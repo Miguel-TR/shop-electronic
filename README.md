@@ -7,7 +7,7 @@ Nuestra pagina web se enfoca en la venta de productos electronicos en especial c
 "Si tienes miedo de fallar, probablemente falles" - Kobe Bryant
 - [@Tito Rodriguez, Miguel Angel](https://www.github.com/octokatherine) : Estudiante avanzado de Ing. Informatica y Jujeño.
 "La inspiración existe, pero tiene que encontrarte trabajando." - Pablo Picasso"
-- [@Gutierrez, Ignacio](https://www.github.com/octokatherine) : 
+- [@Gutierrez, Ignacio](https://www.github.com/octokatherine) : Estudiante de Ingenieria informatica. 
 
 ## Referencias
 
