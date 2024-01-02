@@ -5,7 +5,7 @@ Nuestra pagina web se enfoca en la venta de productos electronicos en especial c
 - [@Ordo-ez, Leonel Omar](https://www.github.com/octokatherine) : 
 - [@Alvarado, Carlos Luis](https://github.com/carlos-luis-alvarado) : Soy jujeño , vivo en la localidad de Los Alisos, estoy estudiando la carrera de Ingeniería Informática en la UNJU-FI, fanatico de River y en mis tiempos libres juego al fútbol o al Counter.
 "Si tienes miedo de fallar, probablemente falles" - Kobe Bryant
-- [@Tito Rodriguez, Miguel Angel](https://www.github.com/octokatherine) : Estudiante avanzado de Ing. Informatica y Jujeño.
+- [@Tito Rodriguez, Miguel Angel](https://www.github.com/octokatherine) : Estudiante avanzado de Ing. Informatica y Jujeño, me gusta salir a andar en bicicleta y mirar series en mis tiempos libres.
 "La inspiración existe, pero tiene que encontrarte trabajando." - Pablo Picasso"
 - [@Gutierrez, Ignacio](https://www.github.com/octokatherine) : Estudiante de Ingenieria informatica. 
 
