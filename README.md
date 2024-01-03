@@ -7,7 +7,8 @@ El sitio esta destinado tanto a personas particulares como a empresas u organiza
 
 ## Autores
 - [@Churquina, Javier Pablo](https://github.com/javis14) : Soy de Jujuy, Argentina. Estudiante de la carrera Ingeniería Informática en la Facultad de Ingeniería de la Universidad Nacional de Jujuy. En mis ratos libres me gusta ver videos de ciencia, animales, el cosmos, y tambien ver películas. Soy fan y jugador compulsivo ocasional de Dota-2.
-- [@Ordo-ez, Leonel Omar](https://www.github.com/octokatherine) : 
+- [@Ordo-ez, Leonel Omar](https://www.github.com/leo2296) : Soy estudiante de Ing. Informatica en la UNJu, vivo en Palpalá, me gusta pasar tiempo frente a la computadora y salir con amigos.
+"No importa lo lento que vayas, siempre y cuando no te detengas." - Confucio 
 - [@Alvarado, Carlos Luis](https://github.com/carlos-luis-alvarado) : Soy jujeño , vivo en la localidad de Los Alisos, estoy estudiando la carrera de Ingeniería Informática en la UNJU-FI, fanatico de River y en mis tiempos libres juego al fútbol o al Counter.
 "Si tienes miedo de fallar, probablemente falles" - Kobe Bryant
 - [@Tito Rodriguez, Miguel Angel](https://www.github.com/octokatherine) : Estudiante avanzado de Ing. Informatica y Jujeño, me gusta salir a andar en bicicleta y mirar series en mis tiempos libres.
