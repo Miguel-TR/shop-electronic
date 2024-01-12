@@ -1,0 +1,27 @@
+{
+  "name": "proyecto-integrador",
+  "version": "1.0.0",
+  "description": "Nuestra pagina web se enfoca en la venta de productos electronicos en especial componentes de pc, ya sea para el uso de estudios, ofimatica o gamer. Tambien se podra ver las caracteristicas de los productos y ademas encontrara informacion hacerca de las ofertas.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlos-luis-alvarado/grupo_9_shop-electronic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlos-luis-alvarado/grupo_9_shop-electronic/issues"
+  },
+  "homepage": "https://github.com/carlos-luis-alvarado/grupo_9_shop-electronic#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
