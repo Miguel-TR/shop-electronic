@@ -31,6 +31,9 @@ app.get('/iniciar-sesion', (req, res) => {
 app.get('/crear-cuenta', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/register.html'))
 });
+app.get('/crear-cuenta', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views/productCart.html'))
+});
 
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);
