@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="productCart.css">
+    <script src="https://kit.fontawesome.com/92e82ded12.js" crossorigin="anonymous"></script>
+    <title>Carrito</title>
+
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+</body>
+</html>
+<div class="sectionTitle " role="alert">
+    <h2>Carrito de compras</h2>
+</div>
+<a href="/home.html" class="deletePoint"><i class="fa-solid fa-trash"></i>Vaciar carrito</a>
+
+<section class="table-box" >
+    <form class="woocommerce-cart-form" action="https://jmdistribuidora.com/carrito/" method="post">
+    <table class="shop_table">
+        <thead >
+            <tr class="tableTitule" d>
+                <td >PRODUCTO</td>
+                <td>PRECIO</td>
+                <td>CANTIDAD</td>
+                <td>TOTAL</td>
+                <td>ELIMINAR</td>                   
+            </tr>
+            
+            <tbody class="boxCarrito">
+                <tr class="productProfile">
+                    <td><h5 >Monitor Samsung 22"</h5></td>
+                    <td><h5>$250.000</h5></td>
+                    <td><button type="button">-</button>
+                        <span>2</span>
+                        <button type="button">+</button>
+                    </td>
+                    <td><h5>%20</h5></td>
+                    <td><button type="button">Elminar</button></td>
+                </tr>
+            </tbody>
+
+            <tbody class="boxCarrito">
+                <tr class="productProfile">
+                    <td><h5 >Mouse Logitech</h5></td>
+                    <td><h5>$90.000</h5></td>
+                    <td><button type="button">-</button>
+                        <span>1</span>
+                        <button type="button">+</button>
+                    </td>
+                    <td><h5 class="precio">---</h5></td>
+                    <td><button type="button">Elminar</button></td>
+                </tr>
+            </tbody>
+
+        </thead>
+
+    </table>
+</form>
+</section>
+
+<section class="piePagina">
+    <div class="row">
+        <div class="productSold">
+            <h5>CUPON</h5>
+                <p> Ingrese su codigo de cupon si es que tiene uno</p>
+                <input type="text" placeholder="Codigo de cupon">
+                <button type="submit" class="buttoncarrito">Enviar Cupon</button>
+        </div>
+
+        <div class="productSold">
+              <h5>Total Carrito</h5>
+              <div >
+                <h5>Subtotal</h5>
+                <p>$340.000</p>
+              </div>
+              <div >
+                <h5>Envío:</h5>
+                <p>$ 5.000</p>
+            </div>
+            <hr class="second-hr">
+                <div >  
+                    <h3>Total:</h3>
+                    <p>345.000</p>
+                </div>
+
+            <a href=""><button type="button"> Finalizar compra</button></a>
+        </div>
+    </div>
+</section>
