@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const loginRoute = require('./routes/loginRoutes');
+const productCartRoute = require('./routes/productCartRoutes');
 
 const app = express();
 const PORT = 3030;
@@ -20,6 +21,8 @@ app.set('views', path.join(__dirname, './views'));
 //ROUTES
 app.use('/',loginRoute);
 
+app.use('/', productCartRoute);
+
 app.get('/',( req, res ) => {
   const pathHome = path.join(__dirname, 'views/home.html')
   res.sendFile(pathHome)
@@ -33,9 +36,9 @@ app.get('/header_and_footer', (req, res) => {
 });
 
 
-app.get('/crear-cuenta', (req, res) => {
+/*app.get('/crear-cuenta', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/productCart.html'))
-});
+});*/
 
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);
