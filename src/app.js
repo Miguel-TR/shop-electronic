@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const loginRoute = require('./routes/loginRoutes');
 const productCartRoute = require('./routes/productCartRoutes');
+const homeRoute = require('./routes/homeRoutes');
 
 const app = express();
 const PORT = 3030;
@@ -23,10 +24,8 @@ app.use('/',loginRoute);
 
 app.use('/', productCartRoute);
 
-app.get('/',( req, res ) => {
-  const pathHome = path.join(__dirname, 'views/home.html')
-  res.sendFile(pathHome)
-});
+app.use('/', homeRoute);
+
 app.get('/detalleDeProducto',( req, res ) => {
   res.sendFile(path.join(__dirname, 'views/productDetail.html'))
 });
