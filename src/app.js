@@ -1,5 +1,6 @@
 const express = require('express');
-const path = require('path')
+const path = require('path');
+const loginRoute = require('./routes/loginRoutes');
 
 const app = express();
 const PORT = 3030;
@@ -8,8 +9,16 @@ const PORT = 3030;
 const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
 
+//TEMPLATE
+app.set('view engine','ejs');
+app.set('views',path.join(__dirname,'views'));
+
+//ARCHIVOS STATIC
 app.use(express.static('public'))
 app.set('views', path.join(__dirname, './views'));
+
+//ROUTES
+app.use('/',loginRoute);
 
 app.get('/',( req, res ) => {
   const pathHome = path.join(__dirname, 'views/home.html')
@@ -23,14 +32,7 @@ app.get('/header_and_footer', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/header_and_footer.html'))
 });
 
-app.get('/iniciar-sesion', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views/login.html'));
 
-});
-
-app.get('/crear-cuenta', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views/register.html'))
-});
 app.get('/crear-cuenta', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/productCart.html'))
 });
