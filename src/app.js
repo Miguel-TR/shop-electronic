@@ -3,6 +3,7 @@ const path = require('path');
 const loginRoute = require('./routes/loginRoutes');
 const productCartRoute = require('./routes/productCartRoutes');
 const homeRoute = require('./routes/homeRoutes');
+const productoRoute = require('./routes/productosRoutes');
 
 const app = express();
 const PORT = 3030;
@@ -26,6 +27,7 @@ app.use('/', productCartRoute);
 
 app.use('/', homeRoute);
 
+app.use('/',productoRoute)
 app.get('/detalleDeProducto',( req, res ) => {
   res.sendFile(path.join(__dirname, 'views/productDetail.html'))
 });
