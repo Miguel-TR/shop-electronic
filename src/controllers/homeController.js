@@ -1,13 +1,13 @@
-const path = require ('node:path');
+const path = require('node:path');
 const data = require('../models/productData.json');
 
 const controller = {
-	renderHome: (req,res) => {
-	
-	res.render('home',{
-		title: 'Home',
-		products: data.results 
-	})
+	renderHome: (req, res) => {
+
+		res.render('home', {
+			title: 'E-Shop',
+			products: data.results
+		})
 	}
 }
 
