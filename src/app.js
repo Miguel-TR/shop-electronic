@@ -5,7 +5,7 @@ const homeRoute = require('./routes/homeRoutes');
 const aboutRoute = require('./routes/aboutRoutes');
 const loginRoute = require('./routes/loginRoutes');
 const productCartRoute = require('./routes/productCartRoutes');
-const productDetailRoute = require('./routes/productDetailRoutes');
+const productoRoute = require('./routes/productosRoutes');
 
 const app = express();
 const PORT = 3030;
@@ -31,7 +31,7 @@ app.use('/', productCartRoute);
 
 app.use('/', aboutRoute);
 
-app.use('/', productDetailRoute);
+app.use('/', productoRoute)
 
 
 

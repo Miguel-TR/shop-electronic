@@ -19,17 +19,18 @@
             <img title="Promocion 2024" src="/img/portada1.webp" alt="Promocion gaming mode">
             <div class="boton-der">
                 <i class="fas fa-forward"></i>
-            </div>
+            </div>            
         </section>
         <section class="section-novedades">
             <h2>NOVEDADES</h2>
             <div class="campo-novedades">
+                <% products.map((product) =>{ %>
                 <article class="campo-articulo">
-                    <a href="/detalleDeProducto">
-                        <img src="/img/monitorGamer1.jpg" alt="Monitor Gamer Samsung 24">
+                    <a href="#">
+                        <img src= "/img/<%= product.img[0] %>" alt="<%= product.title %>">
                         <div class="campo-articulo-info">
-                            <p>$ 254.900</p>
-                            <h4>Monitor Gamer Samsung 24" G50 Curvo 144Hz Full HD VA FreeSync</h4>
+                            <p>$<%= product.price %></p>
+                            <h4><%= product.title %></h4>
                         </div>
                         <div class="campo-articulo-boton">
                             <form action="#">
@@ -38,125 +39,12 @@
                         </div>
                     </a>
                 </article>
-                <article class="campo-articulo">
-                    <a href="/detalleDeProducto">
-                        <img src="/img/consolaPlaystation5.webp" alt="Playstation 5 God of War">
-                        <div class="campo-articulo-info">
-                            <p>$ 1.695.999</p>
-                            <h4>Consola Sony Playstation 5 HW Standard God of War</h4>
-                        </div>
-                        <div class="campo-articulo-boton">
-                            <form action="#">
-                                <button class="boton-agregar">Agregar al carrito</button>
-                            </form>
-                        </div>
-                    </a>
-                </article>
-                <article class="campo-articulo">
-                    <a href="/detalleDeProducto">
-                        <img src="/img/pcAsus.jpg" alt="Pc Asus Ryzen 3">
-                        <div class="campo-articulo-info">
-                            <p>$523.799</p>
-                            <h4>Pc Asus Ryzen 3 3200g 16gb</h4>
-                        </div>
-                        <div class="campo-articulo-boton">
-                            <form action="#">
-                                <button class="boton-agregar">Agregar al carrito</button>
-                            </form>
-                        </div>
-                    </a>
-                </article>
-                <article class="campo-articulo">
-                    <a href="/detalleDeProducto">
-                        <img src="/img/auricularesHyperX.jpg" alt="Auriculares HyperX">
-                        <div class="campo-articulo-info">
-                            <p>$ 114.000</p>
-                            <h4>Auriculares HyperX Cloud Flight Black Wireless</h4>
-                        </div>
-                        <div class="campo-articulo-boton">
-                            <form action="#">
-                                <button class="boton-agregar">Agregar al carrito</button>
-                            </form>
-                        </div>
-                    </a>
-                </article>
-                <article class="campo-articulo">
-                    <a href="/detalleDeProducto">
-                        <img src="/img/JoystickPS5.jpg" alt="Joystick PS5 Sony">
-                        <div class="campo-articulo-info">
-                            <p>$ 138.999</p>
-                            <h4>Joystick PS5 Sony Dualsense Gray Camo Original</h4>
-                        </div>
-                        <div class="campo-articulo-boton">
-                            <form action="#">
-                                <button class="boton-agregar">Agregar al carrito</button>
-                            </form>
-                        </div>
-                    </a>
-                </article>
-                <article class="campo-articulo">
-                    <a href="/detalleDeProducto">
-                        <img src="/img/fuenteBeQuiet.jpg" alt="Fuente Be Quiet! 600W">
-                        <div class="campo-articulo-info">
-                            <p>$89.900</p>
-                            <h4> Fuente Be Quiet! 600W 80 Plus Bronze U9</h4>
-                        </div>
-                        <div class="campo-articulo-boton">
-                            <form action="#">
-                                <button class="boton-agregar">Agregar al carrito</button>
-                            </form>
-                        </div>
-                    </a>
-                </article>
-                <article class="campo-articulo">
-                    <a href="/detalleDeProducto">
-                        <img src="/img/PlacaDeVideoZotacGeForceRTX.jpg" alt="Placa de Video Zotac GeForce RTX 3070">
-                        <div class="campo-articulo-info">
-                            <p>$ 770.350</p>
-                            <h4>Placa de Video Zotac GeForce RTX 3070 Ti 8GB GDDR6X Trinity</h4>
-                        </div>
-                        <div class="campo-articulo-boton">
-                            <form action="#">
-                                <button class="boton-agregar">Agregar al carrito</button>
-                            </form>
-                        </div>
-                    </a>
-                </article>
-                <article class="campo-articulo">
-                    <a href="/detalleDeProducto">
-                        <img src="/img/NotebookLenovo.jpg" alt="Notebook Lenovo ThinkPad E14">
-                        <div class="campo-articulo-info">
-                            <p>$ 1.146.464</p>
-                            <h4>Notebook Lenovo ThinkPad E14 FHD 14" Core I7 1165G7 8GB 256GB SSD NVMe Freedos</h4>
-                        </div>
-                        <div class="campo-articulo-boton">
-                            <form action="#">
-                                <button class="boton-agregar">Agregar al carrito</button>
-                            </form>
-                        </div>
-                    </a>
-                </article>
-                <article class="campo-articulo">
-                    <a href="/detalleDeProducto">
-                        <img src="/img/GabineteKolinkInspireK3.jpg" alt="Gabinete Kolink Inspire K3">
-                        <div class="campo-articulo-info">
-                            <p>$ 51.900</p>
-                            <h4>Gabinete Kolink Inspire K3 RGB M-ATX Vidrio Templado</h4>
-                        </div>
-                        <div class="campo-articulo-boton">
-                            <form action="#">
-                                <button class="boton-agregar">Agregar al carrito</button>
-                            </form>
-                        </div>
-                    </a>
-                </article>
+                <% }) %>
             </div>
         </section>
     </main>
-
+    
     <!-- FOOTER -->
     <%- include('partials/footer.ejs') %>
-
 </body>
-
 </html>

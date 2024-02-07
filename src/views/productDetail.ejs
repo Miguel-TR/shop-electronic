@@ -14,20 +14,35 @@
     <main>
         <section class="section-detalle">
             <div class="campo-detalle">
-                <h1>Monitor Gamer Samsung 24" G50 Curvo 144Hz Full HD VA FreeSync</h1>
-                <h2>$ 254.900</h2>
-                <div class="condiciones-de-compra">
+                <h1><%= products.title %></h1>
+                <h2>$<%= products.price %></h2>
+                <div class="condiciones-de-compra-true">
                     <i class="fas fa-shield-alt"></i>
-                    <H3>Garantia</H3>
+                    <H3>Garantia <%= products.garantia %></H3>
                 </div>
-                <div class="condiciones-de-compra">
+                <% if (products.stock) { %>
+                <div class="condiciones-de-compra-true">
                     <i class="fas fa-check-square"></i>
                     <h3>Stock</h3>
                 </div>
-                <div class="condiciones-de-compra">
+                <% } else { %>
+                <div class="condiciones-de-compra-false">
+                    <i class="fas fa-window-close"></i>
+                    <h3>Sin stock</h3>
+                </div>
+                <% } %>
+
+                <% if (products.envio) { %>
+                <div class="condiciones-de-compra-true">
                     <i class="fas fa-truck"></i>
                     <h3>Envio</h3>
                 </div>
+                <% } else { %>
+                    <div class="condiciones-de-compra-false">
+                        <i class="fas fa-truck"></i>
+                        <h3>Sin envio</h3>
+                    </div>                
+                <% } %>
                 <div>
                     <form action="/" class="form-cantidad">
                         <input type="text" placeholder="1">
@@ -37,37 +52,21 @@
             </div>
             <div class="campo-imagenes">
                 <div class="campo-imagen-grande">
-                    <img src="/img/monitorGamer1.jpg" alt="Monitor Gamer Samsung 24">
+                    <img src="/img/<%= products.img[0] %>" alt="<%= products.title %>">
                 </div>
                 <div class="campo-imagenes-chicas">
-                    <img src="/img/monitorGamer2.jpg">
-                    <img src="/img/monitorGamer3.jpg">
-                    <img src="/img/monitorGamer4.jpg">
-                    <img src="/img/monitorGamer5.jpg">
+                    <% products.img.forEach((imagenes) =>{ %>
+                        <img src="/img/<%=imagenes%>">
+                    <% }) %>
                 </div>
             </div>
         </section>
         <section class="section-caracteristicas">
             <h3>ESPECIFICACIONES</h3>
             <ul>
-                <li>
-                    <h4>Curvatura1800R</h4>
-                </li>
-                <li>
-                    <h4>Relación de aspecto16:9</h4>
-                </li>
-                <li>
-                    <h4>Brillo (Típico)250 cd/?</h4>
-                </li>
-                <li>
-                    <h4>Relación de contraste estática3,000:1 (Typ)</h4>
-                </li>
-                <li>
-                    <h4>Resolución1,920 x 1,080</h4>
-                </li>
-                <li>
-                    <h4>Tiempo de respuesta4ms (GTG)</h4>
-                </li>
+                <% products.especificaciones.forEach((especificacion) =>{ %>
+                <li><h4><%= especificacion %></h4></li>
+                <% }) %>
             </ul>
         </section>
     </main>

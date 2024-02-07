@@ -1,0 +1,204 @@
+{
+    "results":[
+        {
+            "id": "1",
+            "img": ["monitorGamer-1.jpg",
+            "monitorGamer-2.jpg",
+            "monitorGamer-3.jpg",
+            "monitorGamer-4.jpg",
+            "monitorGamer-5.jpg"
+            ],
+            "title": "Monitor Gamer Samsung 24\" G50 Curvo 144Hz Full HD VA FreeSync",
+            "brand": "Samsung",
+            "price": 254900,
+            "garantia": "12 meses",
+            "stock": true,
+            "envio": true,
+            "especificaciones": [
+                "Curvatura 1800R",
+                "Relación de aspecto16:9",
+                "Brillo (Típico)250 cd/?",
+                "Relación de contraste estática3,000:1 (Typ)",
+                "Resolución1,920 x 1,080",
+                "Tiempo de respuesta4ms (GTG)"
+              ]
+        },
+        {
+            "id": "2",
+            "img": ["consolaPlaystation5-1.webp",
+            "consolaPlaystation5-2.webp",
+            "consolaPlaystation5-3.webp",
+            "consolaPlaystation5-4.webp"
+        ],
+            "title": "Consola Sony Playstation 5 HW Standard God of War",
+            "brand": "Sony",
+            "price": 1695999,
+            "garantia": "15 meses",
+            "stock": false,
+            "envio": true,
+            "especificaciones": [
+                "Incluye control",
+                "Resolución de 3840px x 2160px",
+                "Memoria RAM de 16GB",
+                "Cuenta con 1 dock"
+              ]
+        },
+        {
+            "id": "3",
+            "img": [
+                "pcAsus-1.jpg"
+                ],
+            "title": "Pc Asus Ryzen 3 3200g 16gb",
+            "brand": "Asus",
+            "price": 523799,
+            "garantia": "12 meses",
+            "stock": true,
+            "envio": true,
+            "especificaciones": [
+                "Micro amd ryzen 3 3200g 3gen",
+                "Mother asus a320m-k am4",
+                "2 memorias 8gb ddr4 3200 mhz",
+                "Hd ssd 2tb nv2 kingston"
+              ]
+        },
+        {
+            "id": "4",
+            "img": [
+                "auricularesHyperX-1.jpg",
+                "auricularesHyperX-2.jpg",
+                "auricularesHyperX-3.jpg"                
+            ],
+            "title": "Auriculares HyperX Cloud Flight Black Wireless",
+            "brand": "HyperX",
+            "price": 114000,
+            "garantia": "6 meses",
+            "stock": false,
+            "envio": false,
+            "especificaciones": [
+                "Audio 2.0",
+                "Colores Negro",
+                "Conexión Inalámbrico",
+                "Cuenta con Micrófono",
+                "Tipo De Audio Real"
+              ]
+        },
+        {
+            "id": "5",
+            "img": [
+                "JoystickPS5-1.jpg",
+                "JoystickPS5-2.jpg",
+                "JoystickPS5-3.jpg"
+            ],
+            "title": "Joystick PS5 Sony Dualsense Gray Camo Original",
+            "brand": "Sony",
+            "price": 138999,
+            "garantia": "6 meses",
+            "stock": true,
+            "envio": false,
+            "especificaciones": [
+                "Cuenta con Bluetooth",
+                "Pantalla táctil",
+                "Mando inalámbrico",
+                "Compatible con Computadoras",
+                "Incluye un control",
+                "Con sistema de vibración incorporado",
+                "Cuenta con manual",
+                "Diversión garantizada con tu joystick PlayStation",
+                "Diseño ergonómico"
+              ]
+        },
+        {
+            "id": "6",
+            "img": [
+                "fuenteBeQuiet-1.jpg"
+            ],
+            "title": "Fuente Be Quiet! 600W 80 Plus Bronze U9",
+            "brand": "Sony",
+            "price": 89900,
+            "garantia": "12 meses",
+            "stock": false,
+            "envio": true,
+            "especificaciones": [
+                "Potencia de salida de 600W",
+                "Sistema de cableado fijo",
+                "Fuente de tipo ATX",
+                "Con certificación de eficiencia 80 Plus Bronze",
+                "Diámetro del ventilador de 140mm",
+                "Refrigeración por aire",
+                "Transforma la energía",
+                "De uso imprescindible para el buen funcionamiento de la PC"
+              ]
+        },
+        {
+            "id": "7",
+            "img": [
+                "PlacaDeVideoZotacGeForceRTX-1.jpg",
+                "PlacaDeVideoZotacGeForceRTX-2.jpg",
+                "PlacaDeVideoZotacGeForceRTX-3.jpg",
+                "PlacaDeVideoZotacGeForceRTX-4.jpg",
+                "PlacaDeVideoZotacGeForceRTX-5.jpg"
+            ],
+            "title": "Placa de Video Zotac GeForce RTX 3070 Ti 8GB GDDR6X Trinity",
+            "brand": "Zotac",
+            "price": 770350,
+            "garantia": "12 meses",
+            "stock": false,
+            "envio": false,
+            "especificaciones": [
+                "Tipo PCIe",
+                "Chipset GPU RTX 3070 Ti",
+                "Entrada de video No",
+                "Doble puente No",
+                "Características especiales Ray Tracing + DLSS"
+              ]
+        },
+        {
+            "id": "8",
+            "img": [
+                "NotebookLenovo-1.jpg",
+                "NotebookLenovo-2.jpg",
+                "NotebookLenovo-3.jpg"
+            ],
+            "title": "Notebook Lenovo ThinkPad E14 FHD 14\" Core I7 1165G7 8GB 256GB SSD NVMe Freedos",
+            "brand": "Lenovo",
+            "price": 1146464,
+            "garantia": "18 meses",
+            "stock": false,
+            "envio": true,
+            "especificaciones": [
+                "Color Gris Oscuro",
+                "Tipo de CPU Intel",
+                "Tipo de GPU Intel HD Graphics",
+                "Batería Extraíble No",
+                "Modelo GPU Iris® Xe Graphics",
+                "Modelo CPU Core i7",
+                "Tipo Notebook",
+                "Lector de Huellas No",
+                "Familia del Procesador Intel Core i7"
+              ]
+        },
+        {
+            "id": "9",
+            "img": [
+                "GabineteKolinkInspireK3-1.jpg",
+                "GabineteKolinkInspireK3-2.jpg",
+                "GabineteKolinkInspireK3-3.jpg",
+                "GabineteKolinkInspireK3-4.jpg"
+                
+            ],
+            "title": "Gabinete Kolink Inspire K3 RGB M-ATX Vidrio Templado",
+            "brand": "Kolink",
+            "price": 51900,
+            "garantia": "6 meses",
+            "stock": false,
+            "envio": true,
+            "especificaciones": [
+                "Factor Mother ITX, M-ATX",
+                "Fuente en Posición Superior No",
+                "Con Ventana Sí",
+                "Tipo de Ventana Vidrio Templado",
+                "Colores Negro"
+              ]
+        }
+    ]
+}
