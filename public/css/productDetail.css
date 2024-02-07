@@ -72,10 +72,17 @@ h2{
     margin: 0% 7%;
 }
 
-.condiciones-de-compra{
+.condiciones-de-compra-true{
     margin: 15px 0px;
     display: flex;
     color: #00ff00;
+    font-size: 1.3rem;
+    align-items: center;
+}
+.condiciones-de-compra-false{
+    margin: 15px 0px;
+    display: flex;
+    color: #ff0000;
     font-size: 1.3rem;
     align-items: center;
 }

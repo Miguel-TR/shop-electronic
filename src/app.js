@@ -28,9 +28,7 @@ app.use('/', productCartRoute);
 app.use('/', homeRoute);
 
 app.use('/',productoRoute)
-app.get('/detalleDeProducto',( req, res ) => {
-  res.sendFile(path.join(__dirname, 'views/productDetail.html'))
-});
+
 
 app.get('/header_and_footer', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/header_and_footer.html'))
