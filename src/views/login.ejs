@@ -1,21 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/login.css">
+  <%- include('partials/head.ejs') %>
+
   <title><%= title %></title>
 </head>
 
 <body>
-  <header>
-    header 1
-  </header>
+    <!-- HEADER -->
+    <%- include('partials/header.ejs') %>
+
   <main>
-
-
     <form class="form-login">
       <fieldset>
         <h2>Iniciar Sesión</h2>
@@ -35,6 +31,9 @@
       </fieldset>
     </form>
   </main>
+
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs') %>
 </body>
 
 </html>

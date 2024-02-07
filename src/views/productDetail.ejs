@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle de producto</title>
-    <link rel="stylesheet" href="/css/productDetail.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <%- include('partials/head.ejs') %>
+
+    <title><%=title%></title>
 </head>
+
 <body>
-    <header></header>
+    <!-- HEADER -->
+    <%- include('partials/header.ejs') %>
+
     <main>
         <section class="section-detalle">
             <div class="campo-detalle">
@@ -47,17 +48,33 @@
             </div>
         </section>
         <section class="section-caracteristicas">
-           <h3>ESPECIFICACIONES</h3> 
+            <h3>ESPECIFICACIONES</h3>
             <ul>
-                <li><h4>Curvatura1800R</h4></li>
-                <li><h4>Relación de aspecto16:9</h4></li>
-                <li><h4>Brillo (Típico)250 cd/?</h4></li>
-                <li><h4>Relación de contraste estática3,000:1 (Typ)</h4></li>
-                <li><h4>Resolución1,920 x 1,080</h4></li>
-                <li><h4>Tiempo de respuesta4ms (GTG)</h4></li>
+                <li>
+                    <h4>Curvatura1800R</h4>
+                </li>
+                <li>
+                    <h4>Relación de aspecto16:9</h4>
+                </li>
+                <li>
+                    <h4>Brillo (Típico)250 cd/?</h4>
+                </li>
+                <li>
+                    <h4>Relación de contraste estática3,000:1 (Typ)</h4>
+                </li>
+                <li>
+                    <h4>Resolución1,920 x 1,080</h4>
+                </li>
+                <li>
+                    <h4>Tiempo de respuesta4ms (GTG)</h4>
+                </li>
             </ul>
         </section>
     </main>
-    <footer></footer>
+
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs') %>
+    
 </body>
+
 </html>

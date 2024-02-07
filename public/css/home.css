@@ -1,22 +1,25 @@
 * {
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    display: block;
 }
-html{
-    font-size: 13px;
-    font-family: 'Roboto', sans-serif;
-}
+
 /*Portada*/
 .portada {
     width: 100%;
     display: flex;
     position: relative;
 }
+
 .portada img {
     width: 100%;
 }
-.boton-izq, .boton-der {
+
+.boton-izq,
+.boton-der {
     font-size: 30px;
     position: absolute;
     top: 50%;
@@ -25,17 +28,21 @@ html{
     border: none;
     cursor: pointer;
 }
+
 .boton-der {
     right: 20px;
 }
+
 .boton-izq {
     left: 20px;
 }
+
 /*Parte de novedades*/
 .section-novedades {
     width: 100%;
     padding: 0px 20px;
 }
+
 /*Parte de novedades titulo*/
 .section-novedades h2 {
     margin: 15px 30px;
@@ -44,12 +51,14 @@ html{
     text-align: center;
     font-size: 2rem;
 }
+
 /*Parte de novedades articulos*/
 .campo-novedades {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 .campo-articulo {
     width: 100%;
     max-width: 280px;
@@ -59,7 +68,8 @@ html{
     border-radius: 40px;
     margin: 15px 10px;
 }
-a{
+
+main a {
     width: 100%;
     height: 100%;
     display: flex;
@@ -67,15 +77,18 @@ a{
     text-decoration: none;
     color: #000;
 }
-a img {
+
+main a img {
     width: 100%;
     height: 225px;
     display: block;
 }
+
 .campo-articulo-info {
     text-align: left;
 }
-.campo-articulo-info p{
+
+.campo-articulo-info p {
     color: #215FFF;
     margin-top: 10px;
     font-size: 1.4rem;
@@ -85,7 +98,8 @@ a img {
     margin: 10px;
     height: 100%;
     justify-content: center;
-    align-items: flex-end;;
+    align-items: flex-end;
+    ;
     display: flex;
 }
 
@@ -96,8 +110,9 @@ a img {
     border-radius: 5px;
     border: 1px solid transparent;
     font-size: 1rem;
-    
+
 }
+
 main {
     display: flex;
     flex-direction: column;
@@ -105,36 +120,46 @@ main {
 }
 
 @media (min-width: 767px) {
-    html{
+    main {
         font-size: 20px;
     }
+
     .boton-agregar {
         padding: 15px;
-        
+
     }
-    .boton-izq,.boton-der {
+
+    .boton-izq,
+    .boton-der {
         font-size: 40px;
     }
+
     .section-novedades {
         max-width: 800px;
     }
-    
+
 }
+
 @media (min-width: 1024px) {
-    html{
+    main {
         font-size: 25px;
     }
-    .boton-izq,.boton-der {
+
+    .boton-izq,
+    .boton-der {
         font-size: 60px;
-        }
-    .portada ,.section-novedades {
+    }
+
+    .portada,
+    .section-novedades {
         max-width: 1300px;
     }
-    
+
     .campo-articulo {
         transition: width 2s;
     }
+
     .campo-articulo:hover {
         max-width: 320px;
-      }
+    }
 }

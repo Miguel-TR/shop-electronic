@@ -1,37 +1,36 @@
-*{
+main {
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-}
-html{
-    font-size: 13px;
-    font-family: 'Roboto', sans-serif;
-}
-main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 
 }
+
 .section-detalle {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    
-} 
 
-.campo-imagenes{
+}
+
+.campo-imagenes {
     max-width: 320px;
     width: 100%;
     padding: 30px;
 }
+
 .campo-imagen-grande {
     display: flex;
     margin-bottom: 20px;
 }
+
 .campo-imagen-grande img {
     width: 100%;
     height: auto;
@@ -39,30 +38,35 @@ main {
     max-width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.5);
 }
-.campo-imagenes-chicas{
+
+.campo-imagenes-chicas {
     flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
-    
+
 }
+
 .campo-imagenes-chicas img {
-    width: 100px; 
+    width: 100px;
     padding: 10px 0px;
     margin: 10px 0px;
     border: 1px solid rgba(0, 0, 0, 0.5);
 }
+
 .campo-detalle {
     width: 100%;
     max-width: 500px;
     height: 100%;
     padding: 20px 20px;
 }
-h1{
+
+main h1 {
     font-size: 2rem;
     text-align: center;
     margin-bottom: 20px;
 }
-h2{
+
+main h2 {
     color: #215FFF;
     font-size: 1.5rem;
     border: 2px solid #215FFF;
@@ -72,14 +76,15 @@ h2{
     margin: 0% 7%;
 }
 
-.condiciones-de-compra{
+.condiciones-de-compra {
     margin: 15px 0px;
     display: flex;
     color: #00ff00;
     font-size: 1.3rem;
     align-items: center;
 }
-i{
+
+main i {
     width: 15%;
     font-size: 2rem;
     text-align: center;
@@ -92,21 +97,23 @@ i{
     padding-left: 60px;
     padding-bottom: 20px;
 }
-.section-caracteristicas h3{
+
+.section-caracteristicas h3 {
     margin-bottom: 15px;
 }
 
-.form-cantidad{
+.form-cantidad {
     display: flex;
     align-items: center;
 }
-.form-cantidad input{
+
+.form-cantidad input {
     height: 1.5rem;
     width: 1.5rem;
     margin: 0px 10px;
 }
 
-.form-cantidad > button{
+.form-cantidad>button {
     color: #fff;
     font-size: 1.2rem;
     width: 16rem;
@@ -114,41 +121,48 @@ i{
     border-radius: 10px;
     background-color: #215FFF;
     border: 1px solid transparent;
- }
- 
- @media (min-width: 767px) {
-    html{
+}
+
+@media (min-width: 767px) {
+    main {
         font-size: 16px;
     }
-    .campo-imagenes, .section-caracteristicas, .campo-detalle {
+
+    .campo-imagenes,
+    .section-caracteristicas,
+    .campo-detalle {
         max-width: 700px;
     }
-    
+
 }
 
 @media (min-width: 1024px) {
-    html{
+    main {
         font-size: 20px;
+        padding: 10px 60px;
     }
-    .campo-imagenes{
+
+    .campo-imagenes {
         min-width: 500px;
     }
-    .campo-detalle{
+
+    .campo-detalle {
         order: 1;
     }
-    .section-detalle, .section-caracteristicas {
+
+    .section-detalle,
+    .section-caracteristicas {
         max-width: 1600px;
         flex-direction: row;
         align-items: flex-start;
     }
-    main {
-        padding: 10px 60px;
-    }
+
     .campo-imagenes-chicas img {
         transition: width 0.5s;
     }
+
     .campo-imagenes-chicas img:hover {
         width: 120px;
-      }
+    }
 
 }

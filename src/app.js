@@ -1,7 +1,11 @@
 const express = require('express');
 const path = require('path');
+
+const homeRoute = require('./routes/homeRoutes');
+const aboutRoute = require('./routes/aboutRoutes');
 const loginRoute = require('./routes/loginRoutes');
 const productCartRoute = require('./routes/productCartRoutes');
+const productDetailRoute = require('./routes/productDetailRoutes');
 
 const app = express();
 const PORT = 3030;
@@ -10,35 +14,26 @@ const PORT = 3030;
 const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
 
-//TEMPLATE
-app.set('view engine','ejs');
-app.set('views',path.join(__dirname,'views'));
+// TEMPLATE ENGINE (MOTOR DE PLANTILLAS)
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
-//ARCHIVOS STATIC
+// ARCHIVOS STATIC
 app.use(express.static('public'))
 app.set('views', path.join(__dirname, './views'));
 
-//ROUTES
-app.use('/',loginRoute);
+// ROUTES
+app.use('/', homeRoute);
+
+app.use('/', loginRoute);
 
 app.use('/', productCartRoute);
 
-app.get('/',( req, res ) => {
-  const pathHome = path.join(__dirname, 'views/home.html')
-  res.sendFile(pathHome)
-});
-app.get('/detalleDeProducto',( req, res ) => {
-  res.sendFile(path.join(__dirname, 'views/productDetail.html'))
-});
+app.use('/', aboutRoute);
 
-app.get('/header_and_footer', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views/header_and_footer.html'))
-});
+app.use('/', productDetailRoute);
 
 
-/*app.get('/crear-cuenta', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views/productCart.html'))
-});*/
 
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);

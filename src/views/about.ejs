@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- SI ESTE LINK ES DE LOS ICONOS BORRALO, PQ YA ESTA EN EL head.ejs  -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+    <%- include('partials/head.ejs') %>
+
+    <title><%=title%></title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <%- include('partials/header.ejs') %>
+
+    <main>
+        <section class="about" id="about">
+
+            <h1 class="heading"> <span> Acerca de </span> nosotros </h1>
+    
+            <div class="row">
+    
+                <div class="image-container">
+                    <img src="./image/White_And_Black_Modern_Abstract_Beauty_Logo.png" alt="">
+                </div>
+    
+                <div class="content">
+                    <h3>¿Porque elegirnos?</h3>
+                    <p>En Shop-Electronic, entendemos la importancia de la tecnología en la vida diaria y nos
+                        enorgullece
+                        ser tu socio de confianza en el emocionante mundo de la electrónica. Desde los entusiastas de la
+                        tecnología hasta los profesionales, ofrecemos una amplia gama de productos de alta calidad y las
+                        últimas novedades en componentes electrónicos y computadoras.</p>
+                    <a href="#" class="btn">Leer más</a>
+                </div>
+    
+            </div>
+    
+        </section>
+    
+        <section class="icons-container">
+    
+            <div class="icons">
+                <img src="images/icon-1.png" alt="">
+                <div class="info">
+                    <h3>Compromiso con la Calidad</h3>
+                    <span>Comprometidos con la más alta calidad, ofrecemos productos seleccionados cuidadosamente de los
+                        principales fabricantes para garantizar excelencia en cada compra en Shop-Electronic.</span>
+                </div>
+            </div>
+    
+            <div class="icons">
+                <img src="images/icon-2.png" alt="">
+                <div class="info">
+                    <h3>Variedad y Selección</h3>
+                    <span>Amplia gama de productos electrónicos de alta calidad en Shop-Electronic, que incluye desde
+                        placas
+                        madre hasta componentes especializados, para satisfacer todas tus necesidades
+                        tecnológicas.</span>
+                </div>
+            </div>
+    
+            <div class="icons">
+                <img src="images/icon-3.png" alt="">
+                <div class="info">
+                    <h3>Asesoramiento Técnico</h3>
+                    <span>Nuestro equipo de expertos está siempre disponible en Shop-Electronic para brindarte
+                        asesoramiento
+                        técnico, asegurando decisiones informadas y una experiencia de compra confiable.</span>
+                </div>
+            </div>
+    
+            <div class="icons">
+                <img src="images/icon-4.png" alt="">
+                <div class="info">
+                    <h3>Compromiso con la Satisfacción del Cliente</h3>
+                    <span>En Shop-Electronic, priorizamos la satisfacción del cliente. Trabajamos arduamente para
+                        superar
+                        expectativas y garantizar una experiencia de compra excepcional en cada elección que
+                        hagas.</span>
+                </div>
+            </div>
+    
+        </section>
+    
+        <section class="contact" id="contact">
+            <h1 class="heading"> <span> Contactanos </span></h1>
+            <div class="row">
+                <form action="">
+                    <input type="text" placeholder="Nombre" class="box">
+                    <input type="email" placeholder="Email" class="box">
+                    <input type="number" placeholder="Numero" class="box">
+                    <textarea name="" class="box" placeholder="Mensaje" id="" cols="30" rows="10"></textarea>
+                    <input type="submit" value="Enviar mensaje" class="btn">
+                </form>
+    
+                <div class="image">
+                    <img src="images/contact-img.svg" alt="">
+                </div>
+    
+            </div>
+        </section>
+        <section class="footer">
+            <div class="box-container">
+                <div class="box">
+                    <h3>Enlaces rapidos</h3>
+                    <a href="#">home</a>
+                    <a href="#">about</a>
+                    <a href="#">products</a>
+                    <a href="#">review</a>
+                    <a href="#">contact</a>
+                </div>
+    
+                <div class="box">
+                    <h3>extra links</h3>
+                    <a href="#">Mi cuenta</a>
+                    <a href="#">Mi pedido</a>
+                    <a href="#">Mi favorito</a>
+                </div>
+    
+                <div class="box">
+                    <h3>ubicaciones</h3>
+                    <a href="#">Argentina</a>
+                    <a href="#">Uruguay</a>
+                    <a href="#">Chile</a>
+                    <a href="#">Paraguay</a>
+                </div>
+    
+                <div class="box">
+                    <h3>contact info</h3>
+                    <a href="#">+123-456-7890</a>
+                    <a href="#">example@gmail.com</a>
+                    <a href="#">San Salvador de Jujuy, Argentina, 4600</a>
+                    <img src="images/payment.png" alt="">
+                </div>
+    
+            </div>
+    
+            <div class="credit"> created by <span> grupo 9 </span> | all right reserved</div>
+    
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs') %>
+
+</body>
+
+</html>

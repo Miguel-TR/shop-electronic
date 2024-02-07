@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
-    <link rel="stylesheet" href="/css/home.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <%- include('partials/head.ejs') %>
+
+        <title><%=title%></title>
 </head>
+
 <body>
-    <header></header>
+    <!-- HEADER -->
+    <%- include('partials/header.ejs') %>
+
     <main>
         <section class="portada">
-                <div class="boton-izq">
-                    <i class="fas fa-backward"></i>
-                </div>
-                <img title="Promocion 2024" src="/img/portada1.webp" alt="Promocion gaming mode">
-                <div class="boton-der">
-                    <i class="fas fa-forward"></i>
-                </div>            
+            <div class="boton-izq">
+                <i class="fas fa-backward"></i>
+            </div>
+            <img title="Promocion 2024" src="/img/portada1.webp" alt="Promocion gaming mode">
+            <div class="boton-der">
+                <i class="fas fa-forward"></i>
+            </div>
         </section>
         <section class="section-novedades">
             <h2>NOVEDADES</h2>
@@ -37,7 +38,7 @@
                         </div>
                     </a>
                 </article>
-                <article  class="campo-articulo">
+                <article class="campo-articulo">
                     <a href="/detalleDeProducto">
                         <img src="/img/consolaPlaystation5.webp" alt="Playstation 5 God of War">
                         <div class="campo-articulo-info">
@@ -152,6 +153,10 @@
             </div>
         </section>
     </main>
-    <footer></footer>
+
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs') %>
+
 </body>
+
 </html>
