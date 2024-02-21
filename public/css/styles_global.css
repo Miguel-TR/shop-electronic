@@ -1,0 +1,29 @@
+/* ESTILOS GENERALES QUE AFECTAN A TODO EL SISTEMA
+COLORES: 
+azul: #215FFF
+*/
+
+/* ESTILOS BASE (MOBILE/CELULAR/SMARTPHONE) --------------------------------------*/
+* {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: block;
+}
+
+
+/* ESTILOS PARA TABLETS ------------------------------------------*/
+@media (min-width:426px) {
+    * {
+        font-size: 16px;
+    }
+}
+
+/* ESTILOS PARA DESKTOP ------------------------------------------*/
+@media (min-width:769px) {
+    * {
+        font-size: 18px;
+    }
+}
