@@ -1,0 +1,298 @@
+[{
+    "id":1,
+    "firstName":"tellus semper",
+    "lastName":"leo",
+    "email":"vmolson0@youku.com",
+    "password":"rF1'ZBa/_k%3",
+    "type":"Customer",
+    "avatar":"/images/avatars/polloCorazon.jpg"
+},
+
+{
+    "id":2,
+    "firstName":"nec",
+    "lastName":"id pretium",
+    "email":"dbethel1@ucla.edu",
+    "password":"kC5+oH)ySYthg",
+    "type":"Admin",
+    "avatar":""
+},
+
+{
+    "id":3,
+    "firstName":"suspendisse potenti",
+    "lastName":"odio",
+    "email":"tpammenter2@goodreads.com",
+    "password":"kY5,&>orYAS0",
+    "type":"Admin",
+    "avatar":"/images/avatars/jala.jpg"
+},
+
+{
+    "id":4,
+    "firstName":"non",
+    "lastName":"dolor vel",
+    "email":"tnorsworthy3@mozilla.com",
+    "password":"lY5\\>qgge",
+    "type":"Customer",
+    "avatar":"/images/avatars/tostada.jpg"
+},
+
+{
+    "id":5,
+    "firstName":"tristique in",
+    "lastName":"nisi",
+    "email":"lreaper4@harvard.edu",
+    "password":"lM3'xovS\"",
+    "type":"Customer",
+    "avatar":""
+},
+
+{
+    "id":6,
+    "firstName":"nunc",
+    "lastName":"dui",
+    "email":"sosherin5@tinyurl.com",
+    "password":"mA0#.=/{M}WcPEgA",
+    "type":"Customer",
+    "avatar":"/images/avatars/pletzale.jpg"
+},
+
+{
+    "id":7,
+    "firstName":"in felis",
+    "lastName":"erat nulla",
+    "email":"ograyham6@hhs.gov",
+    "password":"zJ8.xcUoc",
+    "type":"Admin",
+    "avatar":"/images/avatars/jala.jpg"
+},
+
+{
+    "id":8,
+    "firstName":"quis",
+    "lastName":"nisl aenean",
+    "email":"kpashba7@wordpress.org",
+    "password":"dI5@tz<A>q)*1",
+    "type":"Customer",
+    "avatar":"/images/avatars/jala.jpg"
+},
+
+{
+    "id":9,
+    "firstName":"tristique in",
+    "lastName":"porttitor pede",
+    "email":"cvedenisov8@google.es",
+    "password":"mM7|aq3|Da",
+    "type":"Admin",
+    "avatar":"/images/avatars/jala.jpg"
+},
+
+{
+    "id":10,
+    "firstName":"habitasse platea",
+    "lastName":"nisl venenatis",
+    "email":"aduer9@guardian.co.uk",
+    "password":"eK7>kUOWHT>KF",
+    "type":"Admin",
+    "avatar":"/images/avatars/pletzale.jpg"
+},
+
+{
+    "id":11,
+    "firstName":"non lectus",
+    "lastName":"curabitur",
+    "email":"wwolfindalea@usa.gov",
+    "password":"vL0~i.Cl~",
+    "type":"Customer",
+    "avatar":"/images/avatars/polloCorazon.jpg"
+},
+
+{
+    "id":12,
+    "firstName":"porta volutpat",
+    "lastName":"quis",
+    "email":"qfettesb@tamu.edu",
+    "password":"yB3,c&f>28~",
+    "type":"Admin",
+    "avatar":""
+},
+
+{
+    "id":13,
+    "firstName":"erat eros",
+    "lastName":"quisque",
+    "email":"thousonc@naver.com",
+    "password":"pN2)EeA/Jpmrt",
+    "type":"Admin",
+    "avatar":"/images/avatars/pletzale.jpg"
+},
+
+{
+    "id":14,
+    "firstName":"ultrices",
+    "lastName":"ipsum dolor",
+    "email":"afairhurstd@alibaba.com",
+    "password":"fO3.<DZ+Wl\"yO",
+    "type":"Customer",
+    "avatar":"/images/avatars/pletzale.jpg"
+},
+
+{
+    "id":15,
+    "firstName":"felis fusce",
+    "lastName":"eu orci",
+    "email":"cgegguse@si.edu",
+    "password":"bH8$z'{TLw",
+    "type":"Customer",
+    "avatar":""
+},
+
+{
+    "id":16,
+    "firstName":"platea dictumst",
+    "lastName":"vestibulum",
+    "email":"gmaragesf@github.io",
+    "password":"qV2'abj{",
+    "type":"Admin",
+    "avatar":""
+},
+
+{
+    "id":17,
+    "firstName":"nam ultrices",
+    "lastName":"sem",
+    "email":"dbetong@4shared.com",
+    "password":"zI8>!t)XjIx3Z7U",
+    "type":"Admin",
+    "avatar":"/images/avatars/kipa.jpg"
+},
+
+{
+    "id":18,
+    "firstName":"justo nec",
+    "lastName":"non",
+    "email":"cwoottonh@nationalgeographic.com",
+    "password":"eM4!Ye/%xy<ft",
+    "type":"Customer","avatar":"/images/avatars/pretzel.jpg"
+},
+
+{
+    "id":19,
+    "firstName":"lacus",
+    "lastName":"rutrum",
+    "email":"lchristophlei@mtv.com",
+    "password":"gL1.`+obg#'*x",
+    "type":"Admin",
+    "avatar":"/images/avatars/kipa.jpg"
+},
+
+{
+    "id":20,
+    "firstName":"sapien",
+    "lastName":"vitae",
+    "email":"boleyj@google.co.jp",
+    "password":"nZ9\\*S6.ISm#H",
+    "type":"Customer",
+    "avatar":"/images/avatars/pletzale.jpg"
+},
+
+{
+    "id":21,
+    "firstName":"consequat",
+    "lastName":"duis at",
+    "email":"ffontk@cornell.edu",
+    "password":"cI9_kL%f$+vNkj9&",
+    "type":"Admin",
+    "avatar":"/images/avatars/kipa.jpg"
+},
+
+{
+    "id":22,
+    "firstName":"praesent blandit",
+    "lastName":"id",
+    "email":"hgranthaml@elpais.com",
+    "password":"wZ7!{S+oot`}`~",
+    "type":"Customer",
+    "avatar":"/images/avatars/pletzale.jpg"
+},
+
+{
+    "id":23,
+    "firstName":"vestibulum velit",
+    "lastName":"dolor",
+    "email":"ggatemanm@discovery.com",
+    "password":"jX2{O3g?wYM",
+    "type":"Admin",
+    "avatar":"/images/avatars/pletzale.jpg"
+},
+
+{
+    "id":24,
+    "firstName":"curabitur at",
+    "lastName":"morbi odio",
+    "email":"lbraveryn@twitter.com",
+    "password":"lO7,2T2/S9JKJDk",
+    "type":"Customer",
+    "avatar":"/images/avatars/polloCorazon.jpg"
+},
+
+{
+    "id":25,
+    "firstName":"et",
+    "lastName":"cras non",
+    "email":"dpetrelluzzio@webs.com",
+    "password":"aH5,f3\\oO{$",
+    "type":"Customer",
+    "avatar":"/images/avatars/tostada.jpg"
+},
+
+{
+    "id":26,
+    "firstName":"justo",
+    "lastName":"erat curabitur",
+    "email":"lsimysonp@moonfruit.com",
+    "password":"wW0}L/z@Bvvi0l",
+    "type":"Customer",
+    "avatar":"/images/avatars/pletzale.jpg"
+},
+
+{
+    "id":27,
+    "firstName":"ac",
+    "lastName":"et magnis",
+    "email":"shymansq@va.gov",
+    "password":"gT9)OafSx#?/U",
+    "type":"Admin",
+    "avatar":"/images/avatars/kipa.jpg"
+},
+
+{
+    "id":28,
+    "firstName":"vestibulum ante",
+    "lastName":"varius ut",
+    "email":"ldreghornr@cocolog-nifty.com",
+    "password":"uQ3@*pB)MUG!LX",
+    "type":"Customer",
+    "avatar":"/images/avatars/polloCorazon.jpg"
+},
+
+{
+    "id":29,
+    "firstName":"pede ullamcorper",
+    "lastName":"augue vestibulum",
+    "email":"onasseys@ox.ac.uk",
+    "password":"yK4(znX&u",
+    "type":"Admin",
+    "avatar":"/images/avatars/tostada.jpg"
+},
+
+{
+    "id":30,
+    "firstName":"phasellus in",
+    "lastName":"nibh ligula",
+    "email":"jjaffreyt@stanford.edu",
+    "password":"iN4}`IA4pbv'",
+    "type":"Customer",
+    "avatar":"/images/avatars/kipa.jpg"
+}]
