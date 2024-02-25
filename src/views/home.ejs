@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('partials/head.ejs') %>
+<%- include('partials/head.ejs',{title:'Inicio'}) %>
 
 <body>
     <!-- HEADER -->
@@ -20,13 +20,16 @@
         <section class="section-novedades">
             <h2>NOVEDADES</h2>
             <div class="campo-novedades">
-                <% products.map((product) =>{ %>
+                <% for (let i = 0; i < products.length ; i++) {%>
                 <article class="campo-articulo">
-                    <a href="#">
-                        <img src= "/img/<%= product.img[0] %>" alt="<%= product.title %>">
+                    <a href="/products/detail/<%= products[i].id%>">
+                        <figure>
+                            <img src= "/img/<%= products[i].img %>" alt="<%= products.title %>">
+                        </figure>
+                        
                         <div class="campo-articulo-info">
-                            <p>$<%= product.price %></p>
-                            <h4><%= product.title %></h4>
+                            <p>$<%= products[i].price %></p>
+                            <h4><%= products[i].title %></h4>
                         </div>
                         <div class="campo-articulo-boton">
                             <form action="#">
@@ -35,7 +38,7 @@
                         </div>
                     </a>
                 </article>
-                <% }) %>
+                <% } %>
             </div>
         </section>
     </main>
