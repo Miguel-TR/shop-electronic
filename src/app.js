@@ -39,13 +39,15 @@ const productsRouter = require('./routes/productosRoutes'); // Rutas /products
 app.use('/', homeRouter);
 app.use('/products', productsRouter);
 
+app.use('/', productoRoute)
+
  app.use('/', loginRoute);
 
  app.use('/', productCartRoute);
 
  app.use('/', aboutRoute);
 
- app.use('/', productoRoute)
+
 
 
 
