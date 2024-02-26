@@ -17,17 +17,19 @@ const controller = {
     let newId = (data.at(-1).id)+1 //varias formas de poner un valor unico este te traer el ultimo y se le suma uno
 		let newProduct ={
 			id: newId,
+			img:"monitorGamer-5.jpg",
 			title: req.body.title,
 			brand: req.body.brand,
 			price: req.body.price,
-      garantia: req.body.garantia,
-      stock: req.body.stock,
-      envio: req.body.envio,
-      especificaciones: req.body.especificaciones
+      		warranty: req.body.warranty,
+			category: req.body.category,
+      		stock: req.body.stock,
+      		shipping: req.body.shipping,
+      		specifications: req.body.specifications
 		}
 		data.push(newProduct)
 
-		fs.writeFileSync(path.join(__dirname, `../data/productsDataBase.json`),
+		fs.writeFileSync(path.join(__dirname, `../models/productData.json`),
 		JSON.stringify(data,null,4),
 		{
 			encoding: 'utf-8'
@@ -38,32 +40,32 @@ const controller = {
 
   detail: (req, res) => {
      let id  = +req.params.id;
-     let selectedProduct = data.find(product => product.id == id);
-
-        res.render('productDetail', {
-          title: 'Detalle de producto',
-          products: selectedProduct,
-        })
+     let products = data.find(product => product.id == id);
+	 if (products) {
+		res.render(`productDetail`, {products})
+	}else{
+		res.send('Se rompio todo')
+	}
    },
-/*   edit: (req, res) => {
+   edit: (req, res) => {
 		let id = +req.params.id // con este + obviamos la compraracion ===
 		let idFound = data.find(e => e.id == id);
-		res.render(`product-edit-form`, {idFound});
+		res.render(`editar-producto`, {idFound});
 	},
   update: (req, res) => {
 		let id = +req.params.id
 		// let productUpdate = {
 			// name : req.body.name}
-		let {title,brand,price,garantia,stock,envio,especificaciones} = req.body
+		let {title,brand,price,warranty,stock,shipping,specifications} = req.body
 		data.forEach(e => {
 			if(e.id == id){
 				e.title = title;
 				e.brand = brand;
 				e.price = price;
-				e.garantia = garantia;
+				e.warranty = warranty;
 				e.stock = stock;
-        e.envio = envio;
-        e.especificaciones = especificaciones;
+				e.shipping = shipping;
+				e.specifications= specifications;
 			}
 		})
 		fs.writeFileSync(path.join(__dirname, `../models/productsData.json`),
@@ -76,18 +78,16 @@ const controller = {
 },
 destroy : (req, res) => {
   let id = +req.params.id // con este + obviamos la compraracion ===
-  products = data.filter(e => e.id != id)
+  products = data.filter(e => e.id != id);
 
-  fs.writeFileSync(path.join(__dirname, `../models/productsData.json`),
-  JSON.stringify(products,null,4),
+  fs.writeFileSync(path.join(__dirname, `../models/productData.json`),
+  JSON.stringify(data,null,4),
   {
     encoding: 'utf-8'
   }
   )
   res.redirect('/')
 }
-*/
+
 }
 module.exports = controller;
-
-

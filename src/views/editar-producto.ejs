@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('partials/head.ejs',{title:'Crear producto'}) %>
+<%- include('partials/head.ejs',{title:'Edit del producto'}) %>
 
 <body>
     <!-- HEADER -->
@@ -9,23 +9,23 @@
 
   <main>
     <section class="container">
-      <form id="" action="" method="POST" class="form-register">
+      <form id="" action="/products/edit/<%=idFound.id%>?_method=PUT" method="POST" class="form-register">
         <fieldset>
           <legend>
             
           </legend>
           <div class="campo-info">
-            <input name="nombreProducto" type="text" required>
+            <input name="nombreProducto" type="text" required value="<%=idFound.title%>">
             <label class="label-form" for="nombreProducto">Ingresa el nombre del producto
             </label>
           </div>
           <div class="campo-info">
-            <input name="precioProducto" type="text" required>
+            <input name="precioProducto" type="text" required value="<%=idFound.price%>">
             <label class="label-form" for="precioProducto">Ingresa el Precio del Producto</label>
           </div>
           <div class="campo-info">
   
-            <input name="marcaProducto" type="text" required>
+            <input name="marcaProducto" type="text" required value="<%=idFound.strock%>">
             <label class="label-form" for="marcaProducto">Ingresa la Marca del Producto</label>
   
           </div>

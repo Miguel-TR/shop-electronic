@@ -1,8 +1,9 @@
 const express = require('express');
+const router = express.Router();
 const { renderCrearProducto } = require('../controllers/productoController');
 let productController = require('../controllers/productoController'); 
 
-const router = express.Router();
+
 
 router.get('/', productController.index)
 
@@ -11,10 +12,10 @@ router.post('/create',productController.store)
 
 router.get('/detail/:id',productController.detail);
 
-//router.get('/edit/:id', productController)
-//router.get('/edit/:id',productController)
+router.get('/edit/:id', productController.edit)
+router.get('/edit/:id',productController.update)
 
-//router.get('/delete/:id', productController)
+router.get('/delete/:id', productController.destroy)
 
 
 module.exports = router;
