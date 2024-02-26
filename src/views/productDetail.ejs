@@ -7,14 +7,14 @@
     <!-- HEADER -->
     <%- include('partials/header.ejs') %>
 
-    <main>
+    <main class="main-detail">
         <section class="section-detalle">
             <div class="campo-detalle">
                 <h1><%= products.title %></h1>
                 <h2>$<%= products.price %></h2>
                 <div class="condiciones-de-compra-true">
                     <i class="fas fa-shield-alt"></i>
-                    <H3>Garantia <%= products.garantia %></H3>
+                    <H3>Garantia <%= products.warranty %></H3>
                 </div>
                 <% if (products.stock) { %>
                 <div class="condiciones-de-compra-true">
@@ -28,7 +28,7 @@
                 </div>
                 <% } %>
 
-                <% if (products.envio) { %>
+                <% if (products.shipping) { %>
                 <div class="condiciones-de-compra-true">
                     <i class="fas fa-truck"></i>
                     <h3>Envio</h3>
@@ -60,7 +60,7 @@
         <section class="section-caracteristicas">
             <h3>ESPECIFICACIONES</h3>
             <ul>
-                <% products.especificaciones.forEach((especificacion) =>{ %>
+                <% products.specifications.forEach((especificacion) =>{ %>
                 <li><h4><%= especificacion %></h4></li>
                 <% }) %>
             </ul>
