@@ -1,22 +1,25 @@
-main {
+.main-login {
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding: 40px 0;
   margin: 0 auto;
 }
 
-main a {
+.main-login a {
   color: black;
   text-decoration: none;
 }
 
-main input {
+.main-login input {
   border: none;
 
   font-size: 17px;
 }
-
+.main-login .form-title{
+  border: none;
+  color: black;
+}
 .form-login {
   display: flex;
   flex-direction: column;
