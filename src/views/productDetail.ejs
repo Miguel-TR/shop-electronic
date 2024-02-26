@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('partials/head.ejs') %>
+<%- include('partials/head.ejs',{title:'Detalle del producto'}) %>
 
 <body>
     <!-- HEADER -->
@@ -40,8 +40,12 @@
                     </div>                
                 <% } %>
                 <div>
+                    <a href="/products/edit/<%=products.id%>" class="action-button edit">EDITAR PRODUCTO</a>
+                    <form action="/products/delete/<%=products.id%>?_method=DELETE" method="POST" style="display: inline-flex">
+                        <button type="submit" class="action-button delete">ELIMINAR</button>
+                    </form>
                     <form action="/" class="form-cantidad">
-                        <input type="text" placeholder="1">
+                        <!-- <input type="text" placeholder="1"> -->
                         <button>Agregar al carrito</button>
                     </form>
                 </div>

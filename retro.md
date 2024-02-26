@@ -43,18 +43,19 @@ Subestimar los tiempos de desarrollo asignados a cada tarea.
 
 
 ## 4° SPRINT
-- Comenzar a hacer (Start doing):  
-
+- Comenzar a hacer (Start doing): 
+Sesiones donde se revise el codigo 
 
 - Hacer más (More of):  
-
+Planificar más reuniones
+Participar mas en el grupo
 
 - Continuar haciendo (Keep doing):  
-
+Asignar tareas
 
 - Hacer menos (Less of):  
-
+Cambios de último minuto
 
 - Dejar de hacer (Stop doing):  
-
+Confiarse con el tiempo
 
