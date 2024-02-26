@@ -6,30 +6,26 @@
 <body>
     <!-- HEADER -->
     <%- include('partials/header.ejs') %>
-
-    <main>
+    <main class="main-home">
         <section class="portada">
-            <div class="boton-izq">
-                <i class="fas fa-backward"></i>
-            </div>
-            <img title="Promocion 2024" src="/img/portada1.webp" alt="Promocion gaming mode">
-            <div class="boton-der">
-                <i class="fas fa-forward"></i>
-            </div>            
+                <div class="boton-izq">
+                    <i class="fas fa-backward"></i>
+                </div>
+                <img title="Promocion 2024" src="/img/portada1.webp" alt="Promocion gaming mode">
+                <div class="boton-der">
+                    <i class="fas fa-forward"></i>
+                </div>            
         </section>
         <section class="section-novedades">
             <h2>NOVEDADES</h2>
             <div class="campo-novedades">
-                <% for (let i = 0; i < products.length ; i++) {%>
+                <% products.map((product) =>{ %>
                 <article class="campo-articulo">
-                    <a href="/products/detail/<%= products[i].id%>">
-                        <figure>
-                            <img src= "/img/<%= products[i].img %>" alt="<%= products.title %>">
-                        </figure>
-                        
+                    <a href="/products/detail/<%= product.id %>">
+                        <img src= "/img/<%= product.img[0] %>" alt="<%= product.title %>">
                         <div class="campo-articulo-info">
-                            <p>$<%= products[i].price %></p>
-                            <h4><%= products[i].title %></h4>
+                            <p>$<%= product.price %></p>
+                            <h4><%= product.title %></h4>
                         </div>
                         <div class="campo-articulo-boton">
                             <form action="#">
@@ -38,11 +34,10 @@
                         </div>
                     </a>
                 </article>
-                <% } %>
+                <% }) %>
             </div>
         </section>
     </main>
-    
     <!-- FOOTER -->
     <%- include('partials/footer.ejs') %>
 </body>

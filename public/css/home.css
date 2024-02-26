@@ -1,12 +1,3 @@
-* {
-    font-size: 13px;
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: block;
-}
-
 /*Portada*/
 .portada {
     width: 100%;
@@ -69,7 +60,7 @@
     margin: 15px 10px;
 }
 
-main a {
+.main-home a {
     width: 100%;
     height: 100%;
     display: flex;
@@ -78,7 +69,7 @@ main a {
     color: #000;
 }
 
-main a img {
+.main-home a img {
     width: 100%;
     height: 225px;
     display: block;
@@ -113,14 +104,14 @@ main a img {
 
 }
 
-main {
+.main-home {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 @media (min-width: 767px) {
-    main {
+    .main-home {
         font-size: 20px;
     }
 
@@ -141,7 +132,7 @@ main {
 }
 
 @media (min-width: 1024px) {
-    main {
+    .main-home {
         font-size: 25px;
     }
 
