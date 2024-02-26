@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('partials/head.ejs',{title:'Edit del producto'}) %>
+
+<body>
+    <!-- HEADER -->
+    <%- include('partials/header.ejs') %>
+
+  <main>
+    <section class="container">
+      <form id="" action="/products/edit/<%=idFound.id%>?_method=PUT" method="POST" class="form-register">
+        <fieldset>
+          <legend>
+            
+          </legend>
+          <div class="campo-info">
+            <input name="nombreProducto" type="text" required value="<%=idFound.title%>">
+            <label class="label-form" for="nombreProducto">Ingresa el nombre del producto
+            </label>
+          </div>
+          <div class="campo-info">
+            <input name="precioProducto" type="text" required value="<%=idFound.price%>">
+            <label class="label-form" for="precioProducto">Ingresa el Precio del Producto</label>
+          </div>
+          <div class="campo-info">
+  
+            <input name="marcaProducto" type="text" required value="<%=idFound.strock%>">
+            <label class="label-form" for="marcaProducto">Ingresa la Marca del Producto</label>
+  
+          </div>
+          <div class="campo-info campo-info-categoria">
+            <label for="nombreCategoria">Selecciona la Categoria del Producto</label>
+            <select class="form-select" name="nombreCategoria">
+  
+              <option value="">CPU</option>
+              <option value="">Monitor</option>
+              <option value="">Teclado</option>
+              <option value="">Tarjeta Grafica</option>
+  
+  
+            </select>
+          </div>
+          <div class="campo-info campo-info-categoria">
+            <label for="">Subir Imagen</label>
+            <input class="" type="file" name="" id="">
+  
+          </div>
+          <div class="campo-info campo-info-descripcion">
+            <label for="descripcionProducto">Descripcion Producto</label>
+            <textarea name="descripcionProducto" class="label-form" rows="3" value=""></textarea>
+          </div>
+  
+  
+          <div class="campo-info">
+            <button type="submit" class="btn" id="">Crear producto</button>
+            <button type="submit" class="btn" id="button-eliminar-producto">Editar Producto</button>
+          </div>
+  
+      </form>
+    </section>
+  </main>
+  
+
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs') %>
+    
+</body>
+
+</html>

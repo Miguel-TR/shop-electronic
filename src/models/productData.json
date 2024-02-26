@@ -1,11 +1,12 @@
 [
     {
         "id": "1",
-        "img": ["monitorGamer-1.jpg",
-        "monitorGamer-2.jpg",
-        "monitorGamer-3.jpg",
-        "monitorGamer-4.jpg",
-        "monitorGamer-5.jpg"
+        "img": [
+            "monitorGamer-1.jpg",
+            "monitorGamer-2.jpg",
+            "monitorGamer-3.jpg",
+            "monitorGamer-4.jpg",
+            "monitorGamer-5.jpg"
         ],
         "title": "Monitor Gamer Samsung 24\" G50 Curvo 144Hz Full HD VA FreeSync",
         "brand": "Samsung",
@@ -21,15 +22,16 @@
             "Relación de contraste estática3,000:1 (Typ)",
             "Resolución1,920 x 1,080",
             "Tiempo de respuesta4ms (GTG)"
-          ]
+        ]
     },
     {
         "id": "2",
-        "img": ["consolaPlaystation5-1.webp",
-        "consolaPlaystation5-2.webp",
-        "consolaPlaystation5-3.webp",
-        "consolaPlaystation5-4.webp"
-    ],
+        "img": [
+            "consolaPlaystation5-1.webp",
+            "consolaPlaystation5-2.webp",
+            "consolaPlaystation5-3.webp",
+            "consolaPlaystation5-4.webp"
+        ],
         "title": "Consola Sony Playstation 5 HW Standard God of War",
         "brand": "Sony",
         "price": 1695999,
@@ -42,13 +44,13 @@
             "Resolución de 3840px x 2160px",
             "Memoria RAM de 16GB",
             "Cuenta con 1 dock"
-          ]
+        ]
     },
     {
         "id": "3",
         "img": [
             "pcAsus-1.jpg"
-            ],
+        ],
         "title": "Pc Asus Ryzen 3 3200g 16gb",
         "brand": "Asus",
         "price": 523799,
@@ -61,14 +63,14 @@
             "Mother asus a320m-k am4",
             "2 memorias 8gb ddr4 3200 mhz",
             "Hd ssd 2tb nv2 kingston"
-          ]
+        ]
     },
     {
         "id": "4",
         "img": [
             "auricularesHyperX-1.jpg",
             "auricularesHyperX-2.jpg",
-            "auricularesHyperX-3.jpg"                
+            "auricularesHyperX-3.jpg"
         ],
         "title": "Auriculares HyperX Cloud Flight Black Wireless",
         "brand": "HyperX",
@@ -83,7 +85,7 @@
             "Conexión Inalámbrico",
             "Cuenta con Micrófono",
             "Tipo De Audio Real"
-          ]
+        ]
     },
     {
         "id": "5",
@@ -109,7 +111,7 @@
             "Cuenta con manual",
             "Diversión garantizada con tu joystick PlayStation",
             "Diseño ergonómico"
-          ]
+        ]
     },
     {
         "id": "6",
@@ -132,7 +134,7 @@
             "Refrigeración por aire",
             "Transforma la energía",
             "De uso imprescindible para el buen funcionamiento de la PC"
-          ]
+        ]
     },
     {
         "id": "7",
@@ -156,7 +158,7 @@
             "Entrada de video No",
             "Doble puente No",
             "Características especiales Ray Tracing + DLSS"
-          ]
+        ]
     },
     {
         "id": "8",
@@ -182,7 +184,7 @@
             "Tipo Notebook",
             "Lector de Huellas No",
             "Familia del Procesador Intel Core i7"
-          ]
+        ]
     },
     {
         "id": "9",
@@ -191,7 +193,6 @@
             "GabineteKolinkInspireK3-2.jpg",
             "GabineteKolinkInspireK3-3.jpg",
             "GabineteKolinkInspireK3-4.jpg"
-            
         ],
         "title": "Gabinete Kolink Inspire K3 RGB M-ATX Vidrio Templado",
         "brand": "Kolink",
@@ -206,7 +207,75 @@
             "Con Ventana Sí",
             "Tipo de Ventana Vidrio Templado",
             "Colores Negro"
-          ]
+        ]
+    },
+    {
+        "id": "91",
+        "img": [
+            "GabineteKolinkInspireK3-1.jpg",
+            "GabineteKolinkInspireK3-2.jpg",
+            "GabineteKolinkInspireK3-3.jpg",
+            "GabineteKolinkInspireK3-4.jpg"
+        ],
+        "title": "Gabinete Kolink Inspire K3 RGB M-ATX Vidrio Templado",
+        "brand": "Kolink",
+        "price": 51900,
+        "warranty": "6 meses",
+        "category": "pc-de-escritorio",
+        "stock": false,
+        "shipping": true,
+        "specifications": [
+            "Factor Mother ITX, M-ATX",
+            "Fuente en Posición Superior No",
+            "Con Ventana Sí",
+            "Tipo de Ventana Vidrio Templado",
+            "Colores Negro"
+        ]
+    },
+    {
+        "id": "911",
+        "img": [
+            "GabineteKolinkInspireK3-1.jpg",
+            "GabineteKolinkInspireK3-2.jpg",
+            "GabineteKolinkInspireK3-3.jpg",
+            "GabineteKolinkInspireK3-4.jpg"
+        ],
+        "title": "Prueba 1",
+        "brand": "Kolink",
+        "price": 51900,
+        "warranty": "6 meses",
+        "category": "pc-de-escritorio",
+        "stock": false,
+        "shipping": true,
+        "specifications": [
+            "Factor Mother ITX, M-ATX",
+            "Fuente en Posición Superior No",
+            "Con Ventana Sí",
+            "Tipo de Ventana Vidrio Templado",
+            "Colores Negro"
+        ]
+    },
+    {
+        "id": "9111",
+        "img": [
+            "GabineteKolinkInspireK3-1.jpg",
+            "GabineteKolinkInspireK3-2.jpg",
+            "GabineteKolinkInspireK3-3.jpg",
+            "GabineteKolinkInspireK3-4.jpg"
+        ],
+        "title": "Prueba 2",
+        "brand": "Kolink",
+        "price": 51900,
+        "warranty": "6 meses",
+        "category": "pc-de-escritorio",
+        "stock": false,
+        "shipping": true,
+        "specifications": [
+            "Factor Mother ITX, M-ATX",
+            "Fuente en Posición Superior No",
+            "Con Ventana Sí",
+            "Tipo de Ventana Vidrio Templado",
+            "Colores Negro"
+        ]
     }
 ]
-
