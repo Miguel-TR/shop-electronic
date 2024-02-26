@@ -1,13 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-family: 'Roboto', sans-serif;
-}
-
 main {
   margin: 0 auto;
 
@@ -55,11 +45,13 @@ input {
   top: 25%;
   transition: .3s;
 }
-.campo-info-categoria{
+
+.campo-info-categoria {
   display: flex;
   justify-content: space-between;
 }
-.campo-info-descripcion{
+
+.campo-info-descripcion {
   display: flex;
   flex-direction: column;
 }
@@ -67,18 +59,21 @@ input {
 .campo-info-descripcion textarea {
   height: 100px;
   border: 2px solid gray;
-  padding: 10px ;
+  padding: 10px;
   outline: none;
   width: 100%;
 
 }
-.campo-info-descripcion label{
+
+.campo-info-descripcion label {
   position: relative;
 }
-.campo-info-categoria label{
+
+.campo-info-categoria label {
   position: relative;
 }
-.campo-info-categoria select{
+
+.campo-info-categoria select {
   width: 40%;
 }
 
@@ -92,9 +87,9 @@ input {
 
 }
 
-.campo-info-categoria input{
+.campo-info-categoria input {
   width: 90%;
-  
+
 }
 
 .campo-info input:focus {

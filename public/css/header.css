@@ -8,92 +8,110 @@ title {
     display: none;
 }
 
-header {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    display: block;
-    /* padding-bottom: 10px; */
-    margin-bottom: 10px;
-}
-
 header div {
     background-color: #215fff;
 }
 
 header img {
-    width: 100vw;
+    width: 80%;
     margin: auto;
 }
 
-.personal {
-    padding-top: 3px;
+header #logo {
+    background-color: white;
+
+}
+
+header .personal {
     padding-bottom: 3px;
 }
 
-.buscador {
-    width: 80%;
+header .buscador {
+    width: 70%;
     display: flex;
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.buscador input {
+header .buscador input {
+    font-size: 13px;
     width: 100%;
+    padding: 5px 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
-.cuenta {
-    width: 50vw;
+header .buscador button {
+    background-color: white;
+    border: 0;
+    padding: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+header .buscador i {
+    font-size: 15px;
+}
+
+header .cuenta {
     display: flex;
+    width: 50%;
     margin: auto;
+    margin-top: 15px;
     margin-bottom: 10px;
 }
 
-.cuenta a {
+header .cuenta a {
     color: #ebebeb;
     padding-left: 5px;
     padding-right: 5px;
 }
 
-#sesion {
+header .cuenta i {
+    font-size: 15px;
+}
+
+header #sesion {
     width: 85%;
 }
 
-#carrito {
+header #carrito {
     width: 15%;
 }
 
-nav {
+header nav {
     background-color: #215fff;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px;
     display: none;
 }
 
-nav li {
+header nav li {
     margin-bottom: 10px;
 }
 
-nav li a {
+header nav li a {
     color: white;
 }
 
-nav li a:hover {
+header nav li a:hover {
     color: black;
 }
 
-.boton-desplegable {
+header .boton-desplegable {
     padding-bottom: 5px;
 }
 
-.boton-desplegable button {
-    width: 2em;
-    height: 2em;
+header .boton-desplegable button {
+    width: 2.5em;
+    height: 2.5em;
     margin: auto;
+    border: 0;
+    border-radius: 5px;
+}
+
+header .boton-desplegable i {
+    font-size: 20px;
 }
 
 header a {
@@ -103,46 +121,82 @@ header a {
 
 /* ESTILOS PARA TABLETS ------------------------------------------*/
 @media (min-width:574px) {
+    header {
+        /* position: fixed;
+        width: 100%;
+        z-index: 100; */
+    }
+
+    header .personal #logo {
+        width: 40%;
+    }
+
+    header .personal {
+        padding: 0;
+    }
+
     #logo img {
+        width: 60%;
+    }
+
+    header .personal .buscador {
+        margin: auto;
+        justify-content: center;
+    }
+
+    header .buscador input {
         width: 50%;
     }
 
-    nav {
-        display: block;
+    header .cuenta {
+        display: none;
     }
 
-    .personal {
-        padding-top: 5px;
+    header #sesion {
+        width: 100%;
+    }
+
+    header nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header nav ul {
+        display: flex;
+        text-align: center;
+    }
+
+    header nav li {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 10px;
+    }
+
+    header .personal {
         border-bottom: solid 1px #ebebeb;
+        display: flex;
     }
 
-    .boton-desplegable {
+    header .boton-desplegable {
         display: none;
     }
 }
 
 /* ESTILOS PARA DESKTOP ------------------------------------------*/
 @media (min-width:769px) {
-    .personal {
-        display: flex;
-    }
-
-    .buscador {
+    header .buscador {
         width: 300px;
     }
 
-    nav ul {
-        display: flex;
-        text-align: center;
+    header .buscador input {
+        width: 100%;
+        font-size: 15px;
+        padding: 8px;
     }
 
-    nav li {
+    header nav li {
         padding-left: 15px;
         padding-right: 15px;
-        margin-top: 10px;
     }
 
-    nav a {
-        font-size: 20px;
-    }
 }

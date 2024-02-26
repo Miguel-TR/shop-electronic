@@ -2,7 +2,7 @@ const express = require('express');
 const { renderLogin, renderRegister } = require('../controllers/loginController');
 const router = express.Router();
 
-router.get('/iniciar-sesion', renderLogin);
+router.get('/login', renderLogin);
 
-router.get('/crear-cuenta', renderRegister);
+router.get('/register', renderRegister);
 module.exports = router;
