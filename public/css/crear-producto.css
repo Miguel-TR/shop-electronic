@@ -8,17 +8,17 @@ html {
   font-family: 'Roboto', sans-serif;
 }
 
-main {
+.main-crear-producto main {
   margin: 0 auto;
 
 }
 
-a {
+.main-crear-producto a {
   color: black;
   text-decoration: none;
 }
 
-input {
+.main-crear-producto input {
   border: none;
 
   font-size: 17px;
@@ -113,6 +113,8 @@ input {
   margin: 20px;
   padding: 10px;
   border: none;
+  font-size: inherit;
+  text-transform: inherit;
 }
 
 .btn:hover {

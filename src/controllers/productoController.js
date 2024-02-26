@@ -10,7 +10,9 @@ const controller = {
 	},
 
   create:(req,res)=>{
-    res.render('crear-producto')
+    res.render('crear-producto',{
+			title:'Crear Producto'
+		})
   },
 
   store: (req, res) => {
