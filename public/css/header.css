@@ -37,6 +37,7 @@ header .buscador {
 header .buscador input {
     font-size: 13px;
     width: 100%;
+    border: 0;
     padding: 5px 5px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
