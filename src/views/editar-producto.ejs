@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('partials/head.ejs',{title:'Edit del producto'}) %>
+<%- include('partials/head.ejs',{title:'Crear producto'}) %>
 
 <body>
     <!-- HEADER -->
     <%- include('partials/header.ejs') %>
 
-  <main>
+  <main class="main-crear-producto">
     <section class="container">
-      <form id="" action="/products/edit/<%=idFound.id%>?_method=PUT" method="POST" class="form-register">
+      <form id="" action="" method="POST" class="form-register">
         <fieldset>
           <legend>
             
           </legend>
           <div class="campo-info">
-            <input name="nombreProducto" type="text" required value="<%=idFound.title%>">
-            <label class="label-form" for="nombreProducto">Ingresa el nombre del producto
+            <input name="title" type="text" required value="<%=idFound.title%>">
+            <label class="label-form" for="title">Ingresa el titulo del producto
             </label>
           </div>
           <div class="campo-info">
-            <input name="precioProducto" type="text" required value="<%=idFound.price%>">
-            <label class="label-form" for="precioProducto">Ingresa el Precio del Producto</label>
+            <input name="brand" type="text" required value="<%=idFound.brand%>">
+            <label class="label-form" for="brand">Ingresa la marca del producto
+            </label>
           </div>
           <div class="campo-info">
-  
-            <input name="marcaProducto" type="text" required value="<%=idFound.strock%>">
-            <label class="label-form" for="marcaProducto">Ingresa la Marca del Producto</label>
-  
+            <input name="warranty" type="text" required value="<%=idFound.warranty%>">
+            <label class="label-form" for="warranty">Ingresa la garantia del producto
+            </label>
+          </div>
+          <div class="campo-info">
+            <input name="price" type="text" required value="<%=idFound.price%>">
+            <label class="label-form" for="price">Ingresa el Precio del Producto</label>
           </div>
           <div class="campo-info campo-info-categoria">
-            <label for="nombreCategoria">Selecciona la Categoria del Producto</label>
-            <select class="form-select" name="nombreCategoria">
+            <label class="" for="stock">Hay stock del producto?</label>
+            <input type="radio" id="stock" name="stock" value="true" checked />
+            <label for="stock">Si</label>
+            <input type="radio" id="stock" name="stock" value="false" checked />
+            <label for="stock">No</label>
+          </div>
+          <div class="campo-info campo-info-categoria">
+            <label class="" for="shipping">Este producto tiene envio?</label>
+            <input type="radio" id="shipping" name="shipping" value="true" checked />
+            <label for="shipping">Si</label>
+            <input type="radio" id="shipping" name="shipping" value="false" checked />
+            <label for="shipping">No</label>
+          </div>
+          <div class="campo-info campo-info-categoria">
+            <label for="category">Selecciona la Categoria del Producto</label>
+            <select class="form-select" name="category">
   
               <option value="">CPU</option>
               <option value="">Monitor</option>
@@ -43,12 +61,12 @@
           </div>
           <div class="campo-info campo-info-categoria">
             <label for="">Subir Imagen</label>
-            <input class="" type="file" name="" id="">
+            <input name="img" class="" type="file" id="">
   
           </div>
           <div class="campo-info campo-info-descripcion">
-            <label for="descripcionProducto">Descripcion Producto</label>
-            <textarea name="descripcionProducto" class="label-form" rows="3" value=""></textarea>
+            <label for="specifications">Descripcion Producto</label>
+            <textarea name="specifications" class="label-form" rows="3" value="">="<%=idFound.specifications%>"</textarea>
           </div>
   
   

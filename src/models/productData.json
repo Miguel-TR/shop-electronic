@@ -256,26 +256,27 @@
         ]
     },
     {
-        "id": "9111",
-        "img": [
-            "GabineteKolinkInspireK3-1.jpg",
-            "GabineteKolinkInspireK3-2.jpg",
-            "GabineteKolinkInspireK3-3.jpg",
-            "GabineteKolinkInspireK3-4.jpg"
-        ],
-        "title": "Prueba 2",
-        "brand": "Kolink",
-        "price": 51900,
-        "warranty": "6 meses",
-        "category": "pc-de-escritorio",
-        "stock": false,
-        "shipping": true,
-        "specifications": [
-            "Factor Mother ITX, M-ATX",
-            "Fuente en Posición Superior No",
-            "Con Ventana Sí",
-            "Tipo de Ventana Vidrio Templado",
-            "Colores Negro"
-        ]
+        "id": "91111",
+        "img": "monitorGamer-5.jpg"
+    },
+    {
+        "id": "911111",
+        "img": "monitorGamer-5.jpg"
+    },
+    {
+        "id": "9111111",
+        "img": "monitorGamer-5.jpg"
+    },
+    {
+        "id": "91111111",
+        "img": "monitorGamer-5.jpg",
+        "title": "monitor",
+        "brand": "samsung",
+        "price": "123",
+        "warranty": "3 meses",
+        "category": "",
+        "stock": "true",
+        "shipping": "true",
+        "specifications": "24 pulgadas"
     }
 ]

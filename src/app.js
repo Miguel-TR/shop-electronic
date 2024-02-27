@@ -1,7 +1,7 @@
 // ************ Require's ************
 const express = require('express');
 const path = require('path');
-//const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
 //const homeRoute = require('./routes/homeRoutes');
 const aboutRoute = require('./routes/aboutRoutes');
@@ -17,7 +17,7 @@ const PORT = 3030;
 app.use(express.static(path.join(__dirname, '../public')));  // Necesario para los archivos estáticos en el folder /public
 app.use(express.urlencoded({ extended: false }));//nos permite trabajar con formularios con metodo post
 app.use(express.json());//nos permite trabajar con formularios con meotodo post
-//app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
+app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 
 // ACCESO A LOS ARCHIVOS DE LA CARPETA public 
 //const publicPath = path.resolve(__dirname, './public');
@@ -41,11 +41,11 @@ app.use('/products', productsRouter);
 
 app.use('/', productoRoute)
 
- app.use('/', loginRoute);
+app.use('/', loginRoute);
 
- app.use('/', productCartRoute);
+app.use('/', productCartRoute);
 
- app.use('/', aboutRoute);
+app.use('/', aboutRoute);
 
 
 

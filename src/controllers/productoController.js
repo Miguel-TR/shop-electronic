@@ -6,7 +6,7 @@ let data = require('../models/productData.json');
 const controller = {
   // Root - Show all products
 	index: (req, res) => {
-		res.render('productCart', {data})
+		res.render('home', {data})
 	},
 
   create:(req,res)=>{
@@ -58,9 +58,10 @@ const controller = {
 		let id = +req.params.id
 		// let productUpdate = {
 			// name : req.body.name}
-		let {title,brand,price,warranty,stock,shipping,specifications} = req.body
+		let {title,img,brand,price,warranty,stock,shipping,specifications} = req.body
 		data.forEach(e => {
 			if(e.id == id){
+				e.img = img
 				e.title = title;
 				e.brand = brand;
 				e.price = price;
@@ -83,7 +84,7 @@ destroy : (req, res) => {
   products = data.filter(e => e.id != id);
 
   fs.writeFileSync(path.join(__dirname, `../models/productData.json`),
-  JSON.stringify(data,null,4),
+  JSON.stringify(products,null,4),
   {
     encoding: 'utf-8'
   }
