@@ -19,7 +19,7 @@ const controller = {
     let newId = (data.at(-1).id)+1 //varias formas de poner un valor unico este te traer el ultimo y se le suma uno
 		let newProduct ={
 			id: newId,
-			img:"monitorGamer-5.jpg",
+			img:["monitorGamer-5.jpg"],
 			title: req.body.title,
 			brand: req.body.brand,
 			price: req.body.price,
@@ -27,7 +27,7 @@ const controller = {
 			category: req.body.category,
       		stock: req.body.stock,
       		shipping: req.body.shipping,
-      		specifications: req.body.specifications
+      		specifications: [req.body.specifications]
 		}
 		data.push(newProduct)
 
@@ -37,7 +37,7 @@ const controller = {
 			encoding: 'utf-8'
 		}
 		)
-		res.render('productCart', {data})
+		res.render('/', {data})
   },
 
   detail: (req, res) => {
@@ -49,29 +49,31 @@ const controller = {
 		res.send('Se rompio todo')
 	}
    },
+
    edit: (req, res) => {
 		let id = +req.params.id // con este + obviamos la compraracion ===
-		let idFound = data.find(e => e.id == id);
+     	let idFound = data.find(product => product.id == id);
 		res.render(`editar-producto`, {idFound});
 	},
   update: (req, res) => {
 		let id = +req.params.id
 		// let productUpdate = {
 			// name : req.body.name}
-		let {title,img,brand,price,warranty,stock,shipping,specifications} = req.body
+		let {img,title,brand,price,warranty,stock,shipping,specifications} = req.body
 		data.forEach(e => {
 			if(e.id == id){
-				e.img = img
+				e.img = img;
 				e.title = title;
 				e.brand = brand;
 				e.price = price;
 				e.warranty = warranty;
+				e.category= category;
 				e.stock = stock;
 				e.shipping = shipping;
 				e.specifications= specifications;
 			}
 		})
-		fs.writeFileSync(path.join(__dirname, `../models/productsData.json`),
+		fs.writeFileSync(path.join(__dirname, `../models/productData.json`),
 		JSON.stringify(data,null,4),
 		{
 			encoding: 'utf-8'
