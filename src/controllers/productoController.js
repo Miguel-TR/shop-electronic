@@ -3,10 +3,17 @@ const path = require('path');
 
 let data = require('../models/productData.json');
 
+const productsFilePath = path.join(__dirname, '../models/productData.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const controller = {
   // Root - Show all products
 	index: (req, res) => {
-		res.render('home', {data})
+		const user = req.session.userLogin;
+		if(user){
+			res.redirect(`/user/${user.email}`);
+		}
+		res.render('home', {products,user});
+		// res.render('home', {data})
 	},
 
   create:(req,res)=>{

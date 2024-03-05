@@ -2,10 +2,11 @@ const express = require('express');
 const router = express.Router();
 //const { renderCrearProducto } = require('../controllers/productoController');
 let productController = require('../controllers/productoController'); 
+const rememberUserMiddleware = require('../middlewares/rememberUserMiddleware');
 
 
 
-router.get('/', productController.index)
+router.get('/',rememberUserMiddleware ,productController.index)
 
 router.get('/create', productController.create);
 router.post('/create',productController.store)

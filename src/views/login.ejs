@@ -8,7 +8,7 @@
     <%- include('partials/header.ejs') %>
 
   <main class="main-login">
-    <form class="form-login">
+    <form class="form-login" method="POST">
       <fieldset>
         <h2 class="form-title">Iniciar Sesión</h2>
         <p>¡Bienvenido de nuevo! Inicie sesión en su cuenta a continuación!</p>
@@ -20,6 +20,10 @@
         <div class="campo-info">
           <input type="password" name="password" required />
           <label for="constraseña" class="label-form">Ingresa tu constraseña</label>
+        </div>
+        <div class="campo-info">
+          <input type="checkbox" name="remember">
+          <label for="" class="">Recordame</label>
         </div>
         <p class="recuperar-contra"><a href="#">¿Olvidaste tu contraseña?</a></p>
         <input class="btn" type="submit" value="Iniciar Sesión" />

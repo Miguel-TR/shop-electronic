@@ -5,7 +5,12 @@
 
 <body>
     <!-- HEADER -->
-    <%- include('partials/header.ejs') %>
+    <% if(user){ %>
+        <%- include('partials/headerUser.ejs',{user}) %>
+
+    <% }else{ %>
+        <%- include('partials/header.ejs') %>
+    <% } %>
     <main class="main-home">
         <section class="portada">
                 <div class="boton-izq">
