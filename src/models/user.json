@@ -1,47 +1,65 @@
 [
-    {
-        "id": 1,
-        "firstName": "tellus semper",
-        "lastName": "leo",
-        "email": "vmolson0@youku.com",
-        "password": "rF1'ZBa/_k%3",
-        "type": "Customer",
-        "avatar": ""
-    },
-    {
-        "id": 2,
-        "firstName": "nec",
-        "lastName": "id pretium",
-        "email": "dbethel1@ucla.edu",
-        "password": "kC5+oH)ySYthg",
-        "type": "Admin",
-        "avatar": ""
-    },
-    {
-        "id": 3,
-        "firstName": "suspendisse potenti",
-        "lastName": "odio",
-        "email": "tpammenter2@goodreads.com",
-        "password": "kY5,&>orYAS0",
-        "type": "Admin",
-        "avatar": ""
-    },
-    {
-        "id": 4,
-        "firstName": "non",
-        "lastName": "dolor vel",
-        "email": "tnorsworthy3@mozilla.com",
-        "password": "lY5\\>qgge",
-        "type": "Customer",
-        "avatar": ""
-    },
-    {
-        "id": 5,
-        "firstName": "tristique in",
-        "lastName": "nisi",
-        "email": "lreaper4@harvard.edu",
-        "password": "lM3'xovS\"",
-        "type": "Customer",
-        "avatar": ""
-    }
+  {
+    "id": 1,
+    "firstName": "tellus semper",
+    "lastName": "leo",
+    "email": "vmolson0@youku.com",
+    "password": "rF1'ZBa/_k%3",
+    "type": "Customer",
+    "avatar": ""
+  },
+  {
+    "id": 2,
+    "firstName": "nec",
+    "lastName": "id pretium",
+    "email": "dbethel1@ucla.edu",
+    "password": "kC5+oH)ySYthg",
+    "type": "Admin",
+    "avatar": ""
+  },
+  {
+    "id": 3,
+    "firstName": "suspendisse potenti",
+    "lastName": "odio",
+    "email": "tpammenter2@goodreads.com",
+    "password": "kY5,&>orYAS0",
+    "type": "Admin",
+    "avatar": ""
+  },
+  {
+    "id": 4,
+    "firstName": "non",
+    "lastName": "dolor vel",
+    "email": "tnorsworthy3@mozilla.com",
+    "password": "lY5\\>qgge",
+    "type": "Customer",
+    "avatar": ""
+  },
+  {
+    "id": 5,
+    "firstName": "tristique in",
+    "lastName": "nisi",
+    "email": "lreaper4@harvard.edu",
+    "password": "lM3'xovS\"",
+    "type": "Customer",
+    "avatar": ""
+  },
+  {
+    "id": "e641eef1-f733-461d-85a1-85b98bbc4f8c",
+    "firstName": "nombre1",
+    "lastName": "apellido1",
+    "email": "emai@1.com",
+    "password": "asdfgh12345",
+    "type": "Customer",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": "e80cf92b-47c5-45ba-bea6-135462e66896",
+    "firstName": "nombre2",
+    "lastName": "apellido2",
+    "email": "emai@2.com",
+    "password": "qwerty987654",
+    "type": "Customer",
+    "avatar": "default-image.png"
+  }
 ]

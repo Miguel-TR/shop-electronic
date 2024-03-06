@@ -1,5 +1,6 @@
 const path = require('path')
 const fs = require('fs')
+const cryto = require('crypto');
 const usersFilePath = path.join(__dirname, '../models/user.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const productsFilePath = path.join(__dirname, '../models/productData.json');
@@ -27,10 +28,24 @@ const controller = {
       title: 'Iniciar Sesion'
     })
   },
-  renderRegister: (req, res) => {
+  createUser: (req, res) => {
     res.render('register', {
       title: 'Crear Cuenta'
     })
+  },
+  storeUser: (req, res) => {
+    const newUser = {
+      id: cryto.randomUUID(),
+      firstName: req.body.nombre,
+      lastName: req.body.apellido,
+      email: req.body.email,
+      password: req.body.password,
+      type: "Customer",
+      avatar: "default-image.png"
+    }
+    users.push(newUser)
+    fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2))
+    res.redirect('/');
   },
   loginProcess: (req,res)=>{
     const {email,password,remember} = req.body;

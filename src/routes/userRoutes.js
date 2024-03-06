@@ -7,7 +7,8 @@ const rememberUserMiddleware = require('../middlewares/rememberUserMiddleware');
 // router.get('/',rememberUserMiddleware ,userController.index); no necesaria - esta en productosRoutes
 router.get('/search', userController.search);
 router.get('/login', userController.renderLogin);
-router.get('/register', userController.renderRegister);
+router.get('/register/', userController.createUser);
+router.post('/register', userController.storeUser);
 router.post('/login',userController.loginProcess)
 router.get('/user/logout',userController.logOut)
 router.get('/user/:email',rememberUserMiddleware,guestMiddleware,userController.renderProfile);
