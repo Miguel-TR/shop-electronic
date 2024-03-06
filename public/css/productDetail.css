@@ -129,6 +129,32 @@
     border-radius: 10px;
     background-color: #215FFF;
     border: 1px solid transparent;
+    width: 100%;
+}
+.div-admin form {
+    margin: 5px 0px;
+    width: 100%;
+}
+.action-button-delete {
+    color: #fff;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #ff0000;
+    border: 1px solid transparent;
+    margin: 5px 0px;
+}
+.action-button-edit {
+    color: #000;
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid #000;
+    text-align: center; 
+}
+.action-button-edit:hover {
+    color: #215FFF;
+    border: 1px solid #215FFF;
 }
 
 @media (min-width: 767px) {
@@ -140,6 +166,19 @@
     .section-caracteristicas,
     .campo-detalle {
         max-width: 700px;
+    }
+    .div-admin {
+        display: flex;
+        align-items: center;
+        margin: 10px 0px;
+    }
+    .div-admin form {
+        width: 50%;
+        margin: 0;
+    }
+    .action-button-edit {
+        width: 50%;
+        margin: 0 10px 0 0;
     }
 
 }

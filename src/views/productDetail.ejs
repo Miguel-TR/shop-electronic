@@ -40,10 +40,12 @@
                     </div>                
                 <% } %>
                 <div>
-                    <a href="/products/edit/<%=products.id%>" class="action-button edit">EDITAR PRODUCTO</a>
-                    <form action="/products/delete/<%=products.id%>?_method=DELETE" method="POST" style="display: inline-flex">
-                        <button type="submit" class="action-button delete">ELIMINAR</button>
-                    </form>
+                    <div class="div-admin">
+                        <a href="/products/edit/<%=products.id%>" class="action-button-edit">EDITAR PRODUCTO</a>
+                        <form action="/products/delete/<%=products.id%>?_method=DELETE" method="POST" style="display: inline-flex">
+                            <button type="submit" class="action-button-delete">ELIMINAR</button>
+                        </form>
+                    </div>
                     <form action="/" class="form-cantidad">
                         <!-- <input type="text" placeholder="1"> -->
                         <button>Agregar al carrito</button>
