@@ -66,18 +66,18 @@ const controller = {
 		let id = +req.params.id
 		// let productUpdate = {
 			// name : req.body.name}
-		let {img,title,brand,price,warranty,stock,shipping,specifications} = req.body
+		let {img,title,brand,price,warranty,category,stock,shipping,specifications} = req.body
 		data.forEach(e => {
 			if(e.id == id){
-				e.img = img;
+				//e.img = img;
 				e.title = title;
 				e.brand = brand;
 				e.price = price;
 				e.warranty = warranty;
 				e.category= category;
-				e.stock = stock;
-				e.shipping = shipping;
-				e.specifications= specifications;
+				e.stock = stock === 'true' || false;
+				e.shipping = shipping === 'true' || false;
+				//e.specifications= specifications;
 			}
 		})
 		fs.writeFileSync(path.join(__dirname, `../models/productData.json`),
@@ -90,10 +90,10 @@ const controller = {
 },
 destroy : (req, res) => {
   let id = +req.params.id // con este + obviamos la compraracion ===
-  products = data.filter(e => e.id != id);
+  let updatedProducts = data.filter(e => e.id != id);
 
   fs.writeFileSync(path.join(__dirname, `../models/productData.json`),
-  JSON.stringify(products,null,4),
+  JSON.stringify(updatedProducts,null,4),
   {
     encoding: 'utf-8'
   }
