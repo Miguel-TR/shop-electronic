@@ -53,7 +53,7 @@ app.use('/', aboutRoute);
 
 app.use('/',userRoute)
 
-app.use('/',contactRoute)
+app.use('/',contactRoute);
 
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);
