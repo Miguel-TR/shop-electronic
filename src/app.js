@@ -10,6 +10,7 @@ const loginRoute = require('./routes/loginRoutes');
 const productCartRoute = require('./routes/productCartRoutes');
 const productoRoute = require('./routes/productosRoutes');
 const userRoute = require('./routes/userRoutes');
+const contactRoute = require('./routes/contactRoutes');
 
 // ************ express() - (don't touch) ************
 const app = express();
@@ -52,7 +53,7 @@ app.use('/', aboutRoute);
 
 app.use('/',userRoute)
 
-
+app.use('/',contactRoute)
 
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);
