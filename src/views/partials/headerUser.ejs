@@ -10,7 +10,14 @@
           <p><%= user.firstName %> <%= user.lastName %></p>
           <li> <img src="/img/user.png" width='30px' height="30px" alt="user"> </li>
           <a href="#" id="carrito"><i class="fas fa-shopping-cart"></i></a>
-          <li><a href="/logout">Cerrar Session</a></li>
+          <!-- <li><a href="/logout">Cerrar Session</a></li> -->
+          <ul>
+            <li>
+                <form action="/user/<%= user.email %>" method="post">
+                    <input type="submit" value="Cerrar Sesion">
+                  </form>
+            </li>
+          </ul>
       </div>
   </div>
   <nav>
@@ -28,7 +35,12 @@
           <li><%= user.firstName %> <%= user.lastName %> </li>
           <li> <img src="/img/user.png" width='30px' height="30px" alt="user"> </li>
           <li><a href="#" id="carrito"><i class="fas fa-shopping-cart"></i></a></li>
-          <li><a href="/user/logout">Cerrar Session</a></li>
+          <!-- <li><a href="/user/logout">Cerrar Session</a></li> -->
+          <li>
+            <form action="/user/<%= user.email %>" method="post">
+                <input type="submit" value="Cerrar Sesion">
+              </form>
+          </li>
       </ul>
   </nav>
   <div class="boton-desplegable">

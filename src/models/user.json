@@ -61,5 +61,14 @@
     "password": "$2a$10$OFuNy4TJ85X1DsgjB8XxFuItyymlC11xlUpZXRptmOUCMHkVDQQNi",
     "type": "Customer",
     "avatar": "default-image.png"
+  },
+  {
+    "id": "14dbc183-cedb-4f24-9c3a-62bcf78f7c85",
+    "firstName": "123",
+    "lastName": "123",
+    "email": "correo@correo.com",
+    "password": "$2a$10$tFWt7nnwGdbbq8Ts49xf3ugylLSW0wMBgrMtXiN0S3TWiZtREz/Rq",
+    "type": "Customer",
+    "avatar": "default-image.png"
   }
 ]

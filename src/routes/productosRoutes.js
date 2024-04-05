@@ -3,20 +3,21 @@ const router = express.Router();
 //const { renderCrearProducto } = require('../controllers/productoController');
 let productController = require('../controllers/productoController'); 
 const rememberUserMiddleware = require('../middlewares/rememberUserMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware');
 
 
 
-router.get('/',rememberUserMiddleware ,productController.index)
+router.get('/',rememberUserMiddleware,guestMiddleware ,productController.index)
 
-router.get('/create', productController.create);
-router.post('/create',productController.store)
+router.get('/create',rememberUserMiddleware,guestMiddleware  ,productController.create);
+router.post('/create',rememberUserMiddleware,guestMiddleware ,productController.store)
 
-router.get('/detail/:id',productController.detail);
+router.get('/detail/:id',rememberUserMiddleware,guestMiddleware ,productController.detail);
 
-router.get('/edit/:id', productController.edit)
-router.put('/edit/:id',productController.update)
+router.get('/edit/:id', rememberUserMiddleware,guestMiddleware ,productController.edit)
+router.put('/edit/:id',rememberUserMiddleware,guestMiddleware ,productController.update)
 
-router.delete('/delete/:id', productController.destroy)
+router.delete('/delete/:id',rememberUserMiddleware,guestMiddleware  ,productController.destroy)
 
 
 module.exports = router;

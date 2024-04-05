@@ -12,7 +12,7 @@ router.get('/login', userController.renderLogin);
 router.get('/register/', userController.createUser);
 router.post('/register',upload.single('img'), inputsValues, validationErrors,userController.storeUser);
 router.post('/login',userController.loginProcess)
-router.get('/user/logout',userController.logOut)
+router.post('/user/:email',userController.logOut)
 router.get('/user/:email',rememberUserMiddleware,guestMiddleware,userController.renderProfile);
 
 
