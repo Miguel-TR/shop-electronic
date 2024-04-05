@@ -5,6 +5,8 @@ const usersFilePath = path.join(__dirname, '../models/user.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const productsFilePath = path.join(__dirname, '../models/productData.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const { hashSync, compareSync } = require('bcryptjs')
+
 const controller = {
   // index: (req, res) => {
 	// 	const user = req.session.userLogin;
@@ -34,18 +36,44 @@ const controller = {
     })
   },
   storeUser: (req, res) => {
+
+    const existingUser = users.find(user => user.email === req.body.email);
+    if (existingUser) {
+      return res.render('register', {
+        errors: {
+            email: {
+                msg: 'Este email ya está registrado'
+            }
+        },
+        old: req.body,
+        title: 'Crear Cuenta'
+      });
+    }
+    if (req.body.password !== req.body.passwordConfirmation) {
+      return res.render('register', {
+          errors: {
+            passwordConfirmation: {
+                  msg: 'Las contraseñas no coinciden'
+              }
+          },
+          old: req.body,
+          title: 'Crear Cuenta'
+      });
+    }
+    const passHash = hashSync( req.body.password, 10 );
+
     const newUser = {
       id: cryto.randomUUID(),
       firstName: req.body.nombre,
       lastName: req.body.apellido,
       email: req.body.email,
-      password: req.body.password,
+      password: passHash,
       type: "Customer",
-      avatar: "default-image.png"
+      avatar: req.file?.filename || 'default-image.png'
     }
     users.push(newUser)
     fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2))
-    res.redirect('/');
+    res.redirect('/login');
   },
   loginProcess: (req,res)=>{
     const {email,password,remember} = req.body;
@@ -53,7 +81,8 @@ const controller = {
     if(!user){
       res.send('Error en correo');
     }
-    if(user.password==password){
+    const isValid = compareSync( req.body.password, user.password );
+    if(isValid  === true){
       req.session.userLogin = user;
     }else{
       res.send('Error contra')

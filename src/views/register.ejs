@@ -8,39 +8,48 @@
     <%- include('partials/header.ejs') %>
 
   <main class="main-register">
-    <form class="form-register" action="/register" method="POST">
+    <form class="form-register" action="/register" method="POST" enctype="multipart/form-data">
       <fieldset>
         <h2 class="form-title">Crear Cuenta</h2>
         <p>Compra más rápido y lleva el control de tus pedidos, ¡en un solo lugar!</p>
         <div class="campo-info">
-          <input type="text" name="nombre" required />
+          <input type="text" name="nombre" value="<%= ( locals.old && old.nombre ) ? old.nombre : '' %>" />
           <label class="label-form" for="nombre">Ingresa tu nombre</label>
-
+          <% if( locals.errors && errors.nombre ){ %>
+            <p> <%= errors.nombre.msg %> </p>
+          <% } %>
         </div>
         <div class="campo-info">
-          <input type="text" name="apellido" required />
-          <label class="label-form" for="apellido">Ingresa tu apeliido</label>
-
+          <input type="text" name="apellido" value="<%= ( locals.old && old.apellido ) ? old.apellido : '' %>"/>
+          <label class="label-form" for="apellido">Ingresa tu apellido</label>
+          <% if( locals.errors && errors.apellido ){ %>
+            <p> <%= errors.apellido.msg %> </p>
+          <% } %>
         </div>
         <div class="campo-info">
-          <input type="text" name="email" required />
+          <input type="text" name="email" value="<%= ( locals.old && old.email ) ? old.email : ''  %>"/>
           <label class="label-form" for="email">Ingresa tu email</label>
-
+          <% if( locals.errors && errors.email ){ %>
+            <p> <%= errors.email.msg %> </p>
+          <% } %>
+        </div>
+        <div class="campo-info campo-info-categoria">
+          <label for="">Subir Imagen</label>
+          <input name="img" class="" type="file" id="">
         </div>
         <div class="campo-info">
-          <input type="number" id="telefono" required />
-          <label class="label-form" for="telefono">Ingresa tu telefono</label>
-
+          <input type="password" name="password"/>
+          <label class="label-form" for="constraseña">Ingresa tu contraseña</label>
+          <% if( locals.errors && errors.password ){ %>
+            <p> <%= errors.password.msg %> </p>
+          <% } %>
         </div>
         <div class="campo-info">
-          <input type="password" name="password" required />
-          <label class="label-form" for="constraseña">Ingresa tu constraseña</label>
-
-        </div>
-        <div class="campo-info">
-          <input type="password" name="password-confirmation" required />
-          <label class="label-form" for="constraseña">Confirma tu Constraseña</label>
-
+          <input type="password" name="passwordConfirmation"/>
+          <label class="label-form" for="constraseña">Confirma tu Contraseña</label>
+          <% if( locals.errors && errors.passwordConfirmation ){ %>
+            <p> <%= errors.passwordConfirmation.msg %> </p>
+          <% } %>
         </div>
         <input class="btn" type="submit" value="Crear Cuenta" />
         <p>¿Ya tenés una cuenta? <a href="#" class="link-login">Inicia sesión</a></p>

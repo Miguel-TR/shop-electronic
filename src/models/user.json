@@ -45,20 +45,20 @@
     "avatar": ""
   },
   {
-    "id": "e641eef1-f733-461d-85a1-85b98bbc4f8c",
-    "firstName": "nombre1",
-    "lastName": "apellido1",
-    "email": "emai@1.com",
-    "password": "asdfgh12345",
+    "id": "2ea18153-ae22-4049-901b-e49ed41dd251",
+    "firstName": "asdfghjkl",
+    "lastName": "asdf",
+    "email": "emai@123.com",
+    "password": "$2a$10$d88iMSTLZ0Jtsk2.91U4nOoSBl2Pk.Me/CrSRLKFJGakuQT2/Mnam",
     "type": "Customer",
-    "avatar": "default-image.png"
+    "avatar": "user-1712274011472.webp"
   },
   {
-    "id": "e80cf92b-47c5-45ba-bea6-135462e66896",
-    "firstName": "nombre2",
-    "lastName": "apellido2",
-    "email": "emai@2.com",
-    "password": "qwerty987654",
+    "id": "1245a67a-dba0-415a-b01d-ae0c2c0763ec",
+    "firstName": "qwertyuio",
+    "lastName": "asd",
+    "email": "emai@145.com",
+    "password": "$2a$10$OFuNy4TJ85X1DsgjB8XxFuItyymlC11xlUpZXRptmOUCMHkVDQQNi",
     "type": "Customer",
     "avatar": "default-image.png"
   }
