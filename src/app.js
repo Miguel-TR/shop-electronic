@@ -58,3 +58,87 @@ app.use('/',contactRoute);
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);
 })
+// conexion con la base de datos 
+var mysql = require('mysql');
+
+var conexion = mysql.createConnection({
+  host: 'localhost',
+  database: 'shop_electronic',
+  user: 'root',
+  password: ''
+});
+
+conexion.connect(function(error){
+  if(error){
+    throw error;
+  }else{
+    console.log('Conexion exitosa');
+  }
+});
+
+conexion.query('SELECT * from users', function(error, results, fields){
+  if(error)
+  throw error;
+
+  results.forEach(result => {
+    console.log(result)
+  });
+
+});
+
+conexion.query('SELECT * from shopping_carts', function(error, results, fields){
+  if(error)
+  throw error;
+
+  results.forEach(result => {
+    console.log(result)
+  });
+
+});
+conexion.query('SELECT * from reservas', function(error, results, fields){
+  if(error)
+  throw error;
+
+  results.forEach(result => {
+    console.log(result)
+  });
+
+});
+conexion.query('SELECT * from products', function(error, results, fields){
+  if(error)
+  throw error;
+
+  results.forEach(result => {
+    console.log(result)
+  });
+
+});
+conexion.query('SELECT * from categorys', function(error, results, fields){
+  if(error)
+  throw error;
+
+  results.forEach(result => {
+    console.log(result)
+  });
+
+});
+conexion.query('SELECT * from brands', function(error, results, fields){
+  if(error)
+  throw error;
+
+  results.forEach(result => {
+    console.log(result)
+  });
+
+});
+
+conexion.end();
+module.exports = {
+  sequelize,
+  usuario,
+  carrito,
+  producto,
+  categoria,
+  marca,
+  reservas,
+};
