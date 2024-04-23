@@ -70,5 +70,77 @@
     "password": "$2a$10$tFWt7nnwGdbbq8Ts49xf3ugylLSW0wMBgrMtXiN0S3TWiZtREz/Rq",
     "type": "Customer",
     "avatar": "default-image.png"
+  },
+  {
+    "id": "b8328bc7-a68c-4f92-8d2c-943884f8ec40",
+    "firstName": "asd",
+    "lastName": "dddd",
+    "email": "hirzululto@gufum.com",
+    "password": "$2a$10$xlLerLdwVdBadqR0HZuQ8uiYQ110um7CR6uJQryNEHN3tOOHSqqIq",
+    "type": "Customer",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": "92ca682b-7d20-40a1-b674-554708f6919d",
+    "firstName": "valen",
+    "lastName": "gall",
+    "email": "noydinupso@gufum.com",
+    "password": "$2a$10$vTi7J4e6X4Bop4.0lBEmXOj5JP1GWYnV2jsi6YeCYf4dV1bV55Kv2",
+    "type": "Customer",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": "cb6f6aa7-8b17-494a-b73f-a87b5f45a1ee",
+    "firstName": "val",
+    "lastName": "ret",
+    "email": "megokel170@idsho.com",
+    "password": "$2a$10$nsWvouSjLszOzsFGmpkFB.4s8wovI/lEgOU5MZAScEDOhwZ9uzhOy",
+    "type": "Customer",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": "61bed480-61ff-4542-9652-68f81ffebd16",
+    "firstName": "gal",
+    "lastName": "ald",
+    "email": "asdd@gmail.com",
+    "password": "$2a$10$aOKkusIkeqcFuWvEAQDPIuBhfG9FdEX27N6ujJJhsT1Z5cfUab2ti",
+    "type": "Customer",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": "2f5936d6-f109-4b2b-ab4e-2724978c492e",
+    "firstName": "gal",
+    "lastName": "ald",
+    "email": "pepito@gmail.com",
+    "password": "$2a$10$vx2jqxPxCeDNBHLmoswWyudoJofFG5PAifniYjLGJ4lptaM2b0kJS",
+    "type": "Customer",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": "72c86d35-c187-40e8-a762-597ee5bb118b",
+    "firstName": "ddd",
+    "lastName": "xxx",
+    "email": "papa@gmail.com",
+    "password": "$2a$10$5TKdTSgCj8AqZKZEVrr/UebdBEYI.wJCVdgKb3MOOyvmbjNVfcoZW",
+    "type": "Customer",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": "a6a9baa3-fde4-46d7-99ff-0021d7746cbf",
+    "firstName": "hhhh",
+    "lastName": "jjjj",
+    "email": "mama@gmail.com",
+    "password": "$2a$10$EzVn2UgwYzEa.gHOmL0ExuHLOB3r.JlbxdpBQ6la3AfxPl7PT8rIW",
+    "type": "Customer",
+    "avatar": "default-image.png"
+  },
+  {
+    "id": "7dacdf43-6d67-4b2d-bdd5-ea9f916bbfcf",
+    "firstName": "kkk",
+    "lastName": "lll",
+    "email": "arg@gmail.com",
+    "password": "$2a$10$jpKLlW7X6zLlBKvSbfypr.ggluKj1LIRZa2fAbQXtRCE0e4to7RmK",
+    "type": "Customer",
+    "avatar": "default-image.png"
   }
 ]

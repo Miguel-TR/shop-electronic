@@ -1,11 +1,14 @@
 const path = require('path')
 const fs = require('fs')
-const cryto = require('crypto');
+const crypto = require('crypto');
 const usersFilePath = path.join(__dirname, '../models/user.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const productsFilePath = path.join(__dirname, '../models/productData.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-const { hashSync, compareSync } = require('bcryptjs')
+const { hashSync, compareSync } = require('bcryptjs');
+const db = require("../database/models");
+const sequelize  = db.sequelize;
+const {Op} = require("sequelize")
 
 const controller = {
   // index: (req, res) => {
@@ -63,7 +66,7 @@ const controller = {
     const passHash = hashSync( req.body.password, 10 );
 
     const newUser = {
-      id: cryto.randomUUID(),
+      id: crypto.randomUUID(),
       firstName: req.body.nombre,
       lastName: req.body.apellido,
       email: req.body.email,
@@ -73,7 +76,22 @@ const controller = {
     }
     users.push(newUser)
     fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2))
-    res.redirect('/login');
+    //sequelize
+    db.User.create({
+      id: crypto.randomUUID(),
+      firstName: req.body.nombre,
+      lastName: req.body.apellido,
+      phone: 1155555555,
+      email: req.body.email,
+      password_user: passHash,
+      rol: 2,
+      avatar: req.file?.filename || 'default-image.png',
+    })
+    .then(()=> {
+      res.redirect('/login');
+    })
+    .catch(error => res.send(error))
+    //sequelize
   },
   loginProcess: (req,res)=>{
     const {email,password,remember} = req.body;
