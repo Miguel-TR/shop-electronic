@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('partials/head.ejs') %>
+
+<body>
+    <!-- HEADER -->
+    <%- include('partials/headerUser.ejs',{user}) %>
+    <main class="main-register">
+        <form class="form-register" action="/editUser/<%=user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+          <fieldset>
+            <h2 class="form-title">Editar perfil</h2>
+            <div class="campo-info">
+              <input type="text" name="nombre" value="<%=user.firstName %>" />
+              <label class="label-form" for="nombre">Ingresa tu nombre</label>
+            </div>
+            <div class="campo-info">
+              <input type="text" name="apellido" value="<%=user.lastName %>"/>
+              <label class="label-form" for="apellido">Ingresa tu apellido</label>
+            </div>
+            <div class="campo-info">
+              <input type="text" name="telefono" value="<%= user.phone %>"/>
+              <label class="label-form" for="telefono">Ingresa telefono</label>
+            </div>
+            <div class="campo-info">
+              <input type="text" name="email" value="<%= user.email %>"/>
+              <label class="label-form" for="email">Ingresa tu email</label>
+            </div>
+            <div class="campo-info campo-info-categoria">
+              <label for="">Subir Imagen</label>
+              <input name="img" class="" type="file" id="">
+            </div>
+            <input class="btn" type="submit" value="Confirmar cambios" />
+          </fieldset>
+        </form>
+      </main>
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs') %>
+</body>
+
+</html>

@@ -32,8 +32,8 @@
       <ul>
           <!-- <li><a href="/register"><i class="far fa-address-card"></i> Registrarme</a></li> -->
           <!-- <li><a href="/login" id="sesion"><i class="far fa-user-circle"></i> Iniciar sesión</a></li> -->
-          <li><%= user.firstName %> <%= user.lastName %> </li>
-          <li> <img src="/img/user.png" width='30px' height="30px" alt="user"> </li>
+          <li><a href="/userDetail/<%= user.id %>"><%= user.firstName %> <%= user.lastName %></li>
+          <li> <img src="/img/user/<%=user.avatar%>" width='30px' height="30px" alt="user"> </li>
           <li><a href="#" id="carrito"><i class="fas fa-shopping-cart"></i></a></li>
           <!-- <li><a href="/user/logout">Cerrar Session</a></li> -->
           <li>

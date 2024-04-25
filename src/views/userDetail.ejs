@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('partials/head.ejs') %>
+
+<body>
+    <!-- HEADER 
+    <%- include('partials/header.ejs') %> -->
+    <%- include('partials/headerUser.ejs',{user}) %>
+  <main>
+    <section class="profile-section">
+        <div class="profile-details">
+            <ul>
+                <li>
+                    <h2>Datos del usuario</h2>
+                </li>
+                <li>
+                    Nombre y Apellido: <%=user.firstName%> <%=user.lastName%>
+                </li>
+                <li>
+                    Telefono: <%=user.phone%>
+                </li>
+                <li>
+                    Email: <%=user.email%>
+                </li>
+            </ul>
+        </div>
+        <div class="profile-image">
+            <li>
+                Foto de perfil: 
+            </li>
+            <div>
+                <img src="/img/user/<%=user.avatar%>">
+            </div>
+        </div>
+    </section>
+    <div class="div-button-edit-user">
+        <a href="/editUser/<%=user.id%>" class="button-edit-user">EDITAR PERFIL</a>
+        <a href="/editUserPass/<%=user.id%>" class="button-edit-user">CAMBIAR CONTRASEÑA</a>
+    </div>
+  </main>
+
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs') %>
+</body>
+
+</html>

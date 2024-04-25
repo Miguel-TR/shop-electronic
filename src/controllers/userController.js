@@ -39,7 +39,7 @@ const controller = {
     })
   },
   storeUser: (req, res) => {
-
+    /*
     const existingUser = users.find(user => user.email === req.body.email);
     if (existingUser) {
       return res.render('register', {
@@ -51,7 +51,7 @@ const controller = {
         old: req.body,
         title: 'Crear Cuenta'
       });
-    }
+    }*/
     if (req.body.password !== req.body.passwordConfirmation) {
       return res.render('register', {
           errors: {
@@ -64,7 +64,7 @@ const controller = {
       });
     }
     const passHash = hashSync( req.body.password, 10 );
-
+/*
     const newUser = {
       id: crypto.randomUUID(),
       firstName: req.body.nombre,
@@ -76,12 +76,13 @@ const controller = {
     }
     users.push(newUser)
     fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2))
+    */
     //sequelize
     db.User.create({
-      id: crypto.randomUUID(),
+      //id: crypto.randomUUID(),
       firstName: req.body.nombre,
       lastName: req.body.apellido,
-      phone: 1155555555,
+      phone: req.body.telefono,
       email: req.body.email,
       password_user: passHash,
       rol: 2,
@@ -95,7 +96,7 @@ const controller = {
   },
   loginProcess: (req,res)=>{
     const {email,password,remember} = req.body;
-    const user =  users.find(u=>u.email==email);
+    /*const user =  users.find(u=>u.email==email);
     if(!user){
       res.send('Error en correo');
     }
@@ -111,12 +112,29 @@ const controller = {
     }
     
     res.redirect(`/user/${user.email}`);
+    */
+    db.User.findOne({ where: { email: email } })
+        .then(function(user) {
+            if (!user) {
+                return res.send('Error en correo');
+            }
+            const isValid = compareSync(password, user.password_user);  
+            if (isValid == true) {
+                req.session.userLogin = user;
+                if (remember) {
+                    res.cookie('user', user.email, { maxAge: 60000 });
+                }
+                return res.redirect(`/user/${user.email}`);
+            } else {
+                return res.send('Error contra');
+            }
+        })
     
   },
   renderProfile:(req,res)=>{
     // const email = req.params.email;
-    const {firstName,lastName,email,type} =req.session.userLogin;
-    const user= {firstName,lastName,email,type}
+    const {id,firstName,lastName,phone,email,type,avatar} =req.session.userLogin;
+    const user= {id,firstName,lastName,phone,email,type,avatar}
     //res.render('profile',{user});
     res.render('home',{user,products});
     //res.send(req.session.userLogin)
@@ -131,6 +149,52 @@ const controller = {
       }
       res.redirect('/login');
     });
+  },
+  renderEdit: (req, res) => {
+    db.User.findByPk(req.params.id)
+        .then(function(user) {
+          res.render("edit-user", { title: 'Editar perfil', user: user });
+        })
+  },
+  renderDetail: (req, res) => {
+    db.User.findByPk(req.params.id)
+        .then(function(user) {
+          res.render("userDetail", { title: 'Perfil', user: user });
+        })
+  },
+  renderUpdate: (req,res) => {
+    let updateData = {
+      firstName: req.body.nombre,
+      lastName: req.body.apellido,
+      phone: req.body.telefono,
+      email: req.body.email
+    };
+    if (req.file && req.file.filename) {
+      updateData.avatar = req.file.filename;
+    }
+    db.User.update(updateData,{
+      where: {
+        id: req.params.id
+      }
+    })
+    .then(() => res.redirect("/userDetail/"+ req.params.id))
+
+  },
+  renderEditPass: (req, res) => {
+    db.User.findByPk(req.params.id)
+        .then(function(user) {
+          res.render("edit-user-pass", { title: 'Cambiar contraseña', user: user });
+        })
+  },
+  renderUpdatePass: (req,res) => {
+    db.User.update({
+      password_user: hashSync( req.body.passwordNew, 10 )
+    },{
+      where: {
+        id: req.params.id
+      }
+    })
+    .then(() => res.redirect("/userDetail/"+ req.params.id))
   }
 }
 module.exports = controller;

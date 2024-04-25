@@ -33,6 +33,13 @@
             <p> <%= errors.email.msg %> </p>
           <% } %>
         </div>
+        <div class="campo-info">
+          <input type="text" name="telefono" pattern="[0-9]*" value="<%= ( locals.old && old.telefono ) ? old.telefono : ''  %>"/>
+          <label class="label-form" for="telefono">Ingresa tu nro de celular</label>
+          <% if( locals.errors && errors.telefono ){ %>
+            <p> <%= errors.telefono.msg %> </p>
+          <% } %>
+        </div>
         <div class="campo-info campo-info-categoria">
           <label for="">Subir Imagen</label>
           <input name="img" class="" type="file" id="">

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('partials/head.ejs') %>
+
+<body>
+    <!-- HEADER -->
+    <%- include('partials/headerUser.ejs',{user}) %>
+    <main class="main-register">
+        <form class="form-register" action="/editUserPass/<%=user.id %>?_method=PUT" method="POST">
+          <fieldset>
+            <h2 class="form-title">Cambiar contraseña</h2>
+            <div class="campo-info">
+              <input type="password" name="passwordOld"/>
+              <label class="label-form" for="constraseña">Ingresa tu contraseña actual FALTA VALIDAR</label>
+            </div>
+            <div class="campo-info">
+              <input type="password" name="passwordNew"/>
+              <label class="label-form" for="constraseña">Ingresa tu nueva contraseña</label>
+            </div>
+            <div class="campo-info">
+              <input type="password" name="passwordConfirmation"/>
+              <label class="label-form" for="constraseña">Confirma tu nueva Contraseña FALTA VALIDAR</label>
+            </div>
+            <input class="btn" type="submit" value="Confirmar cambios" />
+          </fieldset>
+        </form>
+      </main>
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs') %>
+</body>
+
+</html>
