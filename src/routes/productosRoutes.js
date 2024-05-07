@@ -4,13 +4,13 @@ const router = express.Router();
 let productController = require('../controllers/productoController'); 
 const rememberUserMiddleware = require('../middlewares/rememberUserMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
+const upload =  require('../middlewares/userAvatar');
 
 
+router.get('/',rememberUserMiddleware,productController.index)
 
-router.get('/',rememberUserMiddleware,guestMiddleware ,productController.index)
-
-router.get('/create',rememberUserMiddleware,guestMiddleware  ,productController.create);
-router.post('/create',rememberUserMiddleware,guestMiddleware ,productController.store)
+router.get('/create',rememberUserMiddleware ,productController.create);
+router.post('/create',upload.array('image'),rememberUserMiddleware ,productController.store)
 
 router.get('/detail/:id',rememberUserMiddleware,guestMiddleware ,productController.detail);
 

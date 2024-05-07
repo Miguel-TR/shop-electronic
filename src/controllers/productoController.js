@@ -5,6 +5,13 @@ let data = require('../models/productData.json');
 
 const productsFilePath = path.join(__dirname, '../models/productData.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+//CRUD-SQL
+const db = require('../database/models/');
+const Products = db.Product;
+const Brands = db.Brand;
+const Categories = db.Category;
+
+
 const controller = {
   // Root - Show all products
 	index: (req, res) => {
@@ -12,55 +19,87 @@ const controller = {
 		if(user){
 			res.redirect(`/user/${user.email}`);
 		}
-		res.render('home', {products,user});
+		//res.render('home', {products,user});
 		// res.render('home', {data})
+		Products
+			.findAll()
+			.then(products => {
+				return res.render('home', { 
+					title: 'Products List',
+					products, user:null
+				});
+			})
+			.catch(error => res.send(error));
 	},
 
-  create:(req,res)=>{
-    res.render('crear-producto',{
-			title:'Crear Producto'
-		})
+  create:(req,res)=>{	
+	const user = req.session.userLogin;
+		if(user){
+    res.render('crear-producto',{user})
+		}
+		
   },
 
   store: (req, res) => {
-    let newId = (data.at(-1).id)+1 //varias formas de poner un valor unico este te traer el ultimo y se le suma uno
-		let newProduct ={
-			id: newId,
-			img:["monitorGamer-5.jpg"],
+	db.Product.create({
+    //let newId = (data.at(-1).id)+1 //varias formas de poner un valor unico este te traer el ultimo y se le suma uno
+		//let newProduct ={
+			//id: newId,
 			title: req.body.title,
-			brand: req.body.brand,
+			image: req.body?.image || 'default-image.png',
+			description:req.body.description,
 			price: req.body.price,
+			discount : req.body.discount,
       		warranty: req.body.warranty,
-			category: req.body.category,
       		stock: req.body.stock,
-      		shipping: req.body.shipping,
-      		specifications: [req.body.specifications]
-		}
-		data.push(newProduct)
+      		specifications: req.body.specifications,
 
-		fs.writeFileSync(path.join(__dirname, `../models/productData.json`),
-		JSON.stringify(data,null,4),
-		{
-			encoding: 'utf-8'
-		}
-		)
-		res.render('/', {data})
+			id_brand: req.body.brand,
+			id_category: req.body.category,
+		})
+		.then(() => 
+				res.redirect('/')
+			)
+            .catch(error => {
+                console.error(error)
+                res.status(500).send('Hubo un error al crear el producto');
+            });
+		  //sequelize
+		//}
+		//data.push(newProduct)
+
+		// fs.writeFileSync(path.join(__dirname, `../models/productData.json`),
+		// JSON.stringify(data,null,4),
+		// {
+		// 	encoding: 'utf-8'
+		// }
+		//)
+		//res.render('/', {data})
   },
+  
 
   detail: (req, res) => {
-     let id  = +req.params.id;
+     /*let id  = +req.params.id;
      let products = data.find(product => product.id == id);
 	 if (products) {
 		res.render(`productDetail`, {products})
 	}else{
 		res.send('Se rompio todo')
-	}
+	}*/
+	Products.findByPk(req.params.id)
+		.then(function(products){
+			res.render('productDetail', {products})
+		})
    },
 
    edit: (req, res) => {
-		let id = +req.params.id // con este + obviamos la compraracion ===
+		/*let id = +req.params.id // con este + obviamos la compraracion ===
      	let idFound = data.find(product => product.id == id);
-		res.render(`editar-producto`, {idFound});
+		res.render(`editar-producto`, {idFound});*/
+		db.Product.findByPk(req.params.id)
+		.the(function(idFound){
+			res.render('editar-producto', {idFound})
+		})
 	},
   update: (req, res) => {
 		let id = +req.params.id
@@ -88,18 +127,20 @@ const controller = {
 		)
 		res.redirect('/')
 },
-destroy : (req, res) => {
-  let id = +req.params.id // con este + obviamos la compraracion ===
-  let updatedProducts = data.filter(e => e.id != id);
+	destroy : (req, res) => {
+	/*let id = +req.params.id // con este + obviamos la compraracion ===
+	let updatedProducts = data.filter(e => e.id != id);
 
-  fs.writeFileSync(path.join(__dirname, `../models/productData.json`),
-  JSON.stringify(updatedProducts,null,4),
-  {
-    encoding: 'utf-8'
-  }
-  )
-  res.redirect('/')
+	fs.writeFileSync(path.join(__dirname, `../models/productData.json`),
+	JSON.stringify(updatedProducts,null,4),
+	{
+		encoding: 'utf-8'
+	}
+	)
+	res.redirect('/')*/
+	Products.destroy({ where: { id: req.params.id }});
+
+        res.redirect('/')
 }
-
 }
 module.exports = controller;

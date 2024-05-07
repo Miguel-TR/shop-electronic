@@ -54,22 +54,13 @@
             </div>
             <div class="campo-imagenes">
                 <div class="campo-imagen-grande">
-                    <img src="/img/<%= products.img[0] %>" alt="<%= products.title %>">
-                </div>
-                <div class="campo-imagenes-chicas">
-                    <% products.img.forEach((imagenes) =>{ %>
-                        <img src="/img/<%=imagenes%>">
-                    <% }) %>
-                </div>
-            </div>
+                    <img src="/img/<%= products.image %>" alt="<%= products.title %>">
+                
         </section>
         <section class="section-caracteristicas">
             <h3>ESPECIFICACIONES</h3>
-            <ul>
-                <% products.specifications.forEach((especificacion) =>{ %>
-                <li><h4><%= especificacion %></h4></li>
-                <% }) %>
-            </ul>
+            <p>$<%= products.specifications %></p>
+            <p>$<%= products.price %></p>
         </section>
     </main>
 

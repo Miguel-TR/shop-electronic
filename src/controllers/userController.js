@@ -7,6 +7,7 @@ const productsFilePath = path.join(__dirname, '../models/productData.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const { hashSync, compareSync } = require('bcryptjs');
 const db = require("../database/models");
+const Products = db.Product;
 const sequelize  = db.sequelize;
 const {Op} = require("sequelize")
 
@@ -136,7 +137,15 @@ const controller = {
     const {id,firstName,lastName,phone,email,type,avatar} =req.session.userLogin;
     const user= {id,firstName,lastName,phone,email,type,avatar}
     //res.render('profile',{user});
-    res.render('home',{user,products});
+    Products
+			.findAll()
+			.then(products => {
+				return res.render('home', { 
+					title: 'Products List',
+					products, user
+				});
+			})
+			.catch(error => res.send(error));
     //res.send(req.session.userLogin)
   },
   logOut:(req,res)=>{

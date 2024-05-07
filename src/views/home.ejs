@@ -27,7 +27,7 @@
                 <% products.map((product) =>{ %>
                 <article class="campo-articulo">
                     <a href="/products/detail/<%= product.id %>">
-                        <img src= "/img/<%= product.img[0] %>" alt="<%= product.title %>">
+                        <img src= "/img/<%= product.image %>" alt="<%= product.title %>">
                         <div class="campo-articulo-info">
                             <p>$<%= product.price %></p>
                             <h4><%= product.title %></h4>
