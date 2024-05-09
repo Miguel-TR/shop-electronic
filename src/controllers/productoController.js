@@ -96,13 +96,13 @@ const controller = {
 		/*let id = +req.params.id // con este + obviamos la compraracion ===
      	let idFound = data.find(product => product.id == id);
 		res.render(`editar-producto`, {idFound});*/
-		db.Product.findByPk(req.params.id)
-		.the(function(idFound){
+		Products.findByPk(req.params.id)
+		.then(function(idFound){
 			res.render('editar-producto', {idFound})
 		})
 	},
   update: (req, res) => {
-		let id = +req.params.id
+		/*let id = +req.params.id
 		// let productUpdate = {
 			// name : req.body.name}
 		let {img,title,brand,price,warranty,category,stock,shipping,specifications} = req.body
@@ -125,8 +125,31 @@ const controller = {
 			encoding: 'utf-8'
 		}
 		)
-		res.redirect('/')
+		res.redirect('/')*/
+		let updateProduct ={
+			title: req.body.title,
+			image: req.body.image,
+			description:req.body.description,
+			price: req.body.price,
+			discount : req.body.discount,
+      		warranty: req.body.warranty,
+      		stock: req.body.stock,
+      		specifications: req.body.specifications,
+
+			id_brand: req.body.brand,
+			id_category: req.body.category,
+		};
+		if(req.body && req.body.body){
+			updateProduct.image = req.file.body;
+		}
+		Products.update(updateProduct,{
+			where:{
+				id:req.params.id
+			}
+		})
+		.then(() => res.redirect('/detail/'+ req.params.id))
 },
+
 	destroy : (req, res) => {
 	/*let id = +req.params.id // con este + obviamos la compraracion ===
 	let updatedProducts = data.filter(e => e.id != id);

@@ -1,75 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('partials/head.ejs',{title:'Crear producto'}) %>
+<%- include('partials/head.ejs',{title:'Editar producto'}) %>
 
 <body>
-   <!-- HEADER -->
+    <!-- HEADER -->
     <%- include('partials/header.ejs') %>
+  
 
-    <main class="main-crear-producto">
-      <section class="container">
-        <form id="" action="" method="POST" class="form-register">
-          <fieldset>
-            <legend>
-              
-            </legend>
-            <div class="campo-info">
-              <input name="title" type="text" required>
-              <label class="label-form" for="title">Ingresa el titulo del producto
-              </label>
-            </div>
-            <div class="campo-info campo-info-descripcion">
-              <label for="specifications">Especificacion</label>
-              <textarea name="specifications" class="label-form" rows="3" value=""></textarea>
-            </div>
-            <div class="campo-info">
-              <input name="brand" type="text" required>
-              <label class="label-form" for="brand">Ingresa la marca del producto
-              </label>
-            </div>
-            <div class="campo-info">
-              <input name="warranty" type="text" required>
-              <label class="label-form" for="warranty">Ingresa la garantia del producto
-              </label>
-            </div>
-            <div class="campo-info">
-              <input name="price" type="text" required>
-              <label class="label-form" for="price">Ingresa el Precio del Producto</label>
-            </div>
-            <div class="campo-info">
-              <input name="discount" type="text" required>
-              <label class="label-form" for="discount">Ingresa el descuento</label>
-            </div>
-            <div class="campo-info">
-              <input name="stock" type="text" required>
-              <label class="label-form" for="stock">Ingresa el Stock</label>
-            </div>
+  <main class="main-crear-producto">
+    <section class="container">
+      <form  id="" class="form-register" action="/edit/<%=idFound.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <fieldset>
+          <h2 class="form-title">Editar Producto</h2>
+          <div class="campo-info">
+            <input name="title" type="text" required value="<%=idFound.title %>">
+            <label class="label-form" for="title">Ingrese el Titulo
+            </label>
+          </div>
+          <div class="campo-info campo-info-descripcion">
+            <label for="specifications">Especificacion</label>
+            <textarea name="specifications" class="label-form" rows="3" value=""><%= idFound.specifications%></textarea>
+          </div>
+          <div class="campo-info">
+            <input name="brand" type="text" required value="<%= idFound.id_brand %> " >
+            <label class="label-form" for="brand">Ingresa la marca del producto
+            </label>
+          </div>
+          <div class="campo-info">
+            <input name="warranty" type="text" required value="<%= idFound.warranty %>">
+            <label class="label-form" for="warranty">Ingresa la garantia del producto
+            </label>
+          </div>
+          <div class="campo-info">
+            <input name="price" type="text" required value=" <%= idFound.price%>">
+            <label class="label-form" for="price">Ingresa el Precio del Producto</label>
+          </div>
+          <div class="campo-info">
+            <input name="discount" type="text" required value="<%= idFound.discount%>">
+            <label class="label-form" for="discount">Ingresa el descuento</label>
+          </div>
+          <div class="campo-info">
+            <input name="stock" type="text" required value="<%= idFound.stock%>">
+            <label class="label-form" for="stock">Ingresa el Stock</label>
+          </div>
+          
+          <div class="campo-info">
+            <input name="category" type="text" required value="<%= idFound.id_category%>">
+            <label class="label-form" for="category">Ingresa el Category</label>
             
-            <div class="campo-info">
-              <input name="category" type="text" required>
-              <label class="label-form" for="category">Ingresa el Category</label>
-              
-            </div>
-            <div class="campo-info campo-info-categoria">
-              <label for="">Subir Imagen</label>
-              <input name="img" class="" type="file" id="">
-    
-            </div>
-            <div class="campo-info campo-info-descripcion">
-              <label for="description">Descripcion Producto</label>
-              <textarea name="description" class="label-form" rows="3" value=""></textarea>
-            </div>
-    
-    
-            <div class="campo-info">
-              <button type="submit" class="btn" id="">Crear producto</button>
-              <button type="submit" class="btn" id="button-eliminar-producto">Editar Producto</button>
-            </div>
-    
-        </form>
-      </section>
-    </main>
+          </div>
+          <div class="campo-info campo-info-categoria">
+            <label for="">Subir Imagen</label>
+            <input name="image" class="" type="file" id="">
+  
+          </div>
+          <div class="campo-info campo-info-descripcion">
+            <label for="description">Descripcion Producto</label>
+            <textarea name="description" class="label-form" rows="3" value=""><%= idFound.description%></textarea>
+          </div>
+          <input class="btn" type="submit" value="Confirmar cambios" />
+  
+          <!-- <div class="campo-info">
+            <button type="submit" class="btn" id="">Crear producto</button> 
+            <button type="submit" class="btn" id="button-eliminar-producto" value="Confirmar cambios">Editar Producto</button>
+          </div> -->
+        </Fieldset>
+      </form>
+    </section>
+  </main>
   
 
     <!-- FOOTER -->
