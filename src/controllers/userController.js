@@ -40,30 +40,6 @@ const controller = {
     })
   },
   storeUser: (req, res) => {
-    /*
-    const existingUser = users.find(user => user.email === req.body.email);
-    if (existingUser) {
-      return res.render('register', {
-        errors: {
-            email: {
-                msg: 'Este email ya está registrado'
-            }
-        },
-        old: req.body,
-        title: 'Crear Cuenta'
-      });
-    }*/
-    if (req.body.password !== req.body.passwordConfirmation) {
-      return res.render('register', {
-          errors: {
-            passwordConfirmation: {
-                  msg: 'Las contraseñas no coinciden'
-              }
-          },
-          old: req.body,
-          title: 'Crear Cuenta'
-      });
-    }
     const passHash = hashSync( req.body.password, 10 );
 /*
     const newUser = {

@@ -34,7 +34,7 @@
           <% } %>
         </div>
         <div class="campo-info">
-          <input type="text" name="telefono" pattern="[0-9]*" value="<%= ( locals.old && old.telefono ) ? old.telefono : ''  %>"/>
+          <input type="number" name="telefono" value="<%= ( locals.old && old.telefono ) ? old.telefono : ''  %>"/>
           <label class="label-form" for="telefono">Ingresa tu nro de celular</label>
           <% if( locals.errors && errors.telefono ){ %>
             <p> <%= errors.telefono.msg %> </p>
@@ -42,10 +42,13 @@
         </div>
         <div class="campo-info campo-info-categoria">
           <label for="">Subir Imagen</label>
+          <% if( locals.errors && errors.img ){ %>
+            <p> <%= errors.img.msg %> </p>
+          <% } %>
           <input name="img" class="" type="file" id="">
         </div>
         <div class="campo-info">
-          <input type="password" name="password"/>
+          <input type="password" name="password" value="<%= ( locals.old && old.password ) ? old.password : ''  %>"/>
           <label class="label-form" for="constraseña">Ingresa tu contraseña</label>
           <% if( locals.errors && errors.password ){ %>
             <p> <%= errors.password.msg %> </p>
