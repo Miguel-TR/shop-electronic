@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('partials/head.ejs') %>
+
+<body>
+    <!-- HEADER -->
+    <%- include('partials/headerUser.ejs',{user}) %>
+    <main class="list">
+        <h3>Listado de usuarios</h3>
+            <ul>
+                <li class="list-li">
+                    <div class="list-user-details">
+                        <div class="div-list-user-details">Apellido y Nombre</div>
+                        <div class="div-list-user-details">Rango</div>
+                    </div>
+                    <div class="list-user-buttons"></div> 
+                </li>
+                <% for (let i=0;i < users.length; i++){ %>
+                    <li class="list-li">  
+                        <div class="list-user-details">
+                            <div class="div-list-user-details">
+                                <%=users[i].lastName%> <%=users[i].firstName%> 
+                            </div>
+                            <div class="div-list-user-details">
+                                <%=users[i].rol%>
+                            </div>
+                        </div>
+                        <div class="list-user-buttons">
+                            <% if (users[i].rol == 1) { %>
+                                <form action="/userListUp/<%= users[i].id %>?_method=PUT" method="POST">
+                                    <button type="submit" class="button-up">Subir rango</button>
+                                </form>
+                            <% } else if (users[i].rol == 2) { %>
+                                <form action="/userListUp/<%= users[i].id %>?_method=PUT" method="POST">
+                                    <button type="submit" class="button-up">Subir rango</button>
+                                </form>
+                                <form action="/userListDown/<%= users[i].id %>?_method=PUT" method="POST">
+                                    <button type="submit" class="button-down">Bajar rango</button>
+                                </form>
+                            <% } else if (users[i].rol == 3) { %>
+                                <form action="/userListDown/<%= users[i].id %>?_method=PUT" method="POST">
+                                    <button type="submit" class="button-down">Bajar rango</button>
+                                </form>
+                            <% } %>
+                        </div>
+                    </li>
+                <% } %>
+            </ul>
+    </main>
+
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs') %>
+</body>
+
+</html>

@@ -160,13 +160,13 @@ const controller = {
     });
   },
   renderEdit: (req, res) => {
-    db.User.findByPk(req.params.id)
+    db.User.findByPk(req.session.userLogin.id)
         .then(function(user) {
           res.render("edit-user", { title: 'Editar perfil', user: user });
         })
   },
   renderDetail: (req, res) => {
-    db.User.findByPk(req.params.id)
+    db.User.findByPk(req.session.userLogin.id)
         .then(function(user) {
           res.render("userDetail", { title: 'Perfil', user: user });
         })
@@ -183,14 +183,14 @@ const controller = {
     }
     db.User.update(updateData,{
       where: {
-        id: req.params.id
+        id: req.session.userLogin.id
       }
     })
-    .then(() => res.redirect("/userDetail/"+ req.params.id))
+    .then(() => res.redirect("/userDetail/"))
 
   },
   renderEditPass: (req, res) => {
-    db.User.findByPk(req.params.id)
+    db.User.findByPk(req.session.userLogin.id)
         .then(function(user) {
           res.render("edit-user-pass", { title: 'Cambiar contraseña', user: user });
         })
@@ -200,10 +200,39 @@ const controller = {
       password_user: hashSync( req.body.passwordNew, 10 )
     },{
       where: {
+        id: req.session.userLogin.id
+      }
+    })
+    .then(() => res.redirect("/userDetail/"))
+  },
+  renderList: (req, res) => {
+    db.User.findByPk(req.session.userLogin.id)
+        .then(function(user) {
+          db.User.findAll()
+            .then(function(users) {
+              res.render("listUser", { title: 'Usuarios', user: user ,users: users});
+            })
+        })
+  },  
+  renderListUpdateUp: (req,res) => {
+    db.User.increment({
+      rol: 1
+    },{
+      where: {
         id: req.params.id
       }
     })
-    .then(() => res.redirect("/userDetail/"+ req.params.id))
+    .then(() => res.redirect("/userList/"))
+  },
+  renderListUpdateDown: (req,res) => {
+    db.User.increment({
+      rol: -1
+    },{
+      where: {
+        id: req.params.id
+      }
+    })
+    .then(() => res.redirect("/userList/"))
   }
 }
 module.exports = controller;
