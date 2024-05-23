@@ -33,21 +33,6 @@ section {
     font-size: 3rem;
 }
 
-.btn {
-    display: inline-block;
-    margin-top: 1rem;
-    border-radius: 5rem;
-    background: var(--blue);
-    color: #fff;
-    padding: .9rem 3.5rem;
-    cursor: pointer;
-    font-size: 1.7rem;
-}
-
-.btn:hover {
-    background: #000000;
-}
-
 .about .row {
     display: flex;
     align-items: center;
@@ -92,11 +77,6 @@ section {
     flex: 1 1 25rem;
 }
 
-.icons-container .icons img {
-    height: 5rem;
-    margin-right: 2rem;
-}
-
 .icons-container .icons h3 {
     color: var(--blue);
     padding-bottom: .5rem;
@@ -108,44 +88,75 @@ section {
     font-size: 1.3rem;
 }
 
-.contact .row {
+/* Estilo para la sección de miembros */
+.members {
     display: flex;
-    flex-wrap: wrap-reverse;
-    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilo para la información dentro de un cuadro */
+.members .info {
+    border: 2px solid dodgerblue;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-.contact .row form {
-    flex: 1 1 40rem;
-    padding: 2rem 2.5rem;
-    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
-    border: .1rem solid rgba(0, 0, 0, .1);
-    background: #fff;
-    border-radius: .5rem;
-}
-
-.contact .row .image {
-    flex: 1 1 40rem;
-}
-
-.contact .row .image img {
-    width: 100%;
-}
-
-.contact .row form .box {
-    padding: 1rem;
-    font-size: 1.7rem;
+/* Estilo para el título */
+.members .info h3 {
+    margin: 0;
+    font-size: 1.3em;
     color: var(--blue);
-    text-transform: none;
-    border: .1rem solid rgba(0, 0, 0, .1);
-    border-radius: .5rem;
-    margin: .7rem 0;
-    width: 100%;
+    flex-grow: 0;
 }
 
-.contact .row form textarea {
-    height: 15rem;
-    resize: none;
+/* Estilo para el span */
+.members .info span {
+    display: block;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #555;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.info a{
+    width: 35px;
+    height: 35px;
+    text-decoration: none;
+    text-align: center;
+    margin-right: 15px;
+    border-radius: 5px;
+    background-color: dodgerblue;
+    transition: 0.4s;
+}
+.info a i{
+    color: #ddd;
+    font-size: 18px;
+    line-height: 35px;
+    border: 1px solid transparent;
+    transition-delay: 0.4s;
+}
+.info a:hover{
+    transform: translateY(-5px);
+    background-color: #2e2e2e;
+    color: dodgerblue;
+    border: 1px solid dodgerblue;
+}
+.info a:hover i{
+    color: dodgerblue;
 }
 
 /* media queries */
