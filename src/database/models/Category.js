@@ -8,14 +8,14 @@ module.exports = (sequelize, dataType) => {
           primaryKey: true,
           autoIncrement: true
       },
-      name:{
+      nombre:{
           type: dataType.STRING(50),
           allowNull: false
       }
   };
 
   let config = {
-      tableName: 'categories',
+      tableName: 'categorys',
       timestamps: false
   };
 
