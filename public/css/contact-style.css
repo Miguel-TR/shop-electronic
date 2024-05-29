@@ -38,7 +38,6 @@ div .container .row {
 section.left .contactTitle h2 {
     position: relative;
     font-size: 28px;
-    color: #ddd;
     display: inline-block;
     margin-bottom: 25px;
 }
@@ -65,7 +64,6 @@ section.left .contactTitle h2::after {
 
 section.left .contactTitle p {
     font-size: 17px;
-    color: #ccc;
     letter-spacing: 1px;
     line-height: 1, 2;
     padding-bottom: 22px;
@@ -92,7 +90,6 @@ section.left .contactInfo {
 
 .iconGroup .icon i {
     font-size: 20px;
-    color: #ddd;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -101,13 +98,11 @@ section.left .contactInfo {
 
 .iconGroup .details span {
     display: block;
-    color: #888;
     font-size: 18px;
 }
 
 .iconGroup .details span:nth-child(1) {
     text-transform: uppercase;
-    color: #ccc;
 }
 
 section.left .socialMedia {
@@ -148,7 +143,6 @@ section.left .socialMedia {
     color: dodgerblue;
 }
 
-
 .row section.right .messageForm {
     display: flex;
     justify-content: space-between;
@@ -174,10 +168,9 @@ section.left .socialMedia {
     width: 100%;
     font-size: 18px;
     padding: 2px 0px;
-    background-color: #2e2e2e;
     color: #ddd;
     border: none;
-    border-bottom: 2px solid #666;
+    border-bottom: 2px solid dodgerblue;
     outline: none;
 }
 

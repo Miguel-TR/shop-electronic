@@ -13,13 +13,19 @@
         <h2 class="form-title">Iniciar Sesión</h2>
         <p>¡Bienvenido de nuevo! Inicie sesión en su cuenta a continuación!</p>
         <div class="campo-info">
-          <input type="text" name="email" required />
+          <input type="text" name="email" value="<%= ( locals.old && old.email ) ? old.email : ''  %>"/>
           <label for="email" class="label-form">Ingresa tu email</label>
+          <% if( locals.errors && errors.email ){ %>
+            <p> <%= errors.email.msg %> </p>
+          <% } %>
         </div>
 
         <div class="campo-info">
-          <input type="password" name="password" required />
+          <input type="password" name="password" />
           <label for="constraseña" class="label-form">Ingresa tu constraseña</label>
+          <% if( locals.errors && errors.password ){ %>
+            <p> <%= errors.password.msg %> </p>
+          <% } %>
         </div>
         <div class="campo-info">
           <input type="checkbox" name="remember">

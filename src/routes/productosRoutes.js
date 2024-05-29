@@ -9,6 +9,8 @@ const upload = require('../middlewares/userAvatar');
 
 router.get('/', rememberUserMiddleware, productController.index)
 
+router.get('/search', productController.search);
+
 router.get('/create', rememberUserMiddleware, productController.create);
 router.post('/create', upload.single('img'), rememberUserMiddleware, productController.store);
 
