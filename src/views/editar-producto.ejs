@@ -10,61 +10,77 @@
 
   <main class="main-crear-producto">
     <section class="container">
-      <form  id="" class="form-register" action="/edit/<%=idFound.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+      <form  id="" class="form-register form-create-product" action="/edit/<%=idFound.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
         <fieldset>
-          <h2 class="form-title">Editar Producto</h2>
+          <legend class="title-form">EDITAR PRODUCTO</legend>
+          <section class="errors-create-product">
+            <ul></ul>
+          </section>
           <div class="campo-info">
-            <input name="title" type="text" required value="<%=idFound.title %>">
-            <label class="label-form" for="title">Ingrese el Titulo
-            </label>
+            <input name="title" type="text" class="name" value="<%= idFound.title %>">
+            <label class="label-form" for="title">Ingresa el nombre del producto</label>
           </div>
           <div class="campo-info campo-info-descripcion">
-            <label for="specifications">Especificacion</label>
-            <textarea name="specifications" class="label-form" rows="3" value=""><%= idFound.specifications%></textarea>
+            <label for="description">Descripción del producto</label>
+            <textarea name="description" class="label-form description" rows="3"><%= idFound.description%></textarea>
           </div>
           <div class="campo-info">
-            <input name="brand" type="text" required value="<%= idFound.id_brand %> " >
-            <label class="label-form" for="brand">Ingresa la marca del producto
-            </label>
+            <label class="label-selector" for="brand">Marca del producto</label>
+            <select name="brand" id="brand" class="brand">
+              <option value="<%= idFound.id_brand %>"><%= brandName %></option>
+              <option value="1">SAMSUNG</option>
+              <option value="2">LG</option>
+              <option value="3">HYPERX</option>
+              <option value="4">AMD</option>
+              <option value="5">INTEL</option>
+              <option value="6">GIGABYTE</option>
+              <option value="7">ASUS</option>
+              <option value="8">LENOVO</option>
+              <option value="9">ACER</option>
+              <option value="10">REDRAGON</option>
+              <option value="11">LOGITECH</option>
+              <option value="12">SONY</option>
+              <option value="13">MICROSOFT</option>
+              <option value="14">NINTENDO</option>
+            </select>
           </div>
           <div class="campo-info">
-            <input name="warranty" type="text" required value="<%= idFound.warranty %>">
-            <label class="label-form" for="warranty">Ingresa la garantia del producto
-            </label>
+            <input name="warranty" type="text" class="warranty" value="<%= idFound.warranty %>">
+            <label class="label-form" for="warranty">Ingresa la garantía</label>
           </div>
           <div class="campo-info">
-            <input name="price" type="text" required value=" <%= idFound.price%>">
-            <label class="label-form" for="price">Ingresa el Precio del Producto</label>
+            <input name="price" type="text" class="price" value=" <%= idFound.price%>">
+            <label class="label-form" for="price">Ingresa el precio</label>
           </div>
           <div class="campo-info">
-            <input name="discount" type="text" required value="<%= idFound.discount%>">
+            <input name="discount" type="text" class="discount" value="<%= idFound.discount%>">
             <label class="label-form" for="discount">Ingresa el descuento</label>
           </div>
           <div class="campo-info">
-            <input name="stock" type="text" required value="<%= idFound.stock%>">
-            <label class="label-form" for="stock">Ingresa el Stock</label>
+            <input name="stock" type="text" class="stock" value="<%= idFound.stock%>">
+            <label class="label-form" for="stock">Ingresa el stock</label>
           </div>
-          
           <div class="campo-info">
-            <input name="category" type="text" required value="<%= idFound.id_category%>">
-            <label class="label-form" for="category">Ingresa el Category</label>
-            
+            <label class="label-selector" for="category">Categoría del producto</label>
+            <select name="category" id="category" class="category">
+              <option value="<%= idFound.id_category %>"><%= categoryName %></option>
+              <option value="1">PC DESKTOP</option>
+              <option value="2">PC PORTATIL</option>
+              <option value="3">CONSOLA</option>
+              <option value="4">PERIFERICO</option>
+            </select>
           </div>
-          <div class="campo-info campo-info-categoria">
-            <label for="">Subir Imagen</label>
-            <input name="image" class="" type="file" id="">
-  
+          <div class="campo-info">
+            <label for="image" class="label-image">Subir Imagen</label>
+            <input name="image" class="input-image" type="file">
           </div>
           <div class="campo-info campo-info-descripcion">
-            <label for="description">Descripcion Producto</label>
-            <textarea name="description" class="label-form" rows="3" value=""><%= idFound.description%></textarea>
+            <label for="specifications">Especificacion</label>
+            <textarea name="specifications" class="label-form specifications" rows="3" value=""><%= idFound.specifications%></textarea>
           </div>
-          <input class="btn" type="submit" value="Confirmar cambios" />
-  
-          <!-- <div class="campo-info">
-            <button type="submit" class="btn" id="">Crear producto</button> 
-            <button type="submit" class="btn" id="button-eliminar-producto" value="Confirmar cambios">Editar Producto</button>
-          </div> -->
+          <div class="campo-info">
+            <button class="btn" type="submit">Editar producto</button>
+          </div>
         </Fieldset>
       </form>
     </section>
@@ -74,6 +90,7 @@
     <!-- FOOTER -->
     <%- include('partials/footer.ejs') %>
     
+  <script src="/js/product_validations.js"></script>
 </body>
 
 </html>

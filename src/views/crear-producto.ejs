@@ -6,70 +6,92 @@
 <body>
     <!-- HEADER -->
     <% if(user){ %>
-      <%- include('partials/headerUser.ejs',{user}) %>
+    <%- include('partials/headerUser.ejs',{user}) %>
 
-  <% }else{ %>
+    <% }else{ %>
       <%- include('partials/header.ejs') %>
-  <% } %>
+    <% } %>
 
-  <main class="main-crear-producto">
+    <main class="main-crear-producto">
+    
     <section class="container">
-      <form id="" action="" method="POST" class="form-register">
+      <form id="" action="" method="POST" class="form-register form-create-product">
         <fieldset>
-          <legend>
-            
+          <legend class="title-form">
+            CREAR PRODUCTO
           </legend>
+          <section class="errors-create-product">
+            <ul></ul>
+          </section>
           <div class="campo-info">
-            <input name="title" type="text" required>
-            <label class="label-form" for="title">Ingresa el titulo del producto
+            <input name="title" type="text" class="name" >
+            <label class="label-form" for="title">Ingresa el nombre del producto
             </label>
           </div>
           <div class="campo-info campo-info-descripcion">
-            <label for="specifications">Especificacion</label>
-            <textarea name="specifications" class="label-form" rows="3" value=""></textarea>
+            <label class="label-form" for="description">Descripción del producto</label>
+            <textarea name="description" class="label-form description" rows="3"></textarea>
           </div>
           <div class="campo-info">
-            <input name="brand" type="text" required>
-            <label class="label-form" for="brand">Ingresa la marca del producto
+            <label class="label-selector" for="brand">Marca del producto</label>
+            <select name="brand" id="brand" class="brand">
+              <option value="">SELECCIONE LA MARCA</option>
+              <option value="1">SAMSUNG</option>
+              <option value="2">LG</option>
+              <option value="3">HYPERX</option>
+              <option value="4">AMD</option>
+              <option value="5">INTEL</option>
+              <option value="6">GIGABYTE</option>
+              <option value="7">ASUS</option>
+              <option value="8">LENOVO</option>
+              <option value="9">ACER</option>
+              <option value="10">REDRAGON</option>
+              <option value="11">LOGITECH</option>
+              <option value="12">SONY</option>
+              <option value="13">MICROSOFT</option>
+              <option value="14">NINTENDO</option>
+            </select>
+          </div>
+          <div class="campo-info">
+            <input name="warranty" type="text" class="warranty" >
+            <label class="label-form" for="warranty">Ingresa la garantia
             </label>
           </div>
           <div class="campo-info">
-            <input name="warranty" type="text" required>
-            <label class="label-form" for="warranty">Ingresa la garantia del producto
-            </label>
+            <input name="price" type="text" class="price" >
+            <label class="label-form" for="price">Ingresa el precio</label>
           </div>
           <div class="campo-info">
-            <input name="price" type="text" required>
-            <label class="label-form" for="price">Ingresa el Precio del Producto</label>
-          </div>
-          <div class="campo-info">
-            <input name="discount" type="text" required>
+            <input name="discount" type="text" class="discount" >
             <label class="label-form" for="discount">Ingresa el descuento</label>
           </div>
           <div class="campo-info">
-            <input name="stock" type="text" required>
-            <label class="label-form" for="stock">Ingresa el Stock</label>
+            <input name="stock" type="text" class="stock" >
+            <label class="label-form" for="stock">Ingresa el stock</label>
           </div>
           
           <div class="campo-info">
-            <input name="category" type="text" required>
-            <label class="label-form" for="category">Ingresa el Category</label>
-            
+            <label class="label-selector" for="category">Categoría del producto</label>
+            <select name="category" id="category" class="category">
+              <option value="">SELECCIONE LA CATEGORÍA</option>
+              <option value="1">PC DESKTOP</option>
+              <option value="2">PC PORTATIL</option>
+              <option value="3">CONSOLA</option>
+              <option value="4">PERIFERICO</option>
+            </select>
           </div>
-          <div class="campo-info campo-info-categoria">
-            <label for="">Subir Imagen</label>
-            <input name="image" class="" type="file" id="">
+          <div class="campo-info">
+            <label for="image" class="label-image">Subir Imagen</label>
+            <input name="image" class="input-image" type="file">
   
           </div>
-          <div class="campo-info campo-info-descripcion">
-            <label for="description">Descripcion Producto</label>
-            <textarea name="description" class="label-form" rows="3" value=""></textarea>
+          <div class="campo-info campo-info-specifications">
+            <label class="label-form" for="specifications">Especificaciones</label>
+            <textarea name="specifications" class="label-form specifications" rows="3" value=""></textarea>
           </div>
-  
   
           <div class="campo-info">
-            <button type="submit" class="btn" id="">Crear producto</button>
-            <button type="submit" class="btn" id="button-eliminar-producto">Editar Producto</button>
+            <button type="submit" class="btn">Crear producto</button>
           </div>
   
       </form>
@@ -80,6 +102,7 @@
     <!-- FOOTER -->
     <%- include('partials/footer.ejs') %>
     
+    <script src="/js/product_validations.js"></script>
 </body>
 
 </html>

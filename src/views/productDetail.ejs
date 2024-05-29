@@ -14,12 +14,12 @@
                 <h2>$<%= products.price %></h2>
                 <div class="condiciones-de-compra-true">
                     <i class="fas fa-shield-alt"></i>
-                    <H3>Garantia <%= products.warranty %></H3>
+                    <H3>Garantia <%= products.warranty %> meses</H3>
                 </div>
-                <% if (products.stock) { %>
+                <% if (products.stock > 0) { %>
                 <div class="condiciones-de-compra-true">
                     <i class="fas fa-check-square"></i>
-                    <h3>Stock</h3>
+                    <h3>Stock disponible</h3>
                 </div>
                 <% } else { %>
                 <div class="condiciones-de-compra-false">
@@ -28,7 +28,7 @@
                 </div>
                 <% } %>
 
-                <% if (products.shipping) { %>
+                <!-- <% if (products.shipping) { %>
                 <div class="condiciones-de-compra-true">
                     <i class="fas fa-truck"></i>
                     <h3>Envio</h3>
@@ -38,7 +38,7 @@
                         <i class="fas fa-truck"></i>
                         <h3>Sin envio</h3>
                     </div>                
-                <% } %>
+                <% } %> -->
                 <div>
                     <div class="div-admin">
                         <a href="/edit/<%=products.id%>" class="action-button-edit">EDITAR PRODUCTO</a>

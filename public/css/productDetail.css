@@ -92,7 +92,7 @@
     align-items: center;
 }
 
-.main-detail i {
+.main-detail i .fas {
     width: 15%;
     font-size: 2rem;
     text-align: center;
@@ -131,10 +131,12 @@
     border: 1px solid transparent;
     width: 100%;
 }
+
 .div-admin form {
     margin: 5px 0px;
     width: 100%;
 }
+
 .action-button-delete {
     color: #fff;
     font-size: 1.2rem;
@@ -145,13 +147,15 @@
     border: 1px solid transparent;
     margin: 5px 0px;
 }
+
 .action-button-edit {
     color: #000;
     border-radius: 10px;
     padding: 15px;
     border: 1px solid #000;
-    text-align: center; 
+    text-align: center;
 }
+
 .action-button-edit:hover {
     color: #215FFF;
     border: 1px solid #215FFF;
@@ -167,15 +171,18 @@
     .campo-detalle {
         max-width: 700px;
     }
+
     .div-admin {
         display: flex;
         align-items: center;
         margin: 10px 0px;
     }
+
     .div-admin form {
         width: 50%;
         margin: 0;
     }
+
     .action-button-edit {
         width: 50%;
         margin: 0 10px 0 0;

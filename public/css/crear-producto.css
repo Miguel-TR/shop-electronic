@@ -14,6 +14,13 @@
   font-size: 17px;
 }
 
+.title-form {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 .form-register {
   display: flex;
   flex-direction: column;
@@ -22,6 +29,11 @@
   text-align: center;
   margin: auto;
 
+}
+
+.errors-create-product {
+  color: red;
+  text-align: left;
 }
 
 .form-register fieldset {
@@ -35,13 +47,13 @@
 }
 
 .campo-info label {
-  color: gray;
+  color: #3498db;
   font-size: 15px;
   font-weight: bold;
   position: absolute;
   text-align: left;
   pointer-events: none;
-  left: 10px;
+  left: 0px;
   top: 25%;
   transition: .3s;
 }
@@ -67,6 +79,7 @@
 
 .campo-info-descripcion label {
   position: relative;
+  left: 0px;
 }
 
 .campo-info-categoria label {
@@ -77,6 +90,18 @@
   width: 40%;
 }
 
+.campo-info-specifications textarea {
+  height: 100px;
+  border: 2px solid gray;
+  padding: 10px;
+  outline: none;
+  width: 100%;
+}
+
+.campo-info-specifications label {
+  position: relative;
+}
+
 
 .campo-info input {
   height: 30px;
@@ -85,6 +110,29 @@
   outline: none;
   width: 100%;
 
+}
+
+.campo-info .label-selector {
+  top: -60%;
+}
+
+.campo-info select {
+  height: 30px;
+  border-bottom: 2px solid gray;
+  outline: none;
+  width: 100%;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+
+}
+
+.campo-info .label-image {
+  top: -10px;
+}
+
+.campo-info .input-image {
+  height: 35px;
 }
 
 .campo-info-categoria input {
