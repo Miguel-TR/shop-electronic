@@ -152,6 +152,10 @@
 
 }
 
+.campo-info .btn {
+  margin: auto;
+}
+
 .btn {
   margin: 20px;
   padding: 10px;

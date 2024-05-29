@@ -1,12 +1,10 @@
-
 const express = require('express');
 const router = express.Router();
 
-const homeController = require('../controllers/homeController');
+let productController = require('../controllers/productController');
+const rememberUserMiddleware = require('../middlewares/rememberUserMiddleware');
 
-//mostramos todos los productos para el 'home'
-//router.get('/', homeController.index);
+router.get('/', rememberUserMiddleware, productController.index)
 
-//router.get('/search', homeController.search);
 
 module.exports = router;

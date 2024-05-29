@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-04-2024 a las 17:31:56
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Tiempo de generación: 30-05-2024 a las 01:35:02
+-- Versión del servidor: 10.4.24-MariaDB
+-- Versión de PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `shop_electronic`
 --
-CREATE DATABASE IF NOT EXISTS `shop_electronic` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `shop_electronic`;
 
 -- --------------------------------------------------------
 
@@ -31,14 +29,14 @@ USE `shop_electronic`;
 
 CREATE TABLE `brands` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `name` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `brands`
 --
 
-INSERT INTO `brands` (`id`, `nombre`) VALUES
+INSERT INTO `brands` (`id`, `name`) VALUES
 (9, 'ACER'),
 (4, 'AMD'),
 (7, 'ASUS'),
@@ -48,25 +46,28 @@ INSERT INTO `brands` (`id`, `nombre`) VALUES
 (8, 'LENOVO'),
 (2, 'LG'),
 (11, 'LOGITECH'),
+(13, 'MICROSOFT'),
+(14, 'NINTENDO'),
 (10, 'REDRAGON'),
-(1, 'SAMSUNG');
+(1, 'SAMSUNG'),
+(12, 'SONY');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `categorys`
+-- Estructura de tabla para la tabla `categories`
 --
 
-CREATE TABLE `categorys` (
+CREATE TABLE `categories` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `name` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `categorys`
+-- Volcado de datos para la tabla `categories`
 --
 
-INSERT INTO `categorys` (`id`, `nombre`) VALUES
+INSERT INTO `categories` (`id`, `name`) VALUES
 (3, 'CONSOLA'),
 (1, 'PC DE ESCRITORIO'),
 (2, 'PC PORTATIL'),
@@ -90,7 +91,16 @@ CREATE TABLE `products` (
   `specifications` text DEFAULT NULL,
   `id_brand` int(11) DEFAULT NULL,
   `id_category` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `products`
+--
+
+INSERT INTO `products` (`id`, `title`, `image`, `description`, `price`, `discount`, `warranty`, `stock`, `specifications`, `id_brand`, `id_category`) VALUES
+(27, 'monitor gamer', 'monitorGamer-3.jpg', 'el mejor monitor para jugar en alta resolucion', 800000, 15, 6, 20, '22 pulgadas\r\nfull hd\r\nled', 2, 4),
+(28, 'notebook lenovo', 'NotebookLenovo-1.jpg', 'alta notebook para jugar y hacer otras cositas. xD', 1500000, 5, 12, 20, 'micro core i5\r\nalmacenamiento 1 tb\r\nram 16gb\r\ngrafica gtx 1650', 8, 2),
+(31, 'auriculares Hiperx', 'auricularesHyperX-1.jpg', 'auriculares con el mejor sonido', 35000, 10, 6, 15, 'cable 2 metros\r\npeso 150 gramos\r\nUSB', 3, 4);
 
 -- --------------------------------------------------------
 
@@ -103,7 +113,7 @@ CREATE TABLE `selections` (
   `id_product` int(11) DEFAULT NULL,
   `id_shopping_cart` int(11) DEFAULT NULL,
   `units` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -114,7 +124,7 @@ CREATE TABLE `selections` (
 CREATE TABLE `shopping_carts` (
   `id` int(11) NOT NULL,
   `id_user` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -131,7 +141,7 @@ CREATE TABLE `users` (
   `password_user` varchar(70) NOT NULL,
   `rol` varchar(30) DEFAULT NULL,
   `avatar` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `users`
@@ -150,14 +160,14 @@ INSERT INTO `users` (`id`, `firstname`, `lastname`, `phone`, `email`, `password_
 --
 ALTER TABLE `brands`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `nombre` (`nombre`);
+  ADD UNIQUE KEY `nombre` (`name`);
 
 --
--- Indices de la tabla `categorys`
+-- Indices de la tabla `categories`
 --
-ALTER TABLE `categorys`
+ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `nombre` (`nombre`);
+  ADD UNIQUE KEY `nombre` (`name`);
 
 --
 -- Indices de la tabla `products`
@@ -199,19 +209,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `brands`
 --
 ALTER TABLE `brands`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT de la tabla `categorys`
+-- AUTO_INCREMENT de la tabla `categories`
 --
-ALTER TABLE `categorys`
+ALTER TABLE `categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT de la tabla `selections`
@@ -240,7 +250,7 @@ ALTER TABLE `users`
 --
 ALTER TABLE `products`
   ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`id_brand`) REFERENCES `brands` (`id`),
-  ADD CONSTRAINT `products_ibfk_2` FOREIGN KEY (`id_category`) REFERENCES `categorys` (`id`);
+  ADD CONSTRAINT `products_ibfk_2` FOREIGN KEY (`id_category`) REFERENCES `categories` (`id`);
 
 --
 -- Filtros para la tabla `selections`

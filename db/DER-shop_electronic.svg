@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg
+PUBLIC "-//W3C//DTD SVG 1.1//EN"
+       "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg viewBox="140 12 951 464" width="811px" height="452px" xmlns="http://www.w3.org/2000/svg" version="1.1">
+   <line x1="484" y1="237" x2="474" y2="237" style="stroke:#b0b;stroke-width:1;"/>
+   <line x1="223" y1="61" x2="213" y2="61" style="stroke:#b0b;stroke-width:1;"/>
+   <line x1="474" y1="237" x2="223" y2="61" style="stroke:#b0b;stroke-width:1;"/>
+   <line x1="476.5" y1="237" x2="480.03553390593" y2="240.53553390593" style="stroke:#b0b;stroke-width:2;"/>
+   <line x1="476.5" y1="237" x2="480.03553390593" y2="233.46446609407" style="stroke:#b0b;stroke-width:2;"/>
+   <line x1="218" y1="61" x2="221.53553390593" y2="64.535533905933" style="stroke:#b0b;stroke-width:2;"/>
+   <line x1="218" y1="61" x2="221.53553390593" y2="57.464466094067" style="stroke:#b0b;stroke-width:2;"/>
+   <line x1="484" y1="257" x2="474" y2="257" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="250" y1="177" x2="240" y2="177" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="474" y1="257" x2="250" y2="177" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="476.5" y1="257" x2="480.03553390593" y2="260.53553390593" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="476.5" y1="257" x2="480.03553390593" y2="253.46446609407" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="245" y1="177" x2="248.53553390593" y2="180.53553390593" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="245" y1="177" x2="248.53553390593" y2="173.46446609407" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="812" y1="166" x2="802" y2="166" style="stroke:#0b0;stroke-width:1;"/>
+   <line x1="600" y1="57" x2="590" y2="57" style="stroke:#0b0;stroke-width:1;"/>
+   <line x1="802" y1="166" x2="600" y2="57" style="stroke:#0b0;stroke-width:1;"/>
+   <line x1="804.5" y1="166" x2="808.03553390593" y2="169.53553390593" style="stroke:#0b0;stroke-width:2;"/>
+   <line x1="804.5" y1="166" x2="808.03553390593" y2="162.46446609407" style="stroke:#0b0;stroke-width:2;"/>
+   <line x1="595" y1="57" x2="598.53553390593" y2="60.535533905933" style="stroke:#0b0;stroke-width:2;"/>
+   <line x1="595" y1="57" x2="598.53553390593" y2="53.464466094067" style="stroke:#0b0;stroke-width:2;"/>
+   <line x1="812" y1="186" x2="802" y2="186" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="605" y1="419" x2="595" y2="419" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="802" y1="186" x2="605" y2="419" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="804.5" y1="186" x2="808.03553390593" y2="189.53553390593" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="804.5" y1="186" x2="808.03553390593" y2="182.46446609407" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="600" y1="419" x2="603.53553390593" y2="422.53553390593" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="600" y1="419" x2="603.53553390593" y2="415.46446609407" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="481" y1="439" x2="471" y2="439" style="stroke:#333;stroke-width:1;"/>
+   <line x1="288" y1="292" x2="278" y2="292" style="stroke:#333;stroke-width:1;"/>
+   <line x1="471" y1="439" x2="288" y2="292" style="stroke:#333;stroke-width:1;"/>
+   <line x1="473.5" y1="439" x2="477.03553390593" y2="442.53553390593" style="stroke:#333;stroke-width:2;"/>
+   <line x1="473.5" y1="439" x2="477.03553390593" y2="435.46446609407" style="stroke:#333;stroke-width:2;"/>
+   <line x1="283" y1="292" x2="286.53553390593" y2="295.53553390593" style="stroke:#333;stroke-width:2;"/>
+   <line x1="283" y1="292" x2="286.53553390593" y2="288.46446609407" style="stroke:#333;stroke-width:2;"/>
+   <rect width="57" height="20" x="156" y="31" style="fill:#007;stroke:black;"/>
+   <text width="57" height="20" x="161" y="45" style="fill:#fff;" font-family="Arial" font-size="16px"> brands</text>
+   <rect width="57" height="20" x="156" y="51" style="fill:#aea;stroke:black;"/>
+   <text width="57" height="20" x="161" y="65" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="57" height="20" x="156" y="71" style="fill:none;stroke:black;"/>
+   <text width="57" height="20" x="161" y="85" style="fill:black;" font-family="Arial" font-size="16px">name</text>
+   <rect width="85" height="20" x="155" y="147" style="fill:#007;stroke:black;"/>
+   <text width="85" height="20" x="160" y="161" style="fill:#fff;" font-family="Arial" font-size="16px"> categories</text>
+   <rect width="85" height="20" x="155" y="167" style="fill:#aea;stroke:black;"/>
+   <text width="85" height="20" x="160" y="181" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="85" height="20" x="155" y="187" style="fill:none;stroke:black;"/>
+   <text width="85" height="20" x="160" y="201" style="fill:black;" font-family="Arial" font-size="16px">name</text>
+   <rect width="106" height="20" x="484" y="27" style="fill:#007;stroke:black;"/>
+   <text width="106" height="20" x="489" y="41" style="fill:#fff;" font-family="Arial" font-size="16px"> products</text>
+   <rect width="106" height="20" x="484" y="47" style="fill:#aea;stroke:black;"/>
+   <text width="106" height="20" x="489" y="61" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="106" height="20" x="484" y="67" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="489" y="81" style="fill:black;" font-family="Arial" font-size="16px">title</text>
+   <rect width="106" height="20" x="484" y="87" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="489" y="101" style="fill:black;" font-family="Arial" font-size="16px">image</text>
+   <rect width="106" height="20" x="484" y="107" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="489" y="121" style="fill:black;" font-family="Arial" font-size="16px">description</text>
+   <rect width="106" height="20" x="484" y="127" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="489" y="141" style="fill:black;" font-family="Arial" font-size="16px">price</text>
+   <rect width="106" height="20" x="484" y="147" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="489" y="161" style="fill:black;" font-family="Arial" font-size="16px">discount</text>
+   <rect width="106" height="20" x="484" y="167" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="489" y="181" style="fill:black;" font-family="Arial" font-size="16px">warranty</text>
+   <rect width="106" height="20" x="484" y="187" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="489" y="201" style="fill:black;" font-family="Arial" font-size="16px">stock</text>
+   <rect width="106" height="20" x="484" y="207" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="489" y="221" style="fill:black;" font-family="Arial" font-size="16px">specifications</text>
+   <rect width="106" height="20" x="484" y="227" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="489" y="241" style="fill:black;" font-family="Arial" font-size="16px">id_brand</text>
+   <rect width="106" height="20" x="484" y="247" style="fill:none;stroke:black;"/>
+   <text width="106" height="20" x="489" y="261" style="fill:black;" font-family="Arial" font-size="16px">id_category</text>
+   <rect width="124" height="20" x="812" y="116" style="fill:#007;stroke:black;"/>
+   <text width="124" height="20" x="817" y="130" style="fill:#fff;" font-family="Arial" font-size="16px"> selections</text>
+   <rect width="124" height="20" x="812" y="136" style="fill:#aea;stroke:black;"/>
+   <text width="124" height="20" x="817" y="150" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="124" height="20" x="812" y="156" style="fill:none;stroke:black;"/>
+   <text width="124" height="20" x="817" y="170" style="fill:black;" font-family="Arial" font-size="16px">id_product</text>
+   <rect width="124" height="20" x="812" y="176" style="fill:none;stroke:black;"/>
+   <text width="124" height="20" x="817" y="190" style="fill:black;" font-family="Arial" font-size="16px">id_shopping_cart</text>
+   <rect width="124" height="20" x="812" y="196" style="fill:none;stroke:black;"/>
+   <text width="124" height="20" x="817" y="210" style="fill:black;" font-family="Arial" font-size="16px">units</text>
+   <rect width="114" height="20" x="481" y="389" style="fill:#007;stroke:black;"/>
+   <text width="114" height="20" x="486" y="403" style="fill:#fff;" font-family="Arial" font-size="16px"> shopping_carts</text>
+   <rect width="114" height="20" x="481" y="409" style="fill:#aea;stroke:black;"/>
+   <text width="114" height="20" x="486" y="423" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="114" height="20" x="481" y="429" style="fill:none;stroke:black;"/>
+   <text width="114" height="20" x="486" y="443" style="fill:black;" font-family="Arial" font-size="16px">id_user</text>
+   <rect width="115" height="20" x="163" y="262" style="fill:#007;stroke:black;"/>
+   <text width="115" height="20" x="168" y="276" style="fill:#fff;" font-family="Arial" font-size="16px"> users</text>
+   <rect width="115" height="20" x="163" y="282" style="fill:#aea;stroke:black;"/>
+   <text width="115" height="20" x="168" y="296" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="115" height="20" x="163" y="302" style="fill:none;stroke:black;"/>
+   <text width="115" height="20" x="168" y="316" style="fill:black;" font-family="Arial" font-size="16px">firstname</text>
+   <rect width="115" height="20" x="163" y="322" style="fill:none;stroke:black;"/>
+   <text width="115" height="20" x="168" y="336" style="fill:black;" font-family="Arial" font-size="16px">lastname</text>
+   <rect width="115" height="20" x="163" y="342" style="fill:none;stroke:black;"/>
+   <text width="115" height="20" x="168" y="356" style="fill:black;" font-family="Arial" font-size="16px">phone</text>
+   <rect width="115" height="20" x="163" y="362" style="fill:none;stroke:black;"/>
+   <text width="115" height="20" x="168" y="376" style="fill:black;" font-family="Arial" font-size="16px">email</text>
+   <rect width="115" height="20" x="163" y="382" style="fill:none;stroke:black;"/>
+   <text width="115" height="20" x="168" y="396" style="fill:black;" font-family="Arial" font-size="16px">password_user</text>
+   <rect width="115" height="20" x="163" y="402" style="fill:none;stroke:black;"/>
+   <text width="115" height="20" x="168" y="416" style="fill:black;" font-family="Arial" font-size="16px">rol</text>
+   <rect width="115" height="20" x="163" y="422" style="fill:none;stroke:black;"/>
+   <text width="115" height="20" x="168" y="436" style="fill:black;" font-family="Arial" font-size="16px">avatar</text>
+</svg>

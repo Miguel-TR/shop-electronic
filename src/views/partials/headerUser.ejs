@@ -1,51 +1,57 @@
 <header>
-  <div class="personal">
-      <a href="/" id="logo"><img src="/images/logoMobile.png" alt="No se encontro el logo."></a>
-      <div class="buscador">
-          <input name="keywords" placeholder="BUSCAR PROCESADOR, NOTEBOOK">
-          <button><i class="fas fa-search"></i></button>
-      </div>
-      <div class="cuenta">
-          <!-- <a href="/login" id="sesion"><i class="far fa-user-circle"></i> Iniciar sesión</a> -->
-          <p><%= user.firstName %> <%= user.lastName %></p>
-          <li> <img src="/img/user.png" width='30px' height="30px" alt="user"> </li>
-          <a href="#" id="carrito"><i class="fas fa-shopping-cart"></i></a>
-          <!-- <li><a href="/logout">Cerrar Session</a></li> -->
-          <ul>
+    <div class="personal">
+        <a href="/" id="logo"><img src="/images/logoMobile.png" alt="No se encontro el logo."></a>
+        <div class="buscador">
+            <input name="keywords" placeholder="BUSCAR PROCESADOR, NOTEBOOK">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="cuenta">
+            <!-- <a href="/login" id="sesion"><i class="far fa-user-circle"></i> Iniciar sesión</a> -->
+            <p>
+                <%= user.firstName %>
+                    <%= user.lastName %>
+            </p>
+            <li> <img src="/img/user.png" width='30px' height="30px" alt="user"> </li>
+            <a href="#" id="carrito"><i class="fas fa-shopping-cart"></i></a>
+            <!-- <li><a href="/logout">Cerrar Session</a></li> -->
+            <ul>
+                <li>
+                    <form action="/user/<%= user.email %>" method="post">
+                        <input type="submit" value="Cerrar Sesion">
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="#">PC de escritorio</a></li>
+            <li><a href="#">Notebooks</a></li>
+            <li><a href="#">Perifericos</a></li>
+            <li><a href="/about">Acerca de</a></li>
+            <li><a href="/contact">Contacto</a></li>
+            <li><a href="/products/create">Crear Producto</a></li>
+        </ul>
+        <ul>
+            <!-- <li><a href="/register"><i class="far fa-address-card"></i> Registrarme</a></li> -->
+            <!-- <li><a href="/login" id="sesion"><i class="far fa-user-circle"></i> Iniciar sesión</a></li> -->
+            <li><a href="/userList/">Ver usuarios</li>
+            <li><a href="/userDetail/">
+                    <%= user.firstName %>
+                        <%= user.lastName %>
+            </li>
+            <li> <img src="/img/user/<%=user.avatar%>" width='30px' height="30px" alt="user"> </li>
+            <li><a href="#" id="carrito"><i class="fas fa-shopping-cart"></i></a></li>
+            <!-- <li><a href="/user/logout">Cerrar Session</a></li> -->
             <li>
                 <form action="/user/<%= user.email %>" method="post">
                     <input type="submit" value="Cerrar Sesion">
-                  </form>
+                </form>
             </li>
-          </ul>
-      </div>
-  </div>
-  <nav>
-      <ul>
-          <li><a href="/">Inicio</a></li>
-          <li><a href="#">PC de escritorio</a></li>
-          <li><a href="#">Notebooks</a></li>
-          <li><a href="#">Perifericos</a></li>
-          <li><a href="/about">Acerca de</a></li>
-          <li><a href="/contact">Contacto</a></li>
-          <li><a href="/create">Crear Producto</a></li>
-      </ul>
-      <ul>
-          <!-- <li><a href="/register"><i class="far fa-address-card"></i> Registrarme</a></li> -->
-          <!-- <li><a href="/login" id="sesion"><i class="far fa-user-circle"></i> Iniciar sesión</a></li> -->
-          <li><a href="/userList/">Ver usuarios</li>
-          <li><a href="/userDetail/"><%= user.firstName %> <%= user.lastName %></li>
-          <li> <img src="/img/user/<%=user.avatar%>" width='30px' height="30px" alt="user"> </li>
-          <li><a href="#" id="carrito"><i class="fas fa-shopping-cart"></i></a></li>
-          <!-- <li><a href="/user/logout">Cerrar Session</a></li> -->
-          <li>
-            <form action="/user/<%= user.email %>" method="post">
-                <input type="submit" value="Cerrar Sesion">
-              </form>
-          </li>
-      </ul>
-  </nav>
-  <div class="boton-desplegable">
-      <button><i class="fas fa-bars"></i></button>
-  </div>
+        </ul>
+    </nav>
+    <div class="boton-desplegable">
+        <button><i class="fas fa-bars"></i></button>
+    </div>
 </header>

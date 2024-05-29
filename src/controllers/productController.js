@@ -1,5 +1,5 @@
 //CRUD-SQL
-const db = require('../database/models/');
+const db = require('../database/models');
 const { Op, where } = require('sequelize');
 const { title } = require('process');
 const Products = db.Product;
@@ -25,22 +25,23 @@ const controller = {
 			})
 			.catch(error => res.send(error));
 	},
-	search: (req,res)=>{
+
+	search: (req, res) => {
 		Products.findAll(
-            {include:[
-                {association: 'categorys'}, 
-                {association: 'brand'}
-            ],
-            where:{title : {[Op.like]: '%' + req.query.search + '%'}} , 
-        })
- 
-         .then(products=>{
-			console.log(req.query.search)
-           res.render('home',{products:products , user:null})
-         } )      
-        .catch(error=>console.log(error));
-	  },
-	  
+			{
+				include: [
+					{ association: 'categories' },
+					{ association: 'brand' }
+				],
+				where: { title: { [Op.like]: '%' + req.query.search + '%' } },
+			})
+
+			.then(products => {
+				console.log(req.query.search)
+				res.render('home', { products: products, user: null })
+			})
+			.catch(error => console.log(error));
+	},
 
 	create: (req, res) => {
 		const user = req.session.userLogin;

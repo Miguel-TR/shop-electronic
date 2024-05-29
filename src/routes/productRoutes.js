@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 //const { renderCrearProducto } = require('../controllers/productoController');
-let productController = require('../controllers/productoController');
+let productController = require('../controllers/productController');
 const rememberUserMiddleware = require('../middlewares/rememberUserMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const upload = require('../middlewares/userAvatar');
