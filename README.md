@@ -5,6 +5,8 @@ El sitio esta destinado tanto a personas particulares como a empresas u organiza
 
 [Wireframe](https://drive.google.com/file/d/1IxKOAWwu2gQaN6vxJJ9Wl99Ox5_z_tOe/view?usp=drive_link)
 
+[Dashboard](https://github.com/IgnacioG04/AdminPanel)
+
 ## Autores
 - [@Churquina, Javier Pablo](https://github.com/javis14) : Soy de Jujuy, Argentina. Estudiante de la carrera Ingeniería Informática en la Facultad de Ingeniería de la Universidad Nacional de Jujuy. En mis ratos libres me gusta ver videos de ciencia, animales, el cosmos, y tambien ver películas. Soy fan y jugador compulsivo ocasional de Dota-2.
 - [@Ordo-ez, Leonel Omar](https://www.github.com/leo2296) : Soy estudiante de Ing. Informatica en la UNJu, vivo en Palpalá, me gusta pasar tiempo frente a la computadora y salir con amigos.
