@@ -70,31 +70,28 @@
 
             <section class="col right">
                 <!-- Inicia el formulario-->
-                <form class="messageForm">
+                <form class="messageForm" action="https://formspree.io/f/mdoqrnlq" method="POST">
                     <div class="inputGroup halfWidth">
-                        <input type="text" name="" required="required">
+                        <input type="text" name="nombre" required="required">
                         <label>Nombre</label>
                     </div>
-
                     <div class="inputGroup halfWidth">
-                        <input type="email" name="" required="required">
+                        <input type="email" name="email" required="required">
                         <label>Email</label>
                     </div>
-
+                
                     <div class="inputGroup fullWidth">
-                        <input type="text" name="" required="required">
+                        <input type="text" name="tema" required="required">
                         <label>Tema</label>
                     </div>
-
                     <div class="inputGroup fullWidth">
-                        <textarea required="required"></textarea>
+                        <textarea name="mensaje" required="required"></textarea>
                         <label>Mensaje</label>
                     </div>
-
                     <div class="inputGroup fullWidth">
-                        <button>Enviar Mensaje</button>
+                        <button type="submit">Enviar mensaje</button>
                     </div>
-                </form>
+                </form>                
                 <!--Fin del formulario-->
             </section>
 
