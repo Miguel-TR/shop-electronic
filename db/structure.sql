@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-05-2024 a las 01:35:02
+-- Tiempo de generación: 30-05-2024 a las 05:53:52
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `shop_electronic`
 --
+CREATE DATABASE IF NOT EXISTS `shop_electronic` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `shop_electronic`;
 
 -- --------------------------------------------------------
 
@@ -27,10 +29,12 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `brands`
 --
 
-CREATE TABLE `brands` (
-  `id` int(11) NOT NULL,
-  `name` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE IF NOT EXISTS `brands` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `nombre` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `brands`
@@ -58,10 +62,12 @@ INSERT INTO `brands` (`id`, `name`) VALUES
 -- Estructura de tabla para la tabla `categories`
 --
 
-CREATE TABLE `categories` (
-  `id` int(11) NOT NULL,
-  `name` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE IF NOT EXISTS `categories` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `nombre` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `categories`
@@ -79,8 +85,8 @@ INSERT INTO `categories` (`id`, `name`) VALUES
 -- Estructura de tabla para la tabla `products`
 --
 
-CREATE TABLE `products` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `products` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(50) NOT NULL,
   `image` varchar(100) NOT NULL,
   `description` varchar(200) NOT NULL,
@@ -90,8 +96,13 @@ CREATE TABLE `products` (
   `stock` int(11) DEFAULT NULL,
   `specifications` text DEFAULT NULL,
   `id_brand` int(11) DEFAULT NULL,
-  `id_category` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `id_category` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `title` (`title`),
+  UNIQUE KEY `image` (`image`),
+  KEY `id_brand` (`id_brand`),
+  KEY `id_category` (`id_category`)
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `products`
@@ -108,11 +119,14 @@ INSERT INTO `products` (`id`, `title`, `image`, `description`, `price`, `discoun
 -- Estructura de tabla para la tabla `selections`
 --
 
-CREATE TABLE `selections` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `selections` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_product` int(11) DEFAULT NULL,
   `id_shopping_cart` int(11) DEFAULT NULL,
-  `units` int(11) NOT NULL
+  `units` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id_product` (`id_product`),
+  KEY `id_shopping_cart` (`id_shopping_cart`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -121,9 +135,11 @@ CREATE TABLE `selections` (
 -- Estructura de tabla para la tabla `shopping_carts`
 --
 
-CREATE TABLE `shopping_carts` (
-  `id` int(11) NOT NULL,
-  `id_user` int(11) DEFAULT NULL
+CREATE TABLE IF NOT EXISTS `shopping_carts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_user` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id_user` (`id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -132,16 +148,18 @@ CREATE TABLE `shopping_carts` (
 -- Estructura de tabla para la tabla `users`
 --
 
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `firstname` varchar(50) NOT NULL,
   `lastname` varchar(50) NOT NULL,
   `phone` varchar(11) DEFAULT NULL,
   `email` varchar(50) NOT NULL,
   `password_user` varchar(70) NOT NULL,
   `rol` varchar(30) DEFAULT NULL,
-  `avatar` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `avatar` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `users`
@@ -149,97 +167,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `phone`, `email`, `password_user`, `rol`, `avatar`) VALUES
 (1, 'mario64', 'nintendo', '123456789', 'mario@64.com', '$2a$10$JXpvheuHhpJu6u.Es1VLnu0LbYCtAQ.O2YJqLZobZx/rS/5AnYQru', '2', 'user-1714058895807.jpg'),
-(2, 'luigi', 'nintendo', '987654321', 'luigi@64.com', '$2a$10$NLIVctJvyjoJjYTEZr3./uDn2RzOYChS3mQqLyseqHuzxsZHiyK6q', '2', 'default-image.png');
-
---
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `brands`
---
-ALTER TABLE `brands`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `nombre` (`name`);
-
---
--- Indices de la tabla `categories`
---
-ALTER TABLE `categories`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `nombre` (`name`);
-
---
--- Indices de la tabla `products`
---
-ALTER TABLE `products`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `title` (`title`),
-  ADD UNIQUE KEY `image` (`image`),
-  ADD KEY `id_brand` (`id_brand`),
-  ADD KEY `id_category` (`id_category`);
-
---
--- Indices de la tabla `selections`
---
-ALTER TABLE `selections`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_product` (`id_product`),
-  ADD KEY `id_shopping_cart` (`id_shopping_cart`);
-
---
--- Indices de la tabla `shopping_carts`
---
-ALTER TABLE `shopping_carts`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_user` (`id_user`);
-
---
--- Indices de la tabla `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email` (`email`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `brands`
---
-ALTER TABLE `brands`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
---
--- AUTO_INCREMENT de la tabla `categories`
---
-ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT de la tabla `products`
---
-ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
-
---
--- AUTO_INCREMENT de la tabla `selections`
---
-ALTER TABLE `selections`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `shopping_carts`
---
-ALTER TABLE `shopping_carts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+(2, 'luigi', 'nintendo', '987654321', 'luigi@64.com', '$2a$10$NLIVctJvyjoJjYTEZr3./uDn2RzOYChS3mQqLyseqHuzxsZHiyK6q', '1', 'default-image.png');
 
 --
 -- Restricciones para tablas volcadas
