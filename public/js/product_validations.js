@@ -6,12 +6,12 @@ window.addEventListener('load', function () {
 
         let name = document.querySelector('input.name');
         let description = document.querySelector('textarea.description');
-        let brand = document.querySelector('select.brand option');
+        let brand = document.querySelector('select.brand');
         let warranty = document.querySelector('input.warranty');
         let price = document.querySelector('input.price');
         let discount = document.querySelector('input.discount');
         let stock = document.querySelector('input.stock');
-        let category = document.querySelector('select.category option');
+        let category = document.querySelector('select.category');
         let image = document.querySelector('input.input-image');
         let allowedExtensionsImage = /(.jpg|.jpeg|.png|.gif)$/i;
         let specifications = document.querySelector('textarea.specifications');
