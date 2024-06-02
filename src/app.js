@@ -4,6 +4,7 @@ const path = require('path');
 const methodOverride = require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
+
 //const homeRoute = require('./routes/homeRoutes');
 const aboutRoute = require('./routes/aboutRoutes');
 const loginRoute = require('./routes/loginRoutes');
@@ -11,6 +12,8 @@ const productCartRoute = require('./routes/productCartRoutes');
 const productRoute = require('./routes/productRoutes');
 const userRoute = require('./routes/userRoutes');
 const contactRoute = require('./routes/contactRoutes');
+
+const productRoutesAPIs = require('./routes/api/productRoutes');
 
 // ************ express() - (don't touch) ************
 const app = express();
@@ -40,22 +43,21 @@ const homeRouter = require('./routes/homeRoutes'); // Rutas main
 
 // ROUTES
 app.use('/', homeRouter);
-
 app.use('/products', productRoute);
-
 // app.use('/', loginRoute); rutas incluidas en userRoute
-
 app.use('/', productCartRoute);
-
 app.use('/', aboutRoute);
-
 app.use('/', userRoute)
-
 app.use('/', contactRoute);
+
+// Routes APIs
+app.use('/api/products', productRoutesAPIs);
+
 
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);
 })
+
 // conexion con la base de datos 
 app.use(session({
   secret: 'secret',
