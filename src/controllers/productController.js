@@ -76,7 +76,11 @@ const controller = {
 	detail: (req, res) => {
 		Products.findByPk(req.params.id)
 			.then(function (products) {
-				res.render('productDetail', { products })
+				const user = req.session.userLogin;
+				if (user) {
+					res.render('productDetail', { products,user })
+		}
+				
 			})
 	},
 
