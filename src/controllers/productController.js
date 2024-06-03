@@ -31,7 +31,7 @@ const controller = {
 			{
 				include: [
 					{ association: 'categories' },
-					{ association: 'brand' }
+					{ association: 'brands' }
 				],
 				where: { title: { [Op.like]: '%' + req.query.search + '%' } },
 			})
@@ -123,7 +123,7 @@ const controller = {
 				id: req.params.id
 			}
 		})
-			.then(() => res.redirect('/detail/' + req.params.id))
+			.then(() => res.redirect("/detail/" + req.params.id))
 	},
 
 	destroy: (req, res) => {
