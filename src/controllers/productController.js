@@ -123,7 +123,7 @@ const controller = {
 				id: req.params.id
 			}
 		})
-			.then(() => res.redirect("/detail/" + req.params.id))
+			.then(() => res.redirect("/products/detail/" + req.params.id))
 	},
 
 	destroy: (req, res) => {
