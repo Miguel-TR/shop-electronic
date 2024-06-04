@@ -67,7 +67,7 @@ module.exports = (sequelize, dataTypes) => {
 
     // Asociación con la tabla de marcas
     Product.belongsTo(models.Brand, {
-      as: 'brand',
+      as: 'brands',
       foreignKey: 'id_brand' // La clave foránea que hace referencia a la marca en la tabla de productos
     });
   };

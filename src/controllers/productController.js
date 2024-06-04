@@ -31,7 +31,7 @@ const controller = {
 			{
 				include: [
 					{ association: 'categories' },
-					{ association: 'brand' }
+					{ association: 'brands' }
 				],
 				where: { title: { [Op.like]: '%' + req.query.search + '%' } },
 			})
@@ -77,7 +77,11 @@ const controller = {
 		const user = req.session.userLogin;
 		Products.findByPk(req.params.id)
 			.then(function (products) {
-				res.render('productDetail', { products, user })
+				const user = req.session.userLogin;
+				if (user) {
+					res.render('productDetail', { products, user })
+				}
+
 			})
 	},
 
@@ -127,7 +131,7 @@ const controller = {
 				id: req.params.id
 			}
 		})
-			.then(() => res.redirect('/detail/' + req.params.id))
+			.then(() => res.redirect("/products/detail/" + req.params.id))
 	},
 
 	destroy: (req, res) => {

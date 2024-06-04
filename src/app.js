@@ -14,6 +14,7 @@ const userRoute = require('./routes/userRoutes');
 const contactRoute = require('./routes/contactRoutes');
 
 const productRoutesAPIs = require('./routes/api/productRoutes');
+const userRoutesAPIs = require('./routes/api/userRoutes');
 
 // ************ express() - (don't touch) ************
 const app = express();
@@ -52,6 +53,7 @@ app.use('/', contactRoute);
 
 // Routes APIs
 app.use('/api/products', productRoutesAPIs);
+app.use('/api/users', userRoutesAPIs);
 
 
 app.listen(PORT, () => {

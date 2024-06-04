@@ -22,12 +22,12 @@ const controller = {
   // },
   search: (req, res) => {
     // capturar informacion de queryparams
-    const busqueda = req.query.keywords;
+    //const busqueda = req.query.keywords;
 
     //Extrar productos que matcheen con la busqueda
-    const productBuscado = products.filter((product) => product.name.toLowerCase().includes(busqueda.toLowerCase()));
+    //const productBuscado = products.filter((product) => product.name.toLowerCase().includes(busqueda.toLowerCase()));
     //Vista
-    res.render('results', { busqueda, productBuscado })
+    //res.render('results', { busqueda, productBuscado })
   },
   renderLogin: (req, res) => {
     res.render('login', {
