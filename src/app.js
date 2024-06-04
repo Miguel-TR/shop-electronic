@@ -5,6 +5,8 @@ const methodOverride = require('method-override'); // Pasar poder usar los méto
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 
+
+
 //const homeRoute = require('./routes/homeRoutes');
 const aboutRoute = require('./routes/aboutRoutes');
 const loginRoute = require('./routes/loginRoutes');
@@ -19,7 +21,8 @@ const userRoutesAPIs = require('./routes/api/userRoutes');
 // ************ express() - (don't touch) ************
 const app = express();
 const PORT = 3030;
-
+const cors = require('cors')
+app.use(cors())
 // ************ Middlewares - (don't touch) ************
 app.use(express.static(path.join(__dirname, '../public')));  // Necesario para los archivos estáticos en el folder /public
 app.use(express.urlencoded({ extended: false }));//nos permite trabajar con formularios con metodo post
