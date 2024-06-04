@@ -16,10 +16,12 @@
 
   font-size: 17px;
 }
-.main-register .form-title{
+
+.main-register .form-title {
   border: none;
   color: black;
 }
+
 .form-register {
   display: flex;
   flex-direction: column;
@@ -74,13 +76,16 @@
 
 }
 
-.btn {
-  margin: 20px;
+.btn-create-user {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 10px;
   border: none;
+  border-radius: 10px;
 }
 
-.btn:hover {
+.btn-create-user:hover {
   cursor: pointer;
   color: white;
   background-color: #3498db;
@@ -88,4 +93,8 @@
 
 .link-login:hover {
   color: #3498db;
+}
+
+.message-error {
+  color: red;
 }

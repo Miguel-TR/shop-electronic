@@ -74,13 +74,16 @@ const controller = {
 	},
 
 	detail: (req, res) => {
+		const user = req.session.userLogin;
 		Products.findByPk(req.params.id)
 			.then(function (products) {
-				res.render('productDetail', { products })
+				res.render('productDetail', { products, user })
 			})
 	},
 
 	edit: (req, res) => {
+		const user = req.session.userLogin;
+
 		Products.findByPk(req.params.id)
 			.then(function (idFound) {
 				let brandName;
@@ -94,7 +97,8 @@ const controller = {
 								res.render('editar-producto', {
 									idFound: idFound,
 									brandName: brandName,
-									categoryName: categoryName
+									categoryName: categoryName,
+									user: user
 								})
 							});
 					});

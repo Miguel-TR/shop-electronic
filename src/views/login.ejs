@@ -10,7 +10,8 @@
   <main class="main-login">
     <form class="form-login" method="POST">
       <fieldset>
-        <h2 class="form-title">Iniciar Sesión</h2>
+        <legend class="title-form"> INICIAR SESIÓN </legend>
+        <!-- <h2 class="form-title">Iniciar Sesión</h2> -->
         <p>¡Bienvenido de nuevo! Inicie sesión en su cuenta a continuación!</p>
         <div class="campo-info">
           <input type="text" name="email" value="<%= ( locals.old && old.email ) ? old.email : ''  %>"/>
@@ -27,12 +28,12 @@
             <p> <%= errors.password.msg %> </p>
           <% } %>
         </div>
-        <div class="campo-info">
-          <input type="checkbox" name="remember">
-          <label for="" class="">Recordame</label>
+        <div class="div-checkbox">
+          <input type="checkbox" id="remember" name="remember" class="checkbox-remember">
+          <label for="remember" class="label-remember">Recordame</label>
         </div>
+        <input class="btn-init-sesion" type="submit" value="Iniciar Sesión" />
         <p class="recuperar-contra"><a href="#">¿Olvidaste tu contraseña?</a></p>
-        <input class="btn" type="submit" value="Iniciar Sesión" />
         <p>¿No tenés cuenta aun? <a class="link-crear-cuenta" href="/register">Crear Cuenta</a></p>
       </fieldset>
     </form>

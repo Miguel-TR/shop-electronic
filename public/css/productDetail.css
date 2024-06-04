@@ -154,6 +154,7 @@
     padding: 15px;
     border: 1px solid #000;
     text-align: center;
+    text-decoration: none;
 }
 
 .action-button-edit:hover {
@@ -209,6 +210,11 @@
         max-width: 1600px;
         flex-direction: row;
         align-items: flex-start;
+    }
+
+    .section-caracteristicas p {
+        font-size: 14px;
+        text-align: justify;
     }
 
     .campo-imagenes-chicas img {
