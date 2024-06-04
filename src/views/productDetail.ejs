@@ -5,7 +5,11 @@
 
 <body>
     <!-- HEADER -->
-    <%- include('partials/header.ejs') %>
+    <% if(user){ %>
+        <%- include('partials/headerUser.ejs',{user}) %>
+    <% }else{ %>
+        <%- include('partials/header.ejs') %>
+    <% } %>
 
     <main class="main-detail">
         <section class="section-detalle">
@@ -61,8 +65,7 @@
         </section>
         <section class="section-caracteristicas">
             <h3>ESPECIFICACIONES</h3>
-            <p>$<%= products.specifications %></p>
-            <p>$<%= products.price %></p>
+            <p><%= products.specifications %></p>
         </section>
     </main>
 

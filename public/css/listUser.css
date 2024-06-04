@@ -1,12 +1,23 @@
 .list {
     padding: 5px 20%;
+    margin-bottom: 10%;
 }
+
+.list h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
 .list-li {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    
 }
+
+.head-table {
+    font-weight: bold;
+}
+
 .list-user-details {
     display: flex;
     align-items: center;
@@ -18,11 +29,13 @@
     width: 40%;
     justify-content: space-around;
 }
+
 .button-up {
     background-color: #0aaf2e;
     border: 1px solid transparent;
     padding: 10px;
 }
+
 .button-down {
     background-color: #ff0000;
     border: 1px solid transparent;
@@ -30,7 +43,7 @@
 }
 
 
-.div-list-user-details{
+.div-list-user-details {
     text-align: left;
     width: 50%;
 }

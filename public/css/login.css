@@ -16,10 +16,12 @@
 
   font-size: 17px;
 }
-.main-login .form-title{
+
+.main-login .form-title {
   border: none;
   color: black;
 }
+
 .form-login {
   display: flex;
   flex-direction: column;
@@ -71,21 +73,41 @@
 
 }
 
+.div-checkbox {
+  display: flex;
+  margin-top: 30px;
+  position: relative;
+}
+
+.label-remember {
+  font-size: 13px;
+  color: #3498db;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.checkbox-remember {
+  width: 20px;
+}
+
 .recuperar-contra {
-  text-align: end;
+  margin: 10px;
 }
 
 .recuperar-contra a:hover {
   color: #3498db;
 }
 
-.btn {
-  margin: 20px;
+.btn-init-sesion {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 10px;
   border: none;
+  border-radius: 10px;
 }
 
-.btn:hover {
+.btn-init-sesion:hover {
   cursor: pointer;
   color: white;
   background-color: #3498db;

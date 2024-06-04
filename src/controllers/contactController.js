@@ -1,7 +1,10 @@
 const controller = {
     renderContact: (req, res) => {
+        const user = req.session.userLogin;
+
         res.render('contact', {
-            title: 'contact'
+            title: 'contact',
+            user: user
         })
     }
 }
