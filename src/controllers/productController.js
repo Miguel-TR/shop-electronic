@@ -43,6 +43,23 @@ const controller = {
 			.catch(error => console.log(error));
 	},
 
+	filterByCategory: (req, res) => {
+		Products.findAll(
+			{
+				include: [
+					{ association: 'categories' },
+					{ association: 'brands' }
+				],
+				// where: { id_category: { [Op.like]: req.params.category } },
+				where: { id_category: req.params.category },
+			})
+
+			.then(products => {
+				res.render('home', { products: products, user: null })
+			})
+			.catch(error => console.log(error));
+	},
+
 	create: (req, res) => {
 		const user = req.session.userLogin;
 		if (user) {
