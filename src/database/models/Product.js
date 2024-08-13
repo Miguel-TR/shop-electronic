@@ -1,5 +1,4 @@
 module.exports = (sequelize, dataTypes) => {
-
   let alias = "Product";
 
   let cols = {
@@ -7,11 +6,11 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
-      allowNull: false
+      allowNull: false,
     },
     title: {
       type: dataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     image: {
       type: dataTypes.STRING,
@@ -19,41 +18,41 @@ module.exports = (sequelize, dataTypes) => {
     },
     description: {
       type: dataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     price: {
       type: dataTypes.DECIMAL,
-      allowNull: false
+      allowNull: false,
     },
     discount: {
       type: dataTypes.FLOAT,
-      allowNull: true
+      allowNull: true,
     },
     warranty: {
       type: dataTypes.STRING,
-      allowNull: true
+      allowNull: true,
     },
     stock: {
       type: dataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
     },
     specifications: {
       type: dataTypes.STRING,
-      allowNull: true
+      allowNull: true,
     },
     id_brand: {
       type: dataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
     },
     id_category: {
       type: dataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
     },
   };
 
   let config = {
     tableName: "products",
-    timestamps: false
+    timestamps: false,
   };
 
   const Product = sequelize.define(alias, cols, config);
@@ -61,18 +60,22 @@ module.exports = (sequelize, dataTypes) => {
   Product.associate = function (models) {
     // Asociación con la tabla de categorías
     Product.belongsTo(models.Category, {
-      as: 'categories',
-      foreignKey: 'id_category' // La clave foránea que hace referencia a la categoría en la tabla de productos
+      as: "categories",
+      foreignKey: "id_category", // La clave foránea que hace referencia a la categoría en la tabla de productos
     });
 
     // Asociación con la tabla de marcas
     Product.belongsTo(models.Brand, {
-      as: 'brands',
-      foreignKey: 'id_brand' // La clave foránea que hace referencia a la marca en la tabla de productos
+      as: "brands",
+      foreignKey: "id_brand", // La clave foránea que hace referencia a la marca en la tabla de productos
+    });
+    Product.belongsToMany(models.Purchase, {
+      as: "purchases",
+      through: models.ProductPurchase,
+      foreignKey: "id_product",
+      otherKey: "id_purchase",
+      timestamps: false,
     });
   };
-
-
   return Product;
-
 };

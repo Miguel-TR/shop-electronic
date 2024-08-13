@@ -14,6 +14,7 @@ const productCartRoute = require('./routes/productCartRoutes');
 const productRoute = require('./routes/productRoutes');
 const userRoute = require('./routes/userRoutes');
 const contactRoute = require('./routes/contactRoutes');
+const rutsPurchase = require('./routes/purchase')
 
 const productRoutesAPIs = require('./routes/api/productRoutes');
 const userRoutesAPIs = require('./routes/api/userRoutes');
@@ -53,7 +54,7 @@ app.use('/', productCartRoute);
 app.use('/', aboutRoute);
 app.use('/', userRoute)
 app.use('/', contactRoute);
-
+app.use('/carrito', rutsPurchase);
 // Routes APIs
 app.use('/api/products', productRoutesAPIs);
 app.use('/api/users', userRoutesAPIs);
